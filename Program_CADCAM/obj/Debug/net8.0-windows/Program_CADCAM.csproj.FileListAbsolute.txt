@@ -1,0 +1,17 @@
+E:\CADCAM AMEL\PROGRAM CADCAM\Message_CADCAM\Program_CADCAM\Program_CADCAM\bin\Debug\net8.0-windows\Program_CADCAM.exe
+E:\CADCAM AMEL\PROGRAM CADCAM\Message_CADCAM\Program_CADCAM\Program_CADCAM\bin\Debug\net8.0-windows\Program_CADCAM.deps.json
+E:\CADCAM AMEL\PROGRAM CADCAM\Message_CADCAM\Program_CADCAM\Program_CADCAM\bin\Debug\net8.0-windows\Program_CADCAM.runtimeconfig.json
+E:\CADCAM AMEL\PROGRAM CADCAM\Message_CADCAM\Program_CADCAM\Program_CADCAM\bin\Debug\net8.0-windows\Program_CADCAM.dll
+E:\CADCAM AMEL\PROGRAM CADCAM\Message_CADCAM\Program_CADCAM\Program_CADCAM\bin\Debug\net8.0-windows\Program_CADCAM.pdb
+E:\CADCAM AMEL\PROGRAM CADCAM\Message_CADCAM\Program_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.Login.resources
+E:\CADCAM AMEL\PROGRAM CADCAM\Message_CADCAM\Program_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.csproj.GenerateResource.cache
+E:\CADCAM AMEL\PROGRAM CADCAM\Message_CADCAM\Program_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.GeneratedMSBuildEditorConfig.editorconfig
+E:\CADCAM AMEL\PROGRAM CADCAM\Message_CADCAM\Program_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.AssemblyInfoInputs.cache
+E:\CADCAM AMEL\PROGRAM CADCAM\Message_CADCAM\Program_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.AssemblyInfo.cs
+E:\CADCAM AMEL\PROGRAM CADCAM\Message_CADCAM\Program_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.csproj.CoreCompileInputs.cache
+E:\CADCAM AMEL\PROGRAM CADCAM\Message_CADCAM\Program_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.dll
+E:\CADCAM AMEL\PROGRAM CADCAM\Message_CADCAM\Program_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\refint\Program_CADCAM.dll
+E:\CADCAM AMEL\PROGRAM CADCAM\Message_CADCAM\Program_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.pdb
+E:\CADCAM AMEL\PROGRAM CADCAM\Message_CADCAM\Program_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.genruntimeconfig.cache
+E:\CADCAM AMEL\PROGRAM CADCAM\Message_CADCAM\Program_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\ref\Program_CADCAM.dll
+E:\CADCAM AMEL\PROGRAM CADCAM\Message_CADCAM\Program_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.Properties.Resources.resources
