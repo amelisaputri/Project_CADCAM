@@ -5,12 +5,13 @@ namespace Program_CADCAM
 {
     public partial class Login : Form
     {
-        
+
         public Login()
         {
             InitializeComponent();
         }
 
+        private System.Windows.Forms.Label lblResult;
 
         private void txtUsername_Enter(object sender, EventArgs e)
         {
@@ -29,6 +30,7 @@ namespace Program_CADCAM
                 txtBoxUser.ForeColor = Color.Gray;
             }
         }
+
         private void txtPassword_Enter(object sender, EventArgs e)
         {
             if (txtBoxPass.Text == "Password")
@@ -48,9 +50,6 @@ namespace Program_CADCAM
                 txtBoxPass.ForeColor = Color.Gray;
             }
         }
-
-
-        private System.Windows.Forms.Label lblResult;
         private void btn_Login(object sender, EventArgs e)
         {
             string UserId = txtBoxUser.Text.Trim();
@@ -63,7 +62,6 @@ namespace Program_CADCAM
                 return;
             }
 
-            // Contoh validasi login manual (bisa diganti dengan validasi database)
             if (UserId == "User" && UserPass == "1234")
             {
                 lblResult.Text = "Login successful!";
@@ -74,7 +72,7 @@ namespace Program_CADCAM
                 txtBoxPass.Text = "";
 
             }
-            
+
         }
     }
 }

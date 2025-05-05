@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fikri\\Downloads\\Program_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj": {}
+    "E:\\PROJECT TRIAL\\C# Project\\Program_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fikri\\Downloads\\Program_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj": {
+    "E:\\PROJECT TRIAL\\C# Project\\Program_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fikri\\Downloads\\Program_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj",
+        "projectUniqueName": "E:\\PROJECT TRIAL\\C# Project\\Program_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj",
         "projectName": "Program_CADCAM",
-        "projectPath": "C:\\Users\\fikri\\Downloads\\Program_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj",
+        "projectPath": "E:\\PROJECT TRIAL\\C# Project\\Program_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj",
         "packagesPath": "C:\\Users\\fikri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fikri\\Downloads\\Program_CADCAM\\Program_CADCAM\\obj\\",
+        "outputPath": "E:\\PROJECT TRIAL\\C# Project\\Program_CADCAM\\Program_CADCAM\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
