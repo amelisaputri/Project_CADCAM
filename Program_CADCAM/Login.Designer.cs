@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             txtBoxUser = new TextBox();
             Button_Login = new Button();
             txtBoxPass = new TextBox();
             checkBox1 = new CheckBox();
             LinkCreateAcc = new LinkLabel();
             LinkResetPass = new LinkLabel();
-            label1 = new Label();
-            panel1 = new Panel();
-            panel1.SuspendLayout();
+            SHI = new Label();
+            Panel_Login = new Panel();
+            Panel_Login.SuspendLayout();
             SuspendLayout();
             // 
             // txtBoxUser
@@ -96,7 +97,7 @@
             // 
             LinkCreateAcc.ActiveLinkColor = Color.Navy;
             LinkCreateAcc.AutoSize = true;
-            LinkCreateAcc.BackColor = Color.White;
+            LinkCreateAcc.BackColor = Color.Transparent;
             LinkCreateAcc.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LinkCreateAcc.LinkColor = Color.Black;
             LinkCreateAcc.Location = new Point(75, 493);
@@ -106,11 +107,12 @@
             LinkCreateAcc.TabStop = true;
             LinkCreateAcc.Text = "Daftar Login";
             LinkCreateAcc.TextAlign = ContentAlignment.MiddleCenter;
+            LinkCreateAcc.LinkClicked += LinkCreateAcc_LinkClicked;
             // 
             // LinkResetPass
             // 
             LinkResetPass.AutoSize = true;
-            LinkResetPass.BackColor = Color.White;
+            LinkResetPass.BackColor = Color.Transparent;
             LinkResetPass.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LinkResetPass.LinkColor = Color.Black;
             LinkResetPass.Location = new Point(171, 493);
@@ -121,35 +123,35 @@
             LinkResetPass.Text = "Reset Password";
             LinkResetPass.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // SHI
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Britannic Bold", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.DarkBlue;
-            label1.Location = new Point(189, 41);
-            label1.Name = "label1";
-            label1.Size = new Size(161, 76);
-            label1.TabIndex = 10;
-            label1.Text = "SHI\r\nCAD/CAM\r\n";
-            label1.TextAlign = ContentAlignment.TopRight;
+            SHI.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            SHI.AutoSize = true;
+            SHI.BackColor = Color.Transparent;
+            SHI.Font = new Font("Britannic Bold", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            SHI.ForeColor = Color.DarkBlue;
+            SHI.Location = new Point(189, 41);
+            SHI.Name = "SHI";
+            SHI.Size = new Size(161, 76);
+            SHI.TabIndex = 10;
+            SHI.Text = "SHI\r\nCAD/CAM\r\n";
+            SHI.TextAlign = ContentAlignment.TopRight;
             // 
-            // panel1
+            // Panel_Login
             // 
-            panel1.BackgroundImage = Properties.Resources.background;
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(LinkResetPass);
-            panel1.Controls.Add(LinkCreateAcc);
-            panel1.Controls.Add(checkBox1);
-            panel1.Controls.Add(txtBoxPass);
-            panel1.Controls.Add(Button_Login);
-            panel1.Controls.Add(txtBoxUser);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(353, 597);
-            panel1.TabIndex = 11;
+            Panel_Login.BackgroundImage = Properties.Resources.background;
+            Panel_Login.Controls.Add(SHI);
+            Panel_Login.Controls.Add(LinkResetPass);
+            Panel_Login.Controls.Add(LinkCreateAcc);
+            Panel_Login.Controls.Add(checkBox1);
+            Panel_Login.Controls.Add(txtBoxPass);
+            Panel_Login.Controls.Add(Button_Login);
+            Panel_Login.Controls.Add(txtBoxUser);
+            Panel_Login.Dock = DockStyle.Fill;
+            Panel_Login.Location = new Point(0, 0);
+            Panel_Login.Name = "Panel_Login";
+            Panel_Login.Size = new Size(353, 597);
+            Panel_Login.TabIndex = 11;
             // 
             // Login
             // 
@@ -158,17 +160,16 @@
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(353, 597);
-            Controls.Add(panel1);
+            Controls.Add(Panel_Login);
             DoubleBuffered = true;
             Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             HelpButton = true;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Login";
-            ShowIcon = false;
             StartPosition = FormStartPosition.CenterParent;
-            Text = "Login";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            Panel_Login.ResumeLayout(false);
+            Panel_Login.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -180,7 +181,7 @@
         private CheckBox checkBox1;
         private LinkLabel LinkCreateAcc;
         private LinkLabel LinkResetPass;
-        private Label label1;
-        private Panel panel1;
+        private Label SHI;
+        private Panel Panel_Login;
     }
 }

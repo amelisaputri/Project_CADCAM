@@ -64,15 +64,27 @@ namespace Program_CADCAM
 
             if (UserId == "User" && UserPass == "1234")
             {
-                lblResult.Text = "Login successful!";
-                lblResult.ForeColor = System.Drawing.Color.Green;
-
-                // Clear input
-                txtBoxUser.Text = "";
-                txtBoxPass.Text = "";
-
+                this.Hide();
+                MessageBox.Show("Welcome, User!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Main Main_Menu = new Main();
+                Main_Menu.ShowDialog();
+                this.Show();
+                return;
             }
 
+            // Clear input
+            txtBoxUser.Text = "";
+            txtBoxPass.Text = "";
+
+        }
+
+
+        // Move to Page Daftar_login
+        private void LinkCreateAcc_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Create and show the daftar_login form
+            Daftar_Login registerForm = new Daftar_Login();
+            registerForm.Show();
         }
     }
 }

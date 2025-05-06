@@ -1,53 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\PROJECT TRIAL\\C# Project\\Program_CADCAM\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|e:\\project trial\\c# project\\program_cadcam\\program_cadcam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|solutionrelative:program_cadcam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|e:\\project trial\\c# project\\program_cadcam\\program_cadcam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|solutionrelative:program_cadcam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "E:\\PROGAM CADCAM CSTI\\Project_CADCAM\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Login.cs [Design]",
-              "DocumentMoniker": "E:\\PROJECT TRIAL\\C# Project\\Program_CADCAM\\Program_CADCAM\\Login.cs",
-              "RelativeDocumentMoniker": "Program_CADCAM\\Login.cs",
-              "ToolTip": "E:\\PROJECT TRIAL\\C# Project\\Program_CADCAM\\Program_CADCAM\\Login.cs [Design]*",
-              "RelativeToolTip": "Program_CADCAM\\Login.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T13:20:28.074Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.cs",
-              "DocumentMoniker": "E:\\PROJECT TRIAL\\C# Project\\Program_CADCAM\\Program_CADCAM\\Login.cs",
-              "RelativeDocumentMoniker": "Program_CADCAM\\Login.cs",
-              "ToolTip": "E:\\PROJECT TRIAL\\C# Project\\Program_CADCAM\\Program_CADCAM\\Login.cs*",
-              "RelativeToolTip": "Program_CADCAM\\Login.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T13:20:22.894Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
