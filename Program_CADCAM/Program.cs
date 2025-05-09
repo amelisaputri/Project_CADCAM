@@ -14,6 +14,7 @@ namespace Program_CADCAM
             Application.Run(new Login());
             Application.Run(new Daftar_Login());
             Application.Run(new Main());
+            Application.Run(new Chat());
         }
     }
 }

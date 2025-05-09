@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\PROGAM CADCAM CSTI\\Project_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj": {}
+    "C:\\AMEL CADCAM\\Project_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj": {}
   },
   "projects": {
-    "E:\\PROGAM CADCAM CSTI\\Project_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj": {
+    "C:\\AMEL CADCAM\\Project_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PROGAM CADCAM CSTI\\Project_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj",
+        "projectUniqueName": "C:\\AMEL CADCAM\\Project_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj",
         "projectName": "Program_CADCAM",
-        "projectPath": "E:\\PROGAM CADCAM CSTI\\Project_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj",
-        "packagesPath": "C:\\Users\\ameli\\.nuget\\packages\\",
-        "outputPath": "E:\\PROGAM CADCAM CSTI\\Project_CADCAM\\Program_CADCAM\\obj\\",
+        "projectPath": "C:\\AMEL CADCAM\\Project_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj",
+        "packagesPath": "C:\\Users\\yong3\\.nuget\\packages\\",
+        "outputPath": "C:\\AMEL CADCAM\\Project_CADCAM\\Program_CADCAM\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ameli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yong3\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

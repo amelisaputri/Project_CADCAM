@@ -52,37 +52,41 @@
             Main_Menu.BackColor = SystemColors.ControlLightLight;
             Main_Menu.Controls.Add(tabControl1);
             Main_Menu.Controls.Add(Profil);
-            Main_Menu.Location = new Point(-1, 0);
+            Main_Menu.Location = new Point(-2, 0);
+            Main_Menu.Margin = new Padding(5, 6, 5, 6);
             Main_Menu.Name = "Main_Menu";
-            Main_Menu.Size = new Size(356, 597);
+            Main_Menu.Size = new Size(610, 1194);
             Main_Menu.TabIndex = 0;
             // 
             // tabControl1
             // 
             tabControl1.Controls.Add(Chat);
             tabControl1.Controls.Add(Grup_Chat);
-            tabControl1.Location = new Point(0, 89);
+            tabControl1.Location = new Point(0, 178);
+            tabControl1.Margin = new Padding(5, 6, 5, 6);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(356, 508);
+            tabControl1.Size = new Size(610, 1016);
             tabControl1.TabIndex = 3;
             // 
             // Chat
             // 
-            Chat.Location = new Point(4, 24);
+            Chat.Location = new Point(4, 39);
+            Chat.Margin = new Padding(5, 6, 5, 6);
             Chat.Name = "Chat";
-            Chat.Padding = new Padding(3);
-            Chat.Size = new Size(348, 480);
+            Chat.Padding = new Padding(5, 6, 5, 6);
+            Chat.Size = new Size(602, 973);
             Chat.TabIndex = 0;
             Chat.Text = "Chat";
             Chat.UseVisualStyleBackColor = true;
             // 
             // Grup_Chat
             // 
-            Grup_Chat.Location = new Point(4, 24);
+            Grup_Chat.Location = new Point(4, 39);
+            Grup_Chat.Margin = new Padding(5, 6, 5, 6);
             Grup_Chat.Name = "Grup_Chat";
-            Grup_Chat.Padding = new Padding(3);
-            Grup_Chat.Size = new Size(348, 480);
+            Grup_Chat.Padding = new Padding(5, 6, 5, 6);
+            Grup_Chat.Size = new Size(602, 973);
             Grup_Chat.TabIndex = 1;
             Grup_Chat.Text = "Grup Chat";
             Grup_Chat.UseVisualStyleBackColor = true;
@@ -94,28 +98,31 @@
             Profil.Controls.Add(Logout);
             Profil.Controls.Add(Setting);
             Profil.Controls.Add(User);
-            Profil.Location = new Point(1, 0);
+            Profil.Location = new Point(2, 0);
+            Profil.Margin = new Padding(5, 6, 5, 6);
             Profil.Name = "Profil";
-            Profil.Size = new Size(353, 87);
+            Profil.Size = new Size(605, 174);
             Profil.TabIndex = 2;
             // 
             // Nama_Karyawan
             // 
             Nama_Karyawan.AutoSize = true;
-            Nama_Karyawan.Font = new Font("Pretendard", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Nama_Karyawan.Location = new Point(94, 30);
+            Nama_Karyawan.Font = new Font("Pretendard", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            Nama_Karyawan.Location = new Point(97, 60);
+            Nama_Karyawan.Margin = new Padding(5, 0, 5, 0);
             Nama_Karyawan.Name = "Nama_Karyawan";
-            Nama_Karyawan.Size = new Size(102, 15);
+            Nama_Karyawan.Size = new Size(220, 34);
             Nama_Karyawan.TabIndex = 3;
             Nama_Karyawan.Text = "Nama Karyawan";
             // 
             // Depart
             // 
             Depart.AutoSize = true;
-            Depart.Font = new Font("Pretendard", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Depart.Location = new Point(120, 49);
+            Depart.Font = new Font("Pretendard", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            Depart.Location = new Point(170, 98);
+            Depart.Margin = new Padding(5, 0, 5, 0);
             Depart.Name = "Depart";
-            Depart.Size = new Size(76, 15);
+            Depart.Size = new Size(140, 29);
             Depart.TabIndex = 4;
             Depart.Text = "Department";
             Depart.TextAlign = ContentAlignment.MiddleCenter;
@@ -123,9 +130,10 @@
             // Logout
             // 
             Logout.Image = Properties.Resources.logout__1_;
-            Logout.Location = new Point(316, 32);
+            Logout.Location = new Point(505, 68);
+            Logout.Margin = new Padding(5, 6, 5, 6);
             Logout.Name = "Logout";
-            Logout.Size = new Size(25, 25);
+            Logout.Size = new Size(45, 45);
             Logout.SizeMode = PictureBoxSizeMode.StretchImage;
             Logout.TabIndex = 2;
             Logout.TabStop = false;
@@ -133,9 +141,10 @@
             // Setting
             // 
             Setting.Image = Properties.Resources.settings;
-            Setting.Location = new Point(274, 33);
+            Setting.Location = new Point(440, 71);
+            Setting.Margin = new Padding(5, 6, 5, 6);
             Setting.Name = "Setting";
-            Setting.Size = new Size(23, 23);
+            Setting.Size = new Size(40, 40);
             Setting.SizeMode = PictureBoxSizeMode.StretchImage;
             Setting.TabIndex = 1;
             Setting.TabStop = false;
@@ -143,21 +152,23 @@
             // User
             // 
             User.Image = Properties.Resources.icon_2;
-            User.Location = new Point(203, 17);
+            User.Location = new Point(329, 39);
+            User.Margin = new Padding(5, 6, 5, 6);
             User.Name = "User";
-            User.Size = new Size(53, 55);
+            User.Size = new Size(90, 90);
             User.SizeMode = PictureBoxSizeMode.StretchImage;
             User.TabIndex = 0;
             User.TabStop = false;
             // 
             // Main
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(353, 597);
+            ClientSize = new Size(581, 1130);
             Controls.Add(Main_Menu);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(5, 6, 5, 6);
             Name = "Main";
             Main_Menu.ResumeLayout(false);
             tabControl1.ResumeLayout(false);
