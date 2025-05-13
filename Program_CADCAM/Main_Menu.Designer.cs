@@ -37,13 +37,13 @@
             Nama_Karyawan = new Label();
             Depart = new Label();
             Logout = new PictureBox();
-            Setting = new PictureBox();
             User = new PictureBox();
+            btnSend = new Button();
+            button1 = new Button();
             Main_Menu.SuspendLayout();
             tabControl1.SuspendLayout();
             Profil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Logout).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Setting).BeginInit();
             ((System.ComponentModel.ISupportInitialize)User).BeginInit();
             SuspendLayout();
             // 
@@ -94,10 +94,11 @@
             // 
             // Profil
             // 
+            Profil.Controls.Add(button1);
+            Profil.Controls.Add(btnSend);
             Profil.Controls.Add(Nama_Karyawan);
             Profil.Controls.Add(Depart);
             Profil.Controls.Add(Logout);
-            Profil.Controls.Add(Setting);
             Profil.Controls.Add(User);
             Profil.Location = new Point(2, 0);
             Profil.Margin = new Padding(5, 6, 5, 6);
@@ -134,21 +135,10 @@
             Logout.Location = new Point(505, 68);
             Logout.Margin = new Padding(5, 6, 5, 6);
             Logout.Name = "Logout";
-            Logout.Size = new Size(45, 45);
+            Logout.Size = new Size(0, 0);
             Logout.SizeMode = PictureBoxSizeMode.StretchImage;
             Logout.TabIndex = 2;
             Logout.TabStop = false;
-            // 
-            // Setting
-            // 
-            Setting.Image = Properties.Resources.settings;
-            Setting.Location = new Point(440, 71);
-            Setting.Margin = new Padding(5, 6, 5, 6);
-            Setting.Name = "Setting";
-            Setting.Size = new Size(40, 40);
-            Setting.SizeMode = PictureBoxSizeMode.StretchImage;
-            Setting.TabIndex = 1;
-            Setting.TabStop = false;
             // 
             // User
             // 
@@ -160,6 +150,26 @@
             User.SizeMode = PictureBoxSizeMode.StretchImage;
             User.TabIndex = 0;
             User.TabStop = false;
+            // 
+            // btnSend
+            // 
+            btnSend.BackgroundImage = Properties.Resources.settings1;
+            btnSend.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSend.Location = new Point(444, 75);
+            btnSend.Name = "btnSend";
+            btnSend.Size = new Size(40, 40);
+            btnSend.TabIndex = 5;
+            btnSend.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.BackgroundImage = Properties.Resources.logout__1_;
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.Location = new Point(505, 71);
+            button1.Name = "button1";
+            button1.Size = new Size(50, 50);
+            button1.TabIndex = 6;
+            button1.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -176,7 +186,6 @@
             Profil.ResumeLayout(false);
             Profil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)Logout).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Setting).EndInit();
             ((System.ComponentModel.ISupportInitialize)User).EndInit();
             ResumeLayout(false);
         }
@@ -189,9 +198,10 @@
         private TabControl tabControl1;
         private TabPage Chat;
         private TabPage Grup_Chat;
-        private PictureBox Setting;
         private PictureBox Logout;
         private Label Depart;
         private Label Nama_Karyawan;
+        private Button button1;
+        private Button btnSend;
     }
 }
