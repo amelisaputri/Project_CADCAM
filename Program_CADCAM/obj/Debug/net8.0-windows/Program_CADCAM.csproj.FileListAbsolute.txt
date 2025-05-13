@@ -73,4 +73,4 @@ C:\AMEL CADCAM\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\refint\Pro
 C:\AMEL CADCAM\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.pdb
 C:\AMEL CADCAM\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.genruntimeconfig.cache
 C:\AMEL CADCAM\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\ref\Program_CADCAM.dll
-C:\AMEL CADCAM\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.Chat.resources
+C:\AMEL CADCAM\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.ChatForm.resources

@@ -66,16 +66,17 @@
             tabControl1.Margin = new Padding(5, 6, 5, 6);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(610, 1016);
+            tabControl1.Size = new Size(588, 960);
             tabControl1.TabIndex = 3;
             // 
             // Chat
             // 
+            Chat.BackgroundImageLayout = ImageLayout.Stretch;
             Chat.Location = new Point(4, 39);
             Chat.Margin = new Padding(5, 6, 5, 6);
             Chat.Name = "Chat";
             Chat.Padding = new Padding(5, 6, 5, 6);
-            Chat.Size = new Size(602, 973);
+            Chat.Size = new Size(580, 917);
             Chat.TabIndex = 0;
             Chat.Text = "Chat";
             Chat.UseVisualStyleBackColor = true;
@@ -86,7 +87,7 @@
             Grup_Chat.Margin = new Padding(5, 6, 5, 6);
             Grup_Chat.Name = "Grup_Chat";
             Grup_Chat.Padding = new Padding(5, 6, 5, 6);
-            Grup_Chat.Size = new Size(602, 973);
+            Grup_Chat.Size = new Size(580, 917);
             Grup_Chat.TabIndex = 1;
             Grup_Chat.Text = "Grup Chat";
             Grup_Chat.UseVisualStyleBackColor = true;

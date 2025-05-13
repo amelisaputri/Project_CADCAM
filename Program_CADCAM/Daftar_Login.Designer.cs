@@ -63,7 +63,7 @@ namespace Program_CADCAM
             panel1.Location = new Point(0, 2);
             panel1.Margin = new Padding(5, 6, 5, 6);
             panel1.Name = "panel1";
-            panel1.Size = new Size(605, 1194);
+            panel1.Size = new Size(581, 1131);
             panel1.TabIndex = 0;
             // 
             // Profil
@@ -106,7 +106,7 @@ namespace Program_CADCAM
             // 
             btnDaftar.BackColor = Color.White;
             btnDaftar.Font = new Font("Pretendard SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDaftar.Location = new Point(165, 946);
+            btnDaftar.Location = new Point(137, 947);
             btnDaftar.Margin = new Padding(5, 6, 5, 6);
             btnDaftar.Name = "btnDaftar";
             btnDaftar.Size = new Size(303, 78);
@@ -123,7 +123,7 @@ namespace Program_CADCAM
             txtBoxUser.Location = new Point(101, 496);
             txtBoxUser.Margin = new Padding(5, 6, 5, 6);
             txtBoxUser.Name = "txtBoxUser";
-            txtBoxUser.Size = new Size(422, 35);
+            txtBoxUser.Size = new Size(398, 35);
             txtBoxUser.TabIndex = 0;
             txtBoxUser.Text = "Username";
             txtBoxUser.MouseEnter += txtBoxUsername_Enter;
@@ -137,7 +137,7 @@ namespace Program_CADCAM
             txtBoxPass.Location = new Point(101, 554);
             txtBoxPass.Margin = new Padding(5, 6, 5, 6);
             txtBoxPass.Name = "txtBoxPass";
-            txtBoxPass.Size = new Size(422, 35);
+            txtBoxPass.Size = new Size(398, 35);
             txtBoxPass.TabIndex = 7;
             txtBoxPass.Text = "Password";
             txtBoxPass.MouseEnter += txtBoxPassword_Enter;
@@ -151,7 +151,7 @@ namespace Program_CADCAM
             txtBoxName.Location = new Point(101, 654);
             txtBoxName.Margin = new Padding(5, 6, 5, 6);
             txtBoxName.Name = "txtBoxName";
-            txtBoxName.Size = new Size(422, 35);
+            txtBoxName.Size = new Size(398, 35);
             txtBoxName.TabIndex = 9;
             txtBoxName.Text = "Nama Karyawan";
             txtBoxName.MouseEnter += txtBoxNama_Enter;
@@ -165,7 +165,7 @@ namespace Program_CADCAM
             txtBoxPhone.Location = new Point(101, 712);
             txtBoxPhone.Margin = new Padding(5, 6, 5, 6);
             txtBoxPhone.Name = "txtBoxPhone";
-            txtBoxPhone.Size = new Size(422, 35);
+            txtBoxPhone.Size = new Size(398, 35);
             txtBoxPhone.TabIndex = 10;
             txtBoxPhone.Text = "Nomor Handphone";
             txtBoxPhone.MouseEnter += txtBoxPhone_Enter;
@@ -175,7 +175,7 @@ namespace Program_CADCAM
             // 
             cmbBoxDepart.FormattingEnabled = true;
             cmbBoxDepart.Items.AddRange(new object[] { "CAD", "CAM", "IT" });
-            cmbBoxDepart.Location = new Point(101, 830);
+            cmbBoxDepart.Location = new Point(86, 830);
             cmbBoxDepart.Margin = new Padding(5, 6, 5, 6);
             cmbBoxDepart.Name = "cmbBoxDepart";
             cmbBoxDepart.Size = new Size(205, 38);
@@ -185,7 +185,7 @@ namespace Program_CADCAM
             // 
             cmbBoxTeam.FormattingEnabled = true;
             cmbBoxTeam.Items.AddRange(new object[] { "2D/3D PRINT", "3D/ 3D SCAN", "CAM", "IT" });
-            cmbBoxTeam.Location = new Point(319, 830);
+            cmbBoxTeam.Location = new Point(301, 830);
             cmbBoxTeam.Margin = new Padding(5, 6, 5, 6);
             cmbBoxTeam.Name = "cmbBoxTeam";
             cmbBoxTeam.Size = new Size(205, 38);
