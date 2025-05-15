@@ -16,10 +16,11 @@ namespace Program_CADCAM
 {
     public partial class ChatForm : Form
     {
+
         public ChatForm()
         {
             InitializeComponent();
-            ConnectToServer("10.10.92.41", 5000);
+            //ConnectToServer("10.10.92.41", 5000);
         }
 
 
