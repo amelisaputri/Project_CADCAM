@@ -47,7 +47,7 @@ namespace Program_CADCAM
                 txtBoxPass.ForeColor = Color.Black;
             }
         }
-        
+
         private void txtPassword_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtBoxPass.Text))
@@ -88,7 +88,7 @@ namespace Program_CADCAM
                         {
                             reader.Read();
                             string dbPassword = reader["USER_PASS"].ToString();
-                            string usertype = reader["USER_NAME"].ToString();
+                            string userName = reader["USER_NAME"].ToString();
 
                             // Check if password matches
                             if (UserPass == dbPassword)
@@ -107,7 +107,7 @@ namespace Program_CADCAM
                         }
                         else
                         {
-                            MessageBox.Show("Invalid username or password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("User not found. Please register.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
@@ -120,8 +120,8 @@ namespace Program_CADCAM
                 MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
-   
+
+
 
         // Move to Page Daftar_login
         private void LinkCreateAcc_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -129,6 +129,16 @@ namespace Program_CADCAM
             // Create and show the daftar_login form
             Daftar_Login registerForm = new Daftar_Login();
             registerForm.Show();
+        }
+
+        private void LinkCreateAcc_MouseEnter(object sender, EventArgs e)
+        {
+            LinkCreateAcc.ForeColor = Color.Blue;
+        }
+
+        private void LinkCreateAcc_MouseLeave(object sender, EventArgs e)
+        {
+            LinkCreateAcc.ForeColor = Color.Black;
         }
     }
 }
