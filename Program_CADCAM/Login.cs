@@ -10,7 +10,8 @@ namespace Program_CADCAM
 
         private object txtUser;
         private object txtPass;
-        string connectionString = "Server=10.10.92.41;Database=CADCAM;User ID=sa;Password=vision2028;";
+        //string connectionString = "Server=10.10.92.41;Database=CADCAM;User ID=sa;Password=vision2028;";
+        string connectionString = "Server=.;Database=CADCAM;User ID=sa;Password=system;";
 
 
         public Login()
@@ -126,9 +127,10 @@ namespace Program_CADCAM
         // Move to Page Daftar_login
         private void LinkCreateAcc_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // Create and show the daftar_login form
+            this.Hide();
             Daftar_Login registerForm = new Daftar_Login();
-            registerForm.Show();
+            registerForm.ShowDialog();
+            this.Show();
         }
 
         private void LinkCreateAcc_MouseEnter(object sender, EventArgs e)

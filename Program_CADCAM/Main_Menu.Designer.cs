@@ -43,7 +43,6 @@
             btnLogout = new Button();
             User = new PictureBox();
             btnSend = new Button();
-            tableLayoutPanel1 = new TableLayoutPanel();
             Nama_Karyawan = new Label();
             Depart = new Label();
             Main_Menu.SuspendLayout();
@@ -56,7 +55,6 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             Profil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)User).BeginInit();
-            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // Main_Menu
@@ -66,9 +64,8 @@
             Main_Menu.Controls.Add(Profil);
             Main_Menu.Dock = DockStyle.Fill;
             Main_Menu.Location = new Point(0, 0);
-            Main_Menu.Margin = new Padding(5, 6, 5, 6);
             Main_Menu.Name = "Main_Menu";
-            Main_Menu.Size = new Size(605, 1050);
+            Main_Menu.Size = new Size(554, 721);
             Main_Menu.TabIndex = 0;
             // 
             // tabControl1
@@ -76,21 +73,21 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Dock = DockStyle.Fill;
-            tabControl1.Location = new Point(0, 174);
-            tabControl1.Margin = new Padding(4);
+            tabControl1.Location = new Point(0, 87);
+            tabControl1.Margin = new Padding(2);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(605, 876);
+            tabControl1.Size = new Size(554, 634);
             tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
             tabPage1.Controls.Add(panel1);
-            tabPage1.Location = new Point(4, 39);
-            tabPage1.Margin = new Padding(4);
+            tabPage1.Location = new Point(4, 24);
+            tabPage1.Margin = new Padding(2);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(4);
-            tabPage1.Size = new Size(597, 833);
+            tabPage1.Padding = new Padding(2);
+            tabPage1.Size = new Size(546, 606);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Chat";
             tabPage1.UseVisualStyleBackColor = true;
@@ -99,10 +96,10 @@
             // 
             panel1.Controls.Add(dataGridView1);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(4, 4);
-            panel1.Margin = new Padding(4);
+            panel1.Location = new Point(2, 2);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(589, 825);
+            panel1.Size = new Size(542, 602);
             panel1.TabIndex = 3;
             // 
             // dataGridView1
@@ -111,10 +108,10 @@
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Chat });
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Margin = new Padding(4);
+            dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(589, 825);
+            dataGridView1.Size = new Size(542, 602);
             dataGridView1.TabIndex = 0;
             // 
             // Chat
@@ -127,11 +124,11 @@
             // tabPage2
             // 
             tabPage2.Controls.Add(panel2);
-            tabPage2.Location = new Point(4, 39);
-            tabPage2.Margin = new Padding(4);
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Margin = new Padding(2);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(4);
-            tabPage2.Size = new Size(597, 833);
+            tabPage2.Padding = new Padding(2);
+            tabPage2.Size = new Size(597, 935);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Contact";
             tabPage2.UseVisualStyleBackColor = true;
@@ -140,10 +137,10 @@
             // 
             panel2.Controls.Add(dataGridView2);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(4, 4);
-            panel2.Margin = new Padding(4);
+            panel2.Location = new Point(2, 2);
+            panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(589, 825);
+            panel2.Size = new Size(593, 931);
             panel2.TabIndex = 4;
             // 
             // dataGridView2
@@ -152,10 +149,10 @@
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1 });
             dataGridView2.Dock = DockStyle.Fill;
             dataGridView2.Location = new Point(0, 0);
-            dataGridView2.Margin = new Padding(4);
+            dataGridView2.Margin = new Padding(2);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 62;
-            dataGridView2.Size = new Size(589, 825);
+            dataGridView2.Size = new Size(593, 931);
             dataGridView2.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
@@ -170,101 +167,79 @@
             Profil.Controls.Add(btnLogout);
             Profil.Controls.Add(User);
             Profil.Controls.Add(btnSend);
-            Profil.Controls.Add(tableLayoutPanel1);
+            Profil.Controls.Add(Nama_Karyawan);
+            Profil.Controls.Add(Depart);
             Profil.Dock = DockStyle.Top;
             Profil.Location = new Point(0, 0);
-            Profil.Margin = new Padding(5, 6, 5, 6);
             Profil.Name = "Profil";
-            Profil.Size = new Size(605, 174);
+            Profil.Size = new Size(554, 87);
             Profil.TabIndex = 2;
             // 
             // btnLogout
             // 
-            btnLogout.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnLogout.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnLogout.BackgroundImage = Properties.Resources.logout__1_;
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
-            btnLogout.Location = new Point(530, 66);
-            btnLogout.Margin = new Padding(2, 4, 2, 4);
+            btnLogout.Location = new Point(510, 33);
+            btnLogout.Margin = new Padding(1, 2, 1, 2);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(50, 50);
+            btnLogout.Size = new Size(29, 25);
             btnLogout.TabIndex = 6;
             btnLogout.TextAlign = ContentAlignment.TopCenter;
             btnLogout.UseVisualStyleBackColor = true;
             // 
             // User
             // 
+            User.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             User.Image = Properties.Resources.icon_2;
-            User.Location = new Point(326, 36);
-            User.Margin = new Padding(5, 6, 5, 6);
+            User.Location = new Point(391, 18);
             User.Name = "User";
-            User.Size = new Size(100, 100);
+            User.Size = new Size(58, 50);
             User.SizeMode = PictureBoxSizeMode.StretchImage;
             User.TabIndex = 0;
             User.TabStop = false;
             // 
             // btnSend
             // 
+            btnSend.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnSend.BackgroundImage = Properties.Resources.settings1;
             btnSend.BackgroundImageLayout = ImageLayout.Stretch;
-            btnSend.Location = new Point(444, 76);
-            btnSend.Margin = new Padding(2, 4, 2, 4);
+            btnSend.Location = new Point(460, 38);
+            btnSend.Margin = new Padding(1, 2, 1, 2);
             btnSend.Name = "btnSend";
-            btnSend.Size = new Size(38, 40);
+            btnSend.Size = new Size(22, 20);
             btnSend.TabIndex = 5;
             btnSend.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Controls.Add(Nama_Karyawan, 0, 0);
-            tableLayoutPanel1.Controls.Add(Depart, 0, 1);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(2);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(605, 174);
-            tableLayoutPanel1.TabIndex = 7;
-            // 
             // Nama_Karyawan
             // 
-            Nama_Karyawan.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             Nama_Karyawan.AutoSize = true;
             Nama_Karyawan.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            Nama_Karyawan.Location = new Point(75, 55);
-            Nama_Karyawan.Margin = new Padding(5, 0, 5, 0);
+            Nama_Karyawan.Location = new Point(24, 18);
             Nama_Karyawan.Name = "Nama_Karyawan";
-            Nama_Karyawan.Size = new Size(222, 32);
+            Nama_Karyawan.Size = new Size(124, 20);
             Nama_Karyawan.TabIndex = 3;
             Nama_Karyawan.Text = "Nama Karyawan";
             // 
             // Depart
             // 
-            Depart.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Depart.AutoSize = true;
             Depart.Font = new Font("Microsoft Sans Serif", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            Depart.Location = new Point(159, 87);
-            Depart.Margin = new Padding(5, 0, 5, 0);
+            Depart.Location = new Point(66, 38);
             Depart.Name = "Depart";
-            Depart.Size = new Size(138, 29);
+            Depart.Size = new Size(82, 17);
             Depart.TabIndex = 4;
             Depart.Text = "Department";
             Depart.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Main
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(605, 1050);
+            ClientSize = new Size(554, 721);
             Controls.Add(Main_Menu);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(5, 6, 5, 6);
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
             Main_Menu.ResumeLayout(false);
@@ -276,9 +251,8 @@
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             Profil.ResumeLayout(false);
+            Profil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)User).EndInit();
-            tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -291,7 +265,6 @@
         private Label Nama_Karyawan;
         private Button btnLogout;
         private Button btnSend;
-        private TableLayoutPanel tableLayoutPanel1;
         private Panel panel1;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn Chat;

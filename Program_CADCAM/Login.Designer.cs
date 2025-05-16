@@ -45,9 +45,9 @@
             txtBoxUser.Anchor = AnchorStyles.None;
             txtBoxUser.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxUser.ForeColor = Color.Gray;
-            txtBoxUser.Location = new Point(146, 474);
+            txtBoxUser.Location = new Point(121, 309);
             txtBoxUser.Name = "txtBoxUser";
-            txtBoxUser.Size = new Size(326, 33);
+            txtBoxUser.Size = new Size(326, 22);
             txtBoxUser.TabIndex = 0;
             txtBoxUser.Text = "Username";
             txtBoxUser.MouseEnter += txtUsername_Enter;
@@ -58,10 +58,10 @@
             Button_Login.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             Button_Login.BackColor = Color.White;
             Button_Login.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Button_Login.Location = new Point(146, 587);
+            Button_Login.Location = new Point(122, 400);
             Button_Login.Name = "Button_Login";
             Button_Login.Size = new Size(326, 58);
-            Button_Login.TabIndex = 4;
+            Button_Login.TabIndex = 2;
             Button_Login.Text = "Login";
             Button_Login.UseVisualStyleBackColor = false;
             Button_Login.Click += btn_Login;
@@ -71,11 +71,11 @@
             txtBoxPass.Anchor = AnchorStyles.None;
             txtBoxPass.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxPass.ForeColor = Color.Gray;
-            txtBoxPass.Location = new Point(146, 522);
+            txtBoxPass.Location = new Point(121, 357);
             txtBoxPass.Name = "txtBoxPass";
             txtBoxPass.PasswordChar = '*';
-            txtBoxPass.Size = new Size(326, 39);
-            txtBoxPass.TabIndex = 6;
+            txtBoxPass.Size = new Size(326, 26);
+            txtBoxPass.TabIndex = 1;
             txtBoxPass.Tag = "";
             txtBoxPass.Text = "Password";
             txtBoxPass.MouseEnter += txtPassword_Enter;
@@ -86,10 +86,10 @@
             checkBox1.AutoSize = true;
             checkBox1.BackColor = Color.Transparent;
             checkBox1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox1.Location = new Point(146, 671);
+            checkBox1.Location = new Point(119, 477);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(153, 33);
-            checkBox1.TabIndex = 7;
+            checkBox1.Size = new Size(89, 20);
+            checkBox1.TabIndex = 3;
             checkBox1.Text = "Auto Login";
             checkBox1.UseVisualStyleBackColor = false;
             // 
@@ -100,10 +100,10 @@
             LinkCreateAcc.BackColor = Color.Transparent;
             LinkCreateAcc.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LinkCreateAcc.LinkColor = Color.Black;
-            LinkCreateAcc.Location = new Point(135, 913);
+            LinkCreateAcc.Location = new Point(119, 570);
             LinkCreateAcc.Name = "LinkCreateAcc";
-            LinkCreateAcc.Size = new Size(154, 29);
-            LinkCreateAcc.TabIndex = 8;
+            LinkCreateAcc.Size = new Size(91, 16);
+            LinkCreateAcc.TabIndex = 4;
             LinkCreateAcc.TabStop = true;
             LinkCreateAcc.Text = "Daftar Login";
             LinkCreateAcc.TextAlign = ContentAlignment.MiddleCenter;
@@ -117,10 +117,10 @@
             LinkResetPass.BackColor = Color.Transparent;
             LinkResetPass.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LinkResetPass.LinkColor = Color.Black;
-            LinkResetPass.Location = new Point(295, 913);
+            LinkResetPass.Location = new Point(325, 570);
             LinkResetPass.Name = "LinkResetPass";
-            LinkResetPass.Size = new Size(203, 29);
-            LinkResetPass.TabIndex = 9;
+            LinkResetPass.Size = new Size(120, 16);
+            LinkResetPass.TabIndex = 5;
             LinkResetPass.TabStop = true;
             LinkResetPass.Text = "Reset Password";
             LinkResetPass.TextAlign = ContentAlignment.MiddleCenter;
@@ -132,9 +132,9 @@
             SHI.BackColor = Color.Transparent;
             SHI.Font = new Font("Britannic Bold", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             SHI.ForeColor = Color.DarkBlue;
-            SHI.Location = new Point(317, 73);
+            SHI.Location = new Point(381, 56);
             SHI.Name = "SHI";
-            SHI.Size = new Size(285, 138);
+            SHI.Size = new Size(161, 76);
             SHI.TabIndex = 10;
             SHI.Text = "SHI\r\nCAD/CAM\r\n";
             SHI.TextAlign = ContentAlignment.TopRight;
@@ -153,16 +153,16 @@
             Panel_Login.Dock = DockStyle.Fill;
             Panel_Login.Location = new Point(0, 0);
             Panel_Login.Name = "Panel_Login";
-            Panel_Login.Size = new Size(605, 1050);
+            Panel_Login.Size = new Size(554, 721);
             Panel_Login.TabIndex = 11;
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(12F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(605, 1050);
+            ClientSize = new Size(554, 721);
             Controls.Add(Panel_Login);
             DoubleBuffered = true;
             Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);

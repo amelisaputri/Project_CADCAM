@@ -16,7 +16,8 @@ namespace Program_CADCAM
 {
     public partial class Daftar_Login : Form
     {
-        string connectionString = "Server=10.10.92.41;Database=CADCAM;User ID=sa;Password=vision2028;";
+        //string connectionString = "Server=10.10.92.41;Database=CADCAM;User ID=sa;Password=vision2028;";
+        string connectionString = "Server=.;Database=CADCAM;User ID=sa;Password=system;";
 
         public Daftar_Login()
         {
@@ -136,7 +137,7 @@ namespace Program_CADCAM
                     {
                         object result = cmdMax.ExecuteScalar();
                         int nextID = (result != DBNull.Value) ? Convert.ToInt32(result) + 1 : 1;
-                        UserId = "U" + nextID.ToString("D5"); // Format: U00001
+                        UserId = "U" + nextID.ToString("D3"); // Format: U001
                     }
 
                     // Cek apakah USER_NIK sudah terdaftar
@@ -154,8 +155,8 @@ namespace Program_CADCAM
 
                     // Masukkan data ke database
                     string insertQuery = @"INSERT INTO MASTER_USER 
-                (USER_ID,USER_NIK, USER_PASS, USER_NAME, USER_PHONE, USER_DEPART, USER_TEAM)
-                VALUES (@USER_ID,@USER_NIK, @USER_PASS, @USER_NAME, @USER_PHONE, @USER_DEPART, @USER_TEAM)";
+                    (USER_ID,USER_NIK, USER_PASS, USER_NAME, USER_PHONE, USER_DEPART, USER_TEAM)
+                    VALUES (@USER_ID,@USER_NIK, @USER_PASS, @USER_NAME, @USER_PHONE, @USER_DEPART, @USER_TEAM)";
 
                     using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn))
                     {
@@ -181,10 +182,6 @@ namespace Program_CADCAM
                 cmbBoxDepart.SelectedIndex = -1;
                 cmbBoxTeam.SelectedIndex = -1;
 
-                // Pindah ke form login
-                this.Hide(); // Sembunyikan form register
-                Login login = new Login(); // Ganti dengan nama form login kamu
-                login.ShowDialog();
                 this.Close(); // Tutup form registrasi setelah login
             }
             catch (Exception ex)
