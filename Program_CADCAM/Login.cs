@@ -59,10 +59,10 @@ namespace Program_CADCAM
         }
         private void btn_Login(object sender, EventArgs e)
         {
-            string UserId = txtBoxUser.Text.Trim();
+            string UserNIK = txtBoxUser.Text.Trim();
             string UserPass = txtBoxPass.Text.Trim();
 
-            if (string.IsNullOrEmpty(UserId) || string.IsNullOrEmpty(UserPass))
+            if (string.IsNullOrEmpty(UserNIK) || string.IsNullOrEmpty(UserPass))
             {
                 lblResult.Text = "Mohon Masukkan NIK dan Password!";
                 lblResult.ForeColor = System.Drawing.Color.Red;
@@ -76,19 +76,19 @@ namespace Program_CADCAM
                     conn.Open();
 
                     // Query to get user information (username and password, and role)
-                    string query = "SELECT USER_ID, USER_NAME, USER_PASS FROM MASTER_USER WHERE USER_NAME = @USER_NAME AND USER_PASS = @USER_PASS";
+                    string query = "SELECT USER_NIK, USER_PASS FROM MASTER_USER WHERE USER_NIK = @USER_NIK ";
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@USER_NAME", UserId);
+                        cmd.Parameters.AddWithValue("@USER_NIK", UserNIK);
                         cmd.Parameters.AddWithValue("@USER_PASS", UserPass);
 
                         // Execute the query
                         SqlDataReader reader = cmd.ExecuteReader();
-                        if (reader.HasRows)
+                        if (reader.Read())
                         {
-                            reader.Read();
+                            
                             string dbPassword = reader["USER_PASS"].ToString();
-                            string userName = reader["USER_NAME"].ToString();
+                            string userNIK = reader["USER_NIK"].ToString();
 
                             // Check if password matches
                             if (UserPass == dbPassword)

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\AMEL CADCAM\\Project_CADCAM\\ServerProgram\\ServerProgram\\ServerProgram.csproj": {}
+    "C:\\AMEL CADCAM\\Up\\Project_CADCAM\\ServerProgram\\ServerProgram\\ServerProgram.csproj": {}
   },
   "projects": {
-    "C:\\AMEL CADCAM\\Project_CADCAM\\ServerProgram\\ServerProgram\\ServerProgram.csproj": {
+    "C:\\AMEL CADCAM\\Up\\Project_CADCAM\\ServerProgram\\ServerProgram\\ServerProgram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\AMEL CADCAM\\Project_CADCAM\\ServerProgram\\ServerProgram\\ServerProgram.csproj",
+        "projectUniqueName": "C:\\AMEL CADCAM\\Up\\Project_CADCAM\\ServerProgram\\ServerProgram\\ServerProgram.csproj",
         "projectName": "ServerProgram",
-        "projectPath": "C:\\AMEL CADCAM\\Project_CADCAM\\ServerProgram\\ServerProgram\\ServerProgram.csproj",
+        "projectPath": "C:\\AMEL CADCAM\\Up\\Project_CADCAM\\ServerProgram\\ServerProgram\\ServerProgram.csproj",
         "packagesPath": "C:\\Users\\yong3\\.nuget\\packages\\",
-        "outputPath": "C:\\AMEL CADCAM\\Project_CADCAM\\ServerProgram\\ServerProgram\\obj\\",
+        "outputPath": "C:\\AMEL CADCAM\\Up\\Project_CADCAM\\ServerProgram\\ServerProgram\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace Program_CADCAM
 {
@@ -106,167 +107,92 @@ namespace Program_CADCAM
         // button Daftar Login
         private void btnDaftar_Click(object sender, EventArgs e)
         {
-            //string IdUser = txtBoxUser.Text.Trim();
-            //string PassUser = txtBoxPass.Text.Trim();
-            //string User_name = txtBoxName.Text.Trim();
-            //string UserPhone = txtBoxPhone.Text.Trim();
-            //string Depart = cmbBoxDepart.Text.Trim();
-            //string Team = cmbBoxTeam.Text.Trim();
+            string UserId = "";
+            string UserNIK = txtBoxUser.Text.Trim();
+            string UserPass = txtBoxPass.Text.Trim();
+            string UserName = txtBoxName.Text.Trim();
+            string UserPhone = txtBoxPhone.Text.Trim();
+            string Depart = cmbBoxDepart.Text.Trim();
+            string Team = cmbBoxTeam.Text.Trim();
 
-            //if (string.IsNullOrEmpty(IdUser) || string.IsNullOrEmpty(PassUser))
-            //{
-            //    lblResult.Text = "Lengkapi kolom Berikut!";
-            //    lblResult.ForeColor = System.Drawing.Color.Red;
-            //    return;
-            //}
+            // Validasi input kosong
+            if (string.IsNullOrWhiteSpace(UserNIK) || string.IsNullOrWhiteSpace(UserPass) ||
+                string.IsNullOrWhiteSpace(UserName) || string.IsNullOrWhiteSpace(UserPhone) ||
+                string.IsNullOrWhiteSpace(Depart) || string.IsNullOrWhiteSpace(Team))
+            {
+                MessageBox.Show("Harap isi semua kolom!", "Validasi Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            //// Validate inputs
-            //if (string.IsNullOrWhiteSpace(txtBoxUser.Text) ||
-            //    string.IsNullOrWhiteSpace(txtBoxPass.Text) ||
-            //    string.IsNullOrWhiteSpace(txtBoxName.Text) ||
-            //    string.IsNullOrWhiteSpace(txtBoxPhone.Text) ||
-            //    string.IsNullOrWhiteSpace(cmbBoxDepart.Text) ||
-            //    string.IsNullOrWhiteSpace(cmbBoxTeam.Text))
-            //{
-            //    MessageBox.Show("Harap isi semua kolom!", "Validasi Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
 
-            //try
-            //{
-            //    using (SqlConnection conn = new SqlConnection(connectionString))
-            //    {
-            //        conn.Open();
+                    // Generate USER_ID otomatis (format U00001, U00002, dst)
+                    string queryMaxID = "SELECT ISNULL(MAX(CAST(SUBSTRING(USER_ID, 2, LEN(USER_ID) - 1) AS INT)), 0) FROM MASTER_USER";
+                    using (SqlCommand cmdMax = new SqlCommand(queryMaxID, conn))
+                    {
+                        object result = cmdMax.ExecuteScalar();
+                        int nextID = (result != DBNull.Value) ? Convert.ToInt32(result) + 1 : 1;
+                        UserId = "U" + nextID.ToString("D5"); // Format: U00001
+                    }
 
-            //        string woodenID = txtWID.Text.Trim();
-            //        bool isNewEntry = false;
+                    // Cek apakah USER_NIK sudah terdaftar
+                    string checkQuery = "SELECT COUNT(*) FROM MASTER_USER WHERE USER_NIK = @USER_NIK";
+                    using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
+                    {
+                        checkCmd.Parameters.AddWithValue("@USER_NIK", UserNIK);
+                        int exists = Convert.ToInt32(checkCmd.ExecuteScalar());
+                        if (exists > 0)
+                        {
+                            MessageBox.Show("NIK sudah terdaftar. Gunakan NIK lain.", "Registrasi Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
 
-            //        if (string.IsNullOrEmpty(woodenID))
-            //        {
-            //            // Generate new Wooden_ID
-            //            int newWoodenID = 1;
-            //            string queryMaxID = "SELECT ISNULL(MAX(CAST(SUBSTRING(WOODEN_ID, 2, LEN(WOODEN_ID) - 1) AS INT)), 0) FROM MASTER_WOODEN";
+                    // Masukkan data ke database
+                    string insertQuery = @"INSERT INTO MASTER_USER 
+                (USER_ID,USER_NIK, USER_PASS, USER_NAME, USER_PHONE, USER_DEPART, USER_TEAM)
+                VALUES (@USER_ID,@USER_NIK, @USER_PASS, @USER_NAME, @USER_PHONE, @USER_DEPART, @USER_TEAM)";
 
-            //            using (SqlCommand cmdMax = new SqlCommand(queryMaxID, conn))
-            //            {
-            //                object result = cmdMax.ExecuteScalar();
-            //                newWoodenID = (result != DBNull.Value) ? Convert.ToInt32(result) + 1 : 1;
-            //            }
+                    using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn))
+                    {
+                        insertCmd.Parameters.AddWithValue("@USER_ID", UserId);
+                        insertCmd.Parameters.AddWithValue("@USER_NIK", UserNIK);
+                        insertCmd.Parameters.AddWithValue("@USER_PASS", UserPass); // Recommended: hash in production
+                        insertCmd.Parameters.AddWithValue("@USER_NAME", UserName);
+                        insertCmd.Parameters.AddWithValue("@USER_PHONE", UserPhone);
+                        insertCmd.Parameters.AddWithValue("@USER_DEPART", Depart);
+                        insertCmd.Parameters.AddWithValue("@USER_TEAM", Team);
 
-            //            woodenID = "W" + newWoodenID.ToString("D5"); // Format W00001
-            //            isNewEntry = true;
-            //        }
+                        insertCmd.ExecuteNonQuery();
+                    }
+                }
 
-            //        // Check if Wooden_ID exists
-            //        string checkExistenceQuery = "SELECT COUNT(*) FROM MASTER_WOODEN WHERE WOODEN_ID = @WOODEN_ID";
-            //        using (SqlCommand cmdCheck = new SqlCommand(checkExistenceQuery, conn))
-            //        {
-            //            cmdCheck.Parameters.AddWithValue("@WOODEN_ID", woodenID);
-            //            int count = Convert.ToInt32(cmdCheck.ExecuteScalar());
+                MessageBox.Show("Registrasi berhasil! Silakan login.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            //            if (count > 0)
-            //            {
-            //                // UPDATE Existing Record
-            //                string updateQuery = @"UPDATE MASTER_WOODEN
-            //                               SET MODEL_NAME = @MODEL_NAME,
-            //                                   TOOLCODE = @TOOLCODE,
-            //                                   MOLD_TYPE = @MOLD_TYPE,
-            //                                   MOLD_TYPE_DETAIL = @MOLD_TYPE_DETAIL,
-            //                                   MOLD_GENDER = @MOLD_GENDER,
-            //                                   SIZE_MIN = @SIZE_MIN,
-            //                                   SIZE_MAX = @SIZE_MAX,
-            //                                   PIM = @PIM,
-            //                                   MOLD_ORIGIN = @MOLD_ORIGIN,
-            //                                   CREATE_DATE = @CREATE_DATE
-            //                               WHERE WOODEN_ID = @WOODEN_ID";
+                // Clear form input
+                txtBoxUser.Text = "";
+                txtBoxPass.Text = "";
+                txtBoxName.Text = "";
+                txtBoxPhone.Text = "";
+                cmbBoxDepart.SelectedIndex = -1;
+                cmbBoxTeam.SelectedIndex = -1;
 
-            //                using (SqlCommand cmdUpdate = new SqlCommand(updateQuery, conn))
-            //                {
-            //                    cmdUpdate.Parameters.AddWithValue("@WOODEN_ID", woodenID);
-            //                    cmdUpdate.Parameters.AddWithValue("@MODEL_NAME", textBoxNM.Text);
-            //                    cmdUpdate.Parameters.AddWithValue("@TOOLCODE", textBoxTC.Text);
-            //                    cmdUpdate.Parameters.AddWithValue("@MOLD_TYPE", textBoxJM.Text);
-            //                    cmdUpdate.Parameters.AddWithValue("@MOLD_TYPE_DETAIL", DetailMold.Text);
-            //                    cmdUpdate.Parameters.AddWithValue("@MOLD_GENDER", textBoxG.Text);
-            //                    cmdUpdate.Parameters.AddWithValue("@SIZE_MIN", MinSize.Text);
-            //                    cmdUpdate.Parameters.AddWithValue("@SIZE_MAX", MaxSize.Text);
-            //                    cmdUpdate.Parameters.AddWithValue("@PIM", Pim.Text);
-            //                    cmdUpdate.Parameters.AddWithValue("@MOLD_ORIGIN", Origin.Text);
-            //                    cmdUpdate.Parameters.AddWithValue("@CREATE_DATE", Convert.ToDateTime(dateIn.Text));
-            //                    cmdUpdate.ExecuteNonQuery();
-            //                }
-
-            //                MessageBox.Show("Data berhasil diperbarui!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //            }
-            //            else
-            //            {
-            //                // INSERT New Record
-            //                string insertQuery = @"INSERT INTO MASTER_WOODEN 
-            //                              (WOODEN_ID, MODEL_NAME, TOOLCODE, MOLD_TYPE, MOLD_TYPE_DETAIL, MOLD_GENDER, SIZE_MIN, SIZE_MAX, PIM, MOLD_ORIGIN, CREATE_DATE)
-            //                              VALUES 
-            //                              (@WOODEN_ID, @MODEL_NAME, @TOOLCODE, @MOLD_TYPE, @MOLD_TYPE_DETAIL, @MOLD_GENDER, @SIZE_MIN, @SIZE_MAX, @PIM, @MOLD_ORIGIN, @CREATE_DATE)";
-
-            //                using (SqlCommand cmdInsert = new SqlCommand(insertQuery, conn))
-            //                {
-            //                    cmdInsert.Parameters.AddWithValue("@WOODEN_ID", woodenID);
-            //                    cmdInsert.Parameters.AddWithValue("@MODEL_NAME", textBoxNM.Text);
-            //                    cmdInsert.Parameters.AddWithValue("@TOOLCODE", textBoxTC.Text);
-            //                    cmdInsert.Parameters.AddWithValue("@MOLD_TYPE", textBoxJM.Text);
-            //                    cmdInsert.Parameters.AddWithValue("@MOLD_TYPE_DETAIL", DetailMold.Text);
-            //                    cmdInsert.Parameters.AddWithValue("@MOLD_GENDER", textBoxG.Text);
-            //                    cmdInsert.Parameters.AddWithValue("@SIZE_MIN", MinSize.Text);
-            //                    cmdInsert.Parameters.AddWithValue("@SIZE_MAX", MaxSize.Text);
-            //                    cmdInsert.Parameters.AddWithValue("@PIM", Pim.Text);
-            //                    cmdInsert.Parameters.AddWithValue("@MOLD_ORIGIN", Origin.Text);
-            //                    cmdInsert.Parameters.AddWithValue("@CREATE_DATE", Convert.ToDateTime(dateIn.Text));
-            //                    cmdInsert.ExecuteNonQuery();
-            //                }
-
-            //                MessageBox.Show("Data berhasil ditambahkan ke database!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //            }
-            //        }
-
-            //        // Insert into HISTORY_WOODEN (only for new records)
-            //        if (isNewEntry)
-            //        {
-            //            string insertHistoryQuery = @"INSERT INTO HISTORY_WOODEN (WOODEN_ID, RACK_ID, DATE, STATUS)
-            //                                  VALUES (@WOODEN_ID, @RACK_ID, GETDATE(), 'NEW')";
-
-            //            using (SqlCommand cmdInsertHistory = new SqlCommand(insertHistoryQuery, conn))
-            //            {
-            //                cmdInsertHistory.Parameters.AddWithValue("@WOODEN_ID", woodenID);
-            //                cmdInsertHistory.Parameters.AddWithValue("@RACK_ID", cmbBoxRak.SelectedValue?.ToString() ?? ""); // Prevent Null Reference
-            //                cmdInsertHistory.ExecuteNonQuery();
-            //            }
-            //        }
-
-            //        // Update RACK_STATUS to "Y" in MASTER_RACK
-            //        string updateRackQuery = "UPDATE MASTER_RACK SET RACK_STATUS = 'Y' WHERE RACK_ID = @RACK_ID";
-            //        using (SqlCommand cmdUpdateRack = new SqlCommand(updateRackQuery, conn))
-            //        {
-            //            cmdUpdateRack.Parameters.AddWithValue("@RACK_ID", cmbBoxRak.SelectedValue?.ToString() ?? "");
-            //            cmdUpdateRack.ExecuteNonQuery();
-            //        }
-
-            //        // Clear and refresh after success
-            //        ClearAll();
-            //        GetData();
-            //        GetDataRack();
-            //    }
-            //}
-            //catch (SqlException sqlEx)
-            //{
-            //    MessageBox.Show("SQL Error: " + sqlEx.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            //catch (FormatException formatEx)
-            //{
-            //    MessageBox.Show("Format Error: " + formatEx.Message, "Data Format Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Unexpected Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+                // Pindah ke form login
+                this.Hide(); // Sembunyikan form register
+                Login login = new Login(); // Ganti dengan nama form login kamu
+                login.ShowDialog();
+                this.Close(); // Tutup form registrasi setelah login
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
     }
 }
 
