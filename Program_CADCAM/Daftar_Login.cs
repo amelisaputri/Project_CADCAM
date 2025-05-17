@@ -16,8 +16,8 @@ namespace Program_CADCAM
 {
     public partial class Daftar_Login : Form
     {
-        //string connectionString = "Server=10.10.92.41;Database=CADCAM;User ID=sa;Password=vision2028;";
-        string connectionString = "Server=.;Database=CADCAM;User ID=sa;Password=system;";
+        string connectionString = "Server=10.10.92.41;Database=CADCAM;User ID=sa;Password=vision2028;";
+
 
         public Daftar_Login()
         {

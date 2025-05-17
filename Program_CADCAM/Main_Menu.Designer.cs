@@ -64,8 +64,9 @@
             Main_Menu.Controls.Add(Profil);
             Main_Menu.Dock = DockStyle.Fill;
             Main_Menu.Location = new Point(0, 0);
+            Main_Menu.Margin = new Padding(5, 6, 5, 6);
             Main_Menu.Name = "Main_Menu";
-            Main_Menu.Size = new Size(554, 721);
+            Main_Menu.Size = new Size(605, 1050);
             Main_Menu.TabIndex = 0;
             // 
             // tabControl1
@@ -73,21 +74,21 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Dock = DockStyle.Fill;
-            tabControl1.Location = new Point(0, 87);
-            tabControl1.Margin = new Padding(2);
+            tabControl1.Location = new Point(0, 174);
+            tabControl1.Margin = new Padding(3, 4, 3, 4);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(554, 634);
+            tabControl1.Size = new Size(605, 876);
             tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
             tabPage1.Controls.Add(panel1);
-            tabPage1.Location = new Point(4, 24);
-            tabPage1.Margin = new Padding(2);
+            tabPage1.Location = new Point(4, 39);
+            tabPage1.Margin = new Padding(3, 4, 3, 4);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(2);
-            tabPage1.Size = new Size(546, 606);
+            tabPage1.Padding = new Padding(3, 4, 3, 4);
+            tabPage1.Size = new Size(597, 833);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Chat";
             tabPage1.UseVisualStyleBackColor = true;
@@ -96,10 +97,10 @@
             // 
             panel1.Controls.Add(dataGridView1);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(2, 2);
-            panel1.Margin = new Padding(2);
+            panel1.Location = new Point(3, 4);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(542, 602);
+            panel1.Size = new Size(591, 825);
             panel1.TabIndex = 3;
             // 
             // dataGridView1
@@ -108,10 +109,10 @@
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Chat });
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Margin = new Padding(2);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(542, 602);
+            dataGridView1.Size = new Size(591, 825);
             dataGridView1.TabIndex = 0;
             // 
             // Chat
@@ -124,11 +125,11 @@
             // tabPage2
             // 
             tabPage2.Controls.Add(panel2);
-            tabPage2.Location = new Point(4, 24);
-            tabPage2.Margin = new Padding(2);
+            tabPage2.Location = new Point(4, 39);
+            tabPage2.Margin = new Padding(3, 4, 3, 4);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(2);
-            tabPage2.Size = new Size(597, 935);
+            tabPage2.Padding = new Padding(3, 4, 3, 4);
+            tabPage2.Size = new Size(597, 833);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Contact";
             tabPage2.UseVisualStyleBackColor = true;
@@ -137,10 +138,10 @@
             // 
             panel2.Controls.Add(dataGridView2);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(2, 2);
-            panel2.Margin = new Padding(2);
+            panel2.Location = new Point(3, 4);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(593, 931);
+            panel2.Size = new Size(591, 825);
             panel2.TabIndex = 4;
             // 
             // dataGridView2
@@ -149,10 +150,10 @@
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1 });
             dataGridView2.Dock = DockStyle.Fill;
             dataGridView2.Location = new Point(0, 0);
-            dataGridView2.Margin = new Padding(2);
+            dataGridView2.Margin = new Padding(3, 4, 3, 4);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 62;
-            dataGridView2.Size = new Size(593, 931);
+            dataGridView2.Size = new Size(591, 825);
             dataGridView2.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
@@ -171,8 +172,9 @@
             Profil.Controls.Add(Depart);
             Profil.Dock = DockStyle.Top;
             Profil.Location = new Point(0, 0);
+            Profil.Margin = new Padding(5, 6, 5, 6);
             Profil.Name = "Profil";
-            Profil.Size = new Size(554, 87);
+            Profil.Size = new Size(605, 174);
             Profil.TabIndex = 2;
             // 
             // btnLogout
@@ -180,10 +182,10 @@
             btnLogout.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnLogout.BackgroundImage = Properties.Resources.logout__1_;
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
-            btnLogout.Location = new Point(510, 33);
-            btnLogout.Margin = new Padding(1, 2, 1, 2);
+            btnLogout.Location = new Point(529, 66);
+            btnLogout.Margin = new Padding(2, 4, 2, 4);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(29, 25);
+            btnLogout.Size = new Size(50, 50);
             btnLogout.TabIndex = 6;
             btnLogout.TextAlign = ContentAlignment.TopCenter;
             btnLogout.UseVisualStyleBackColor = true;
@@ -192,9 +194,10 @@
             // 
             User.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             User.Image = Properties.Resources.icon_2;
-            User.Location = new Point(391, 18);
+            User.Location = new Point(325, 36);
+            User.Margin = new Padding(5, 6, 5, 6);
             User.Name = "User";
-            User.Size = new Size(58, 50);
+            User.Size = new Size(99, 100);
             User.SizeMode = PictureBoxSizeMode.StretchImage;
             User.TabIndex = 0;
             User.TabStop = false;
@@ -204,10 +207,10 @@
             btnSend.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnSend.BackgroundImage = Properties.Resources.settings1;
             btnSend.BackgroundImageLayout = ImageLayout.Stretch;
-            btnSend.Location = new Point(460, 38);
-            btnSend.Margin = new Padding(1, 2, 1, 2);
+            btnSend.Location = new Point(444, 76);
+            btnSend.Margin = new Padding(2, 4, 2, 4);
             btnSend.Name = "btnSend";
-            btnSend.Size = new Size(22, 20);
+            btnSend.Size = new Size(38, 40);
             btnSend.TabIndex = 5;
             btnSend.UseVisualStyleBackColor = true;
             // 
@@ -215,9 +218,10 @@
             // 
             Nama_Karyawan.AutoSize = true;
             Nama_Karyawan.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            Nama_Karyawan.Location = new Point(24, 18);
+            Nama_Karyawan.Location = new Point(41, 36);
+            Nama_Karyawan.Margin = new Padding(5, 0, 5, 0);
             Nama_Karyawan.Name = "Nama_Karyawan";
-            Nama_Karyawan.Size = new Size(124, 20);
+            Nama_Karyawan.Size = new Size(222, 32);
             Nama_Karyawan.TabIndex = 3;
             Nama_Karyawan.Text = "Nama Karyawan";
             // 
@@ -225,23 +229,26 @@
             // 
             Depart.AutoSize = true;
             Depart.Font = new Font("Microsoft Sans Serif", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            Depart.Location = new Point(66, 38);
+            Depart.Location = new Point(113, 76);
+            Depart.Margin = new Padding(5, 0, 5, 0);
             Depart.Name = "Depart";
-            Depart.Size = new Size(82, 17);
+            Depart.Size = new Size(138, 29);
             Depart.TabIndex = 4;
             Depart.Text = "Department";
             Depart.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Main
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(554, 721);
+            ClientSize = new Size(605, 1050);
             Controls.Add(Main_Menu);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(5, 6, 5, 6);
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
+            WindowState = FormWindowState.Minimized;
             Main_Menu.ResumeLayout(false);
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);

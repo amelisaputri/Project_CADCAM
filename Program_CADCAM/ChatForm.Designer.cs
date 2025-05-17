@@ -158,6 +158,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "ChatForm";
             StartPosition = FormStartPosition.CenterScreen;
+            WindowState = FormWindowState.Minimized;
             panel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
