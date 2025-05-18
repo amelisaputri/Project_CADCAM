@@ -21,6 +21,7 @@ namespace Program_CADCAM
         {
             InitializeComponent();
             //ConnectToServer("10.10.92.41", 5000);
+            this.Size = new Size(627, 1106);
         }
 
 

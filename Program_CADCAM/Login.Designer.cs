@@ -50,9 +50,9 @@
             txtBoxUser.ForeColor = Color.Gray;
             txtBoxUser.Location = new Point(129, 422);
             txtBoxUser.Name = "txtBoxUser";
-            txtBoxUser.Size = new Size(326, 39);
+            txtBoxUser.Size = new Size(326, 35);
             txtBoxUser.TabIndex = 0;
-            txtBoxUser.Text = "Username";
+            txtBoxUser.Text = "NIK";
             txtBoxUser.MouseEnter += txtUsername_Enter;
             txtBoxUser.MouseLeave += txtUsername_Leave;
             // 
@@ -79,7 +79,7 @@
             txtBoxPass.Location = new Point(129, 480);
             txtBoxPass.Name = "txtBoxPass";
             txtBoxPass.PasswordChar = '*';
-            txtBoxPass.Size = new Size(326, 39);
+            txtBoxPass.Size = new Size(326, 35);
             txtBoxPass.TabIndex = 1;
             txtBoxPass.Tag = "";
             txtBoxPass.Text = "Password";
@@ -93,9 +93,9 @@
             checkBox1.BackColor = Color.Transparent;
             tableLayoutPanel1.SetColumnSpan(checkBox1, 2);
             checkBox1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox1.Location = new Point(129, 538);
+            checkBox1.Location = new Point(129, 542);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(153, 33);
+            checkBox1.Size = new Size(132, 29);
             checkBox1.TabIndex = 3;
             checkBox1.Text = "Auto Login";
             checkBox1.UseVisualStyleBackColor = false;
@@ -109,9 +109,9 @@
             tableLayoutPanel1.SetColumnSpan(LinkCreateAcc, 2);
             LinkCreateAcc.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LinkCreateAcc.LinkColor = Color.Black;
-            LinkCreateAcc.Location = new Point(116, 784);
+            LinkCreateAcc.Location = new Point(141, 788);
             LinkCreateAcc.Name = "LinkCreateAcc";
-            LinkCreateAcc.Size = new Size(154, 29);
+            LinkCreateAcc.Size = new Size(129, 25);
             LinkCreateAcc.TabIndex = 4;
             LinkCreateAcc.TabStop = true;
             LinkCreateAcc.Text = "Daftar Login";
@@ -129,9 +129,9 @@
             LinkResetPass.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LinkResetPass.ImageAlign = ContentAlignment.MiddleLeft;
             LinkResetPass.LinkColor = Color.Black;
-            LinkResetPass.Location = new Point(310, 784);
+            LinkResetPass.Location = new Point(310, 788);
             LinkResetPass.Name = "LinkResetPass";
-            LinkResetPass.Size = new Size(203, 29);
+            LinkResetPass.Size = new Size(167, 25);
             LinkResetPass.TabIndex = 5;
             LinkResetPass.TabStop = true;
             LinkResetPass.Text = "Reset Password";
@@ -146,9 +146,9 @@
             SHI.Font = new Font("Britannic Bold", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             SHI.ForeColor = Color.DarkBlue;
             SHI.ImageAlign = ContentAlignment.TopCenter;
-            SHI.Location = new Point(317, 65);
+            SHI.Location = new Point(358, 65);
             SHI.Name = "SHI";
-            SHI.Size = new Size(285, 138);
+            SHI.Size = new Size(244, 116);
             SHI.TabIndex = 10;
             SHI.Text = "SHI\r\nCAD/CAM\r\n";
             SHI.TextAlign = ContentAlignment.TopRight;
@@ -201,8 +201,9 @@
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(12F, 25F);
+            AutoScaleDimensions = new SizeF(10F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(605, 1050);
@@ -214,7 +215,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
-            WindowState = FormWindowState.Minimized;
+            Load += Login_Load;
             Panel_Login.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();

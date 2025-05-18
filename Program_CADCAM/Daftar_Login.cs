@@ -11,25 +11,26 @@ using System.Data.SqlClient;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Microsoft.VisualBasic.ApplicationServices;
+using Program_CADCAM.Configuration;
 
 namespace Program_CADCAM
 {
     public partial class Daftar_Login : Form
     {
-        string connectionString = "Server=10.10.92.41;Database=CADCAM;User ID=sa;Password=vision2028;";
+        string connectionString;
 
 
         public Daftar_Login()
         {
             InitializeComponent();
-
+            this.Size = new Size(627, 1106);
         }
         private System.Windows.Forms.Label lblResult;
 
         // Perintah saat klik text box Username
         private void txtBoxUsername_Enter(object sender, EventArgs e)
         {
-            if (txtBoxUser.Text == "Username")
+            if (txtBoxUser.Text == "NIK")
             {
                 txtBoxUser.Text = "";
                 txtBoxUser.ForeColor = Color.Black;
@@ -40,7 +41,7 @@ namespace Program_CADCAM
         {
             if (string.IsNullOrWhiteSpace(txtBoxUser.Text))
             {
-                txtBoxUser.Text = "Username";
+                txtBoxUser.Text = "NIK";
                 txtBoxUser.ForeColor = Color.Gray;
             }
         }
@@ -190,6 +191,10 @@ namespace Program_CADCAM
             }
         }
 
+        private void Daftar_Login_Load(object sender, EventArgs e)
+        {
+            connectionString = Connection.ConnectionString;
+        }
     }
 }
 

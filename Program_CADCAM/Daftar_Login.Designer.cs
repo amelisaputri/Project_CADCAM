@@ -55,9 +55,9 @@ namespace Program_CADCAM
             panel1.Controls.Add(tableLayoutPanel1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(5, 6, 5, 6);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(605, 1050);
+            panel1.Size = new Size(504, 875);
             panel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -82,6 +82,7 @@ namespace Program_CADCAM
             tableLayoutPanel1.Controls.Add(btnDaftar, 2, 11);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 13;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 4.380934F));
@@ -96,8 +97,8 @@ namespace Program_CADCAM
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 3.986694F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 4.473142F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 15.6062937F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 57F));
-            tableLayoutPanel1.Size = new Size(605, 1050);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 48F));
+            tableLayoutPanel1.Size = new Size(504, 875);
             tableLayoutPanel1.TabIndex = 16;
             // 
             // Profil
@@ -106,11 +107,11 @@ namespace Program_CADCAM
             Profil.BackColor = Color.Transparent;
             tableLayoutPanel1.SetColumnSpan(Profil, 4);
             Profil.Image = Properties.Resources.icon_2;
-            Profil.Location = new Point(67, 49);
-            Profil.Margin = new Padding(5, 6, 5, 6);
+            Profil.Location = new Point(56, 41);
+            Profil.Margin = new Padding(4, 5, 4, 5);
             Profil.Name = "Profil";
             tableLayoutPanel1.SetRowSpan(Profil, 2);
-            Profil.Size = new Size(467, 346);
+            Profil.Size = new Size(389, 287);
             Profil.SizeMode = PictureBoxSizeMode.Zoom;
             Profil.TabIndex = 15;
             Profil.TabStop = false;
@@ -121,12 +122,12 @@ namespace Program_CADCAM
             tableLayoutPanel1.SetColumnSpan(txtBoxUser, 2);
             txtBoxUser.Font = new Font("Microsoft Sans Serif", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxUser.ForeColor = Color.Gray;
-            txtBoxUser.Location = new Point(102, 426);
-            txtBoxUser.Margin = new Padding(5, 6, 5, 6);
+            txtBoxUser.Location = new Point(85, 354);
+            txtBoxUser.Margin = new Padding(4, 5, 4, 5);
             txtBoxUser.Name = "txtBoxUser";
-            txtBoxUser.Size = new Size(397, 34);
+            txtBoxUser.Size = new Size(331, 30);
             txtBoxUser.TabIndex = 0;
-            txtBoxUser.Text = "Username";
+            txtBoxUser.Text = "NIK";
             txtBoxUser.MouseEnter += txtBoxUsername_Enter;
             txtBoxUser.MouseLeave += txtBoxUsername_Leave;
             // 
@@ -136,11 +137,11 @@ namespace Program_CADCAM
             tableLayoutPanel1.SetColumnSpan(txtBoxPass, 2);
             txtBoxPass.Font = new Font("Microsoft Sans Serif", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxPass.ForeColor = Color.Gray;
-            txtBoxPass.Location = new Point(102, 473);
-            txtBoxPass.Margin = new Padding(5, 6, 5, 6);
+            txtBoxPass.Location = new Point(85, 393);
+            txtBoxPass.Margin = new Padding(4, 5, 4, 5);
             txtBoxPass.Name = "txtBoxPass";
             txtBoxPass.PasswordChar = '*';
-            txtBoxPass.Size = new Size(397, 34);
+            txtBoxPass.Size = new Size(331, 30);
             txtBoxPass.TabIndex = 7;
             txtBoxPass.Text = "Password";
             txtBoxPass.MouseEnter += txtBoxPassword_Enter;
@@ -152,10 +153,10 @@ namespace Program_CADCAM
             tableLayoutPanel1.SetColumnSpan(txtBoxName, 2);
             txtBoxName.Font = new Font("Microsoft Sans Serif", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxName.ForeColor = Color.Gray;
-            txtBoxName.Location = new Point(102, 573);
-            txtBoxName.Margin = new Padding(5, 6, 5, 6);
+            txtBoxName.Location = new Point(85, 475);
+            txtBoxName.Margin = new Padding(4, 5, 4, 5);
             txtBoxName.Name = "txtBoxName";
-            txtBoxName.Size = new Size(397, 34);
+            txtBoxName.Size = new Size(331, 30);
             txtBoxName.TabIndex = 9;
             txtBoxName.Text = "Nama Karyawan";
             txtBoxName.MouseEnter += txtBoxNama_Enter;
@@ -167,10 +168,10 @@ namespace Program_CADCAM
             tableLayoutPanel1.SetColumnSpan(txtBoxPhone, 2);
             txtBoxPhone.Font = new Font("Microsoft Sans Serif", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxPhone.ForeColor = Color.Gray;
-            txtBoxPhone.Location = new Point(102, 624);
-            txtBoxPhone.Margin = new Padding(5, 6, 5, 6);
+            txtBoxPhone.Location = new Point(85, 518);
+            txtBoxPhone.Margin = new Padding(4, 5, 4, 5);
             txtBoxPhone.Name = "txtBoxPhone";
-            txtBoxPhone.Size = new Size(397, 34);
+            txtBoxPhone.Size = new Size(331, 30);
             txtBoxPhone.TabIndex = 10;
             txtBoxPhone.Text = "Nomor Handphone";
             txtBoxPhone.MouseEnter += txtBoxPhone_Enter;
@@ -182,10 +183,10 @@ namespace Program_CADCAM
             Team.AutoSize = true;
             Team.BackColor = Color.Transparent;
             Team.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Team.Location = new Point(102, 760);
-            Team.Margin = new Padding(5, 0, 5, 0);
+            Team.Location = new Point(85, 630);
+            Team.Margin = new Padding(4, 0, 4, 0);
             Team.Name = "Team";
-            Team.Size = new Size(76, 29);
+            Team.Size = new Size(63, 25);
             Team.TabIndex = 14;
             Team.Text = "Team";
             // 
@@ -195,10 +196,10 @@ namespace Program_CADCAM
             Department.AutoSize = true;
             Department.BackColor = Color.Transparent;
             Department.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Department.Location = new Point(310, 760);
-            Department.Margin = new Padding(5, 0, 5, 0);
+            Department.Location = new Point(258, 630);
+            Department.Margin = new Padding(4, 0, 4, 0);
             Department.Name = "Department";
-            Department.Size = new Size(138, 29);
+            Department.Size = new Size(113, 25);
             Department.TabIndex = 13;
             Department.Text = "Department";
             // 
@@ -207,10 +208,10 @@ namespace Program_CADCAM
             cmbBoxDepart.Font = new Font("Times New Roman", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbBoxDepart.FormattingEnabled = true;
             cmbBoxDepart.Items.AddRange(new object[] { "CAD", "CAM", "IT" });
-            cmbBoxDepart.Location = new Point(102, 795);
-            cmbBoxDepart.Margin = new Padding(5, 6, 5, 6);
+            cmbBoxDepart.Location = new Point(85, 660);
+            cmbBoxDepart.Margin = new Padding(4, 5, 4, 5);
             cmbBoxDepart.Name = "cmbBoxDepart";
-            cmbBoxDepart.Size = new Size(198, 34);
+            cmbBoxDepart.Size = new Size(165, 30);
             cmbBoxDepart.TabIndex = 5;
             // 
             // cmbBoxTeam
@@ -219,10 +220,10 @@ namespace Program_CADCAM
             cmbBoxTeam.Font = new Font("Times New Roman", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbBoxTeam.FormattingEnabled = true;
             cmbBoxTeam.Items.AddRange(new object[] { "2D/3D PRINT", "3D/ 3D SCAN", "CAM", "IT" });
-            cmbBoxTeam.Location = new Point(310, 795);
-            cmbBoxTeam.Margin = new Padding(5, 6, 5, 6);
+            cmbBoxTeam.Location = new Point(258, 660);
+            cmbBoxTeam.Margin = new Padding(4, 5, 4, 5);
             cmbBoxTeam.Name = "cmbBoxTeam";
-            cmbBoxTeam.Size = new Size(189, 34);
+            cmbBoxTeam.Size = new Size(158, 30);
             cmbBoxTeam.TabIndex = 6;
             // 
             // btnDaftar
@@ -231,10 +232,10 @@ namespace Program_CADCAM
             btnDaftar.BackColor = Color.White;
             tableLayoutPanel1.SetColumnSpan(btnDaftar, 2);
             btnDaftar.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDaftar.Location = new Point(102, 871);
-            btnDaftar.Margin = new Padding(5, 6, 5, 6);
+            btnDaftar.Location = new Point(85, 723);
+            btnDaftar.Margin = new Padding(4, 5, 4, 5);
             btnDaftar.Name = "btnDaftar";
-            btnDaftar.Size = new Size(397, 78);
+            btnDaftar.Size = new Size(331, 65);
             btnDaftar.TabIndex = 12;
             btnDaftar.Text = "Daftar Login";
             btnDaftar.UseVisualStyleBackColor = false;
@@ -242,20 +243,22 @@ namespace Program_CADCAM
             // 
             // Daftar_Login
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackgroundImage = Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(605, 1050);
+            ClientSize = new Size(504, 875);
+            ControlBox = false;
             Controls.Add(panel1);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedDialog;
             HelpButton = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(5, 6, 5, 6);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Daftar_Login";
             StartPosition = FormStartPosition.CenterScreen;
-            WindowState = FormWindowState.Minimized;
+            Load += Daftar_Login_Load;
             panel1.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();

@@ -13,7 +13,7 @@ namespace Program_CADCAM
             //ApplicationConfiguration.Initialize();
             Application.Run(new Login());
             //Application.Run(new Daftar_Login());
-            Application.Run(new Main());
+            //Application.Run(new Main());
             //Application.Run(new ChatForm());
         }
     }

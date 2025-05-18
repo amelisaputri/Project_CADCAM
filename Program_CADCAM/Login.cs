@@ -1,28 +1,31 @@
 using System.Data;
 using System.Data.SqlClient;
 using Microsoft.VisualBasic.ApplicationServices;
+using Program_CADCAM.Configuration;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Program_CADCAM
 {
     public partial class Login : Form
     {
+        string userId;
+        string userName;
+        string userDepartment;
+        string connectionString;
 
-        private object txtUser;
-        private object txtPass;
-        string connectionString = "Server=10.10.92.41;Database=CADCAM;User ID=sa;Password=vision2028;";
 
 
         public Login()
         {
             InitializeComponent();
+            this.Size = new Size(627, 1106);
         }
 
         private System.Windows.Forms.Label lblResult;
 
         private void txtUsername_Enter(object sender, EventArgs e)
         {
-            if (txtBoxUser.Text == "Username")
+            if (txtBoxUser.Text == "NIK")
             {
                 txtBoxUser.Text = "";
                 txtBoxUser.ForeColor = Color.Black;
@@ -33,7 +36,7 @@ namespace Program_CADCAM
         {
             if (string.IsNullOrWhiteSpace(txtBoxUser.Text))
             {
-                txtBoxUser.Text = "Username";
+                txtBoxUser.Text = "NIK";
                 txtBoxUser.ForeColor = Color.Gray;
             }
         }
@@ -76,7 +79,7 @@ namespace Program_CADCAM
                     conn.Open();
 
                     // Query to get user information (username and password, and role)
-                    string query = "SELECT USER_NIK, USER_PASS FROM MASTER_USER WHERE USER_NIK = @USER_NIK ";
+                    string query = "SELECT USER_NIK, USER_PASS, USER_NAME, USER_DEPART FROM MASTER_USER WHERE USER_NIK = @USER_NIK ";
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@USER_NIK", UserNIK);
@@ -86,19 +89,24 @@ namespace Program_CADCAM
                         SqlDataReader reader = cmd.ExecuteReader();
                         if (reader.Read())
                         {
-                            
+
                             string dbPassword = reader["USER_PASS"].ToString();
                             string userNIK = reader["USER_NIK"].ToString();
+                            string Name = reader["USER_NAME"].ToString();
+                            string Depart = reader["USER_DEPART"].ToString();
 
                             // Check if password matches
                             if (UserPass == dbPassword)
                             {
-                                // Login successful
-                                this.Hide(); // Hide login form
-                                MessageBox.Show("Selamat Datang User", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                userName = Name;
+                                userId = UserNIK;
+                                userDepartment = Depart;
+                                                                                                                                this.Hide();
+                                MessageBox.Show("Selamat Datang "+userName, "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Main main = new Main();
+                                main.Load_Data(userId,userName,userDepartment);
                                 main.ShowDialog();
-                                this.Show(); // Show the login form again after closing the chat form
+                                this.Show();
                             }
                             else
                             {
@@ -126,7 +134,7 @@ namespace Program_CADCAM
         // Move to Page Daftar_login
         private void LinkCreateAcc_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //this.Hide();
+            this.Hide();
             Daftar_Login registerForm = new Daftar_Login();
             registerForm.ShowDialog();
             this.Show();
@@ -140,6 +148,12 @@ namespace Program_CADCAM
         private void LinkCreateAcc_MouseLeave(object sender, EventArgs e)
         {
             LinkCreateAcc.ForeColor = Color.Black;
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            Connection.LoadConnectionString();
+            connectionString = Connection.ConnectionString;
         }
     }
 }
