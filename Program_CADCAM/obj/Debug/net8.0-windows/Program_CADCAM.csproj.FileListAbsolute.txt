@@ -145,7 +145,6 @@ E:\PROJECT TRIAL\C# Project\Project_CADCAM\Program_CADCAM\bin\Debug\net8.0-windo
 E:\PROJECT TRIAL\C# Project\Project_CADCAM\Program_CADCAM\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
 E:\PROJECT TRIAL\C# Project\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.csproj.AssemblyReference.cache
 E:\PROJECT TRIAL\C# Project\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.ChatForm.resources
-E:\PROJECT TRIAL\C# Project\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.ChatForm_20250513.resources
 E:\PROJECT TRIAL\C# Project\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.Daftar_Login.resources
 E:\PROJECT TRIAL\C# Project\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.Login.resources
 E:\PROJECT TRIAL\C# Project\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.Main.resources

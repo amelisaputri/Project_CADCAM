@@ -96,13 +96,15 @@ namespace Program_CADCAM
 
                         while (reader.Read())
                         {
+                            string userNik = reader["USER_NIK"].ToString();
                             string userName = reader["USER_NAME"].ToString();
 
-                            TreeNode node = new TreeNode(userName);
-                            node.Tag = userName; // Simpan USER_NAME di Tag node
+                            TreeNode node = new TreeNode(userName); // shown in the tree
+                            node.Tag = userNik; // store the NIK as value
 
                             ListUser.Nodes.Add(node);
                         }
+
                     }
                 }
             }
@@ -126,6 +128,21 @@ namespace Program_CADCAM
             LoadUserList();
 
         }
-       
+
+        private void ListUser_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            TreeNode selectedNode = e.Node;
+            if (selectedNode != null)
+            {
+                string selectedUserNik = selectedNode.Tag.ToString();
+                string selectedUserName = selectedNode.Text;
+
+                this.Hide();
+                ChatForm form = new ChatForm();
+                form.Load_DataContact(selectedUserNik, selectedUserName, "");
+                form.ShowDialog();
+                this.Show();
+            }
+        }
     }
 }

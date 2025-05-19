@@ -11,6 +11,7 @@ using System.IO;
 using System.Net.Sockets;
 using System.Threading;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace Program_CADCAM
 {
@@ -20,9 +21,25 @@ namespace Program_CADCAM
         public ChatForm()
         {
             InitializeComponent();
-            //ConnectToServer("10.10.92.41", 5000);
             this.Size = new Size(520, 920);
-    
+
+        }
+
+        string userId;
+        string username;
+        string depart;
+        string connectionString;
+
+        public void Load_DataContact(string id, string name, string department)
+        {
+            userId = id;
+            username = name;
+            depart = department;
+        }
+
+        private void ChatForm_Load(object sender, EventArgs e)
+        {
+            lblNama.Text = username;
         }
 
         //private void treeViewUsers_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)

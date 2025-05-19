@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
-  <connectionString>Server=10.10.92.41;Database=CADCAM;User ID=sa;Password=vision2028;</connectionString>
+  <connectionString>Server=.;Database=CADCAM;User ID=sa;Password=system;</connectionString>
 </configuration>

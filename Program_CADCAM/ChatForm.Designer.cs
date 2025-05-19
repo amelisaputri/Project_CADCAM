@@ -34,7 +34,7 @@
             panel1 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
             btnSend = new Button();
-            label1 = new Label();
+            lblNama = new Label();
             panel2 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1.SuspendLayout();
@@ -46,11 +46,11 @@
             // txtBoxMessage
             // 
             txtBoxMessage.Dock = DockStyle.Fill;
-            txtBoxMessage.Location = new Point(2, 3);
-            txtBoxMessage.Margin = new Padding(2, 3, 2, 3);
+            txtBoxMessage.Location = new Point(1, 2);
+            txtBoxMessage.Margin = new Padding(1, 2, 1, 2);
             txtBoxMessage.Multiline = true;
             txtBoxMessage.Name = "txtBoxMessage";
-            txtBoxMessage.Size = new Size(441, 73);
+            txtBoxMessage.Size = new Size(310, 42);
             txtBoxMessage.TabIndex = 0;
             // 
             // txtBoxChat
@@ -58,11 +58,11 @@
             txtBoxChat.BackColor = SystemColors.ControlLightLight;
             tableLayoutPanel1.SetColumnSpan(txtBoxChat, 2);
             txtBoxChat.Dock = DockStyle.Fill;
-            txtBoxChat.Location = new Point(2, 93);
-            txtBoxChat.Margin = new Padding(2, 3, 2, 3);
+            txtBoxChat.Location = new Point(1, 77);
+            txtBoxChat.Margin = new Padding(1, 2, 1, 2);
             txtBoxChat.Multiline = true;
             txtBoxChat.Name = "txtBoxChat";
-            txtBoxChat.Size = new Size(510, 733);
+            txtBoxChat.Size = new Size(358, 419);
             txtBoxChat.TabIndex = 1;
             // 
             // panel1
@@ -71,10 +71,10 @@
             tableLayoutPanel1.SetColumnSpan(panel1, 2);
             panel1.Controls.Add(tableLayoutPanel2);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(2, 832);
-            panel1.Margin = new Padding(2, 3, 2, 3);
+            panel1.Location = new Point(1, 500);
+            panel1.Margin = new Padding(1, 2, 1, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(510, 79);
+            panel1.Size = new Size(358, 46);
             panel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -86,12 +86,11 @@
             tableLayoutPanel2.Controls.Add(txtBoxMessage, 0, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(0, 0);
-            tableLayoutPanel2.Margin = new Padding(4, 5, 4, 5);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 78F));
-            tableLayoutPanel2.Size = new Size(510, 79);
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 47F));
+            tableLayoutPanel2.Size = new Size(358, 46);
             tableLayoutPanel2.TabIndex = 5;
             // 
             // btnSend
@@ -99,67 +98,65 @@
             btnSend.BackgroundImage = Properties.Resources.message__1_;
             btnSend.BackgroundImageLayout = ImageLayout.Stretch;
             btnSend.Dock = DockStyle.Fill;
-            btnSend.Location = new Point(447, 3);
-            btnSend.Margin = new Padding(2, 3, 2, 3);
+            btnSend.Location = new Point(313, 2);
+            btnSend.Margin = new Padding(1, 2, 1, 2);
             btnSend.Name = "btnSend";
-            btnSend.Size = new Size(61, 73);
+            btnSend.Size = new Size(44, 42);
             btnSend.TabIndex = 4;
             btnSend.UseVisualStyleBackColor = true;
-            
             // 
-            // label1
+            // lblNama
             // 
-            label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Microsoft Sans Serif", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            label1.Location = new Point(2, 0);
-            label1.Margin = new Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(258, 90);
-            label1.TabIndex = 2;
-            label1.Text = "Nama Karyawan";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            lblNama.Dock = DockStyle.Fill;
+            lblNama.Font = new Font("Microsoft Sans Serif", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            lblNama.Location = new Point(1, 0);
+            lblNama.Margin = new Padding(1, 0, 1, 0);
+            lblNama.Name = "lblNama";
+            lblNama.Size = new Size(181, 75);
+            lblNama.TabIndex = 2;
+            lblNama.Text = "Nama Karyawan";
+            lblNama.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
             panel2.Controls.Add(tableLayoutPanel1);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
-            panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(514, 914);
+            panel2.Size = new Size(360, 548);
             panel2.TabIndex = 5;
             // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 51.0385742F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 51.03857F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 48.9614258F));
             tableLayoutPanel1.Controls.Add(txtBoxChat, 0, 1);
-            tableLayoutPanel1.Controls.Add(label1, 0, 0);
+            tableLayoutPanel1.Controls.Add(lblNama, 0, 0);
             tableLayoutPanel1.Controls.Add(panel1, 0, 2);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(4, 5, 4, 5);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 9.951057F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 81.09162F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 9.161794F));
-            tableLayoutPanel1.Size = new Size(514, 914);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
+            tableLayoutPanel1.Size = new Size(360, 548);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // ChatForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(514, 914);
+            ClientSize = new Size(360, 548);
             ControlBox = false;
             Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(2, 3, 2, 3);
+            Margin = new Padding(1, 2, 1, 2);
             Name = "ChatForm";
             StartPosition = FormStartPosition.CenterScreen;
+            Load += ChatForm_Load;
             panel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
@@ -174,7 +171,7 @@
         private TextBox txtBoxMessage;
         private TextBox txtBoxChat;
         private Panel panel1;
-        private Label label1;
+        private Label lblNama;
         private PictureBox pictureBox1;
         private Button btnSend;
         private Panel panel2;
