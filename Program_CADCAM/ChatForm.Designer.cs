@@ -50,7 +50,7 @@
             txtBoxMessage.Margin = new Padding(2, 3, 2, 3);
             txtBoxMessage.Multiline = true;
             txtBoxMessage.Name = "txtBoxMessage";
-            txtBoxMessage.Size = new Size(521, 85);
+            txtBoxMessage.Size = new Size(441, 73);
             txtBoxMessage.TabIndex = 0;
             // 
             // txtBoxChat
@@ -58,11 +58,11 @@
             txtBoxChat.BackColor = SystemColors.ControlLightLight;
             tableLayoutPanel1.SetColumnSpan(txtBoxChat, 2);
             txtBoxChat.Dock = DockStyle.Fill;
-            txtBoxChat.Location = new Point(2, 107);
+            txtBoxChat.Location = new Point(2, 93);
             txtBoxChat.Margin = new Padding(2, 3, 2, 3);
             txtBoxChat.Multiline = true;
             txtBoxChat.Name = "txtBoxChat";
-            txtBoxChat.Size = new Size(601, 843);
+            txtBoxChat.Size = new Size(510, 733);
             txtBoxChat.TabIndex = 1;
             // 
             // panel1
@@ -71,10 +71,10 @@
             tableLayoutPanel1.SetColumnSpan(panel1, 2);
             panel1.Controls.Add(tableLayoutPanel2);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(2, 956);
+            panel1.Location = new Point(2, 832);
             panel1.Margin = new Padding(2, 3, 2, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(601, 91);
+            panel1.Size = new Size(510, 79);
             panel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -90,8 +90,8 @@
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 74F));
-            tableLayoutPanel2.Size = new Size(601, 91);
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 78F));
+            tableLayoutPanel2.Size = new Size(510, 79);
             tableLayoutPanel2.TabIndex = 5;
             // 
             // btnSend
@@ -99,13 +99,13 @@
             btnSend.BackgroundImage = Properties.Resources.message__1_;
             btnSend.BackgroundImageLayout = ImageLayout.Stretch;
             btnSend.Dock = DockStyle.Fill;
-            btnSend.Location = new Point(527, 3);
+            btnSend.Location = new Point(447, 3);
             btnSend.Margin = new Padding(2, 3, 2, 3);
             btnSend.Name = "btnSend";
-            btnSend.Size = new Size(72, 85);
+            btnSend.Size = new Size(61, 73);
             btnSend.TabIndex = 4;
             btnSend.UseVisualStyleBackColor = true;
-            btnSend.Click += btnSend_Click;
+            
             // 
             // label1
             // 
@@ -114,7 +114,7 @@
             label1.Location = new Point(2, 0);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(304, 104);
+            label1.Size = new Size(258, 90);
             label1.TabIndex = 2;
             label1.Text = "Nama Karyawan";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -126,7 +126,7 @@
             panel2.Location = new Point(0, 0);
             panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(605, 1050);
+            panel2.Size = new Size(514, 914);
             panel2.TabIndex = 5;
             // 
             // tableLayoutPanel1
@@ -145,14 +145,14 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 9.951057F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 81.09162F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 9.161794F));
-            tableLayoutPanel1.Size = new Size(605, 1050);
+            tableLayoutPanel1.Size = new Size(514, 914);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // ChatForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(605, 1050);
+            ClientSize = new Size(514, 914);
             ControlBox = false;
             Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.FixedDialog;

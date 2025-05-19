@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,7 +19,7 @@ namespace Program_CADCAM
         {
 
             InitializeComponent();
-            this.Size = new Size(627, 1106);
+            this.Size = new Size(520, 920);
 
         }
 
@@ -38,12 +39,12 @@ namespace Program_CADCAM
         {
             try
             {
-                
+
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
 
-                    string query = "SELECT USER_NAME FROM MASTER_USER WHERE USER_NIK != @USER_NIK"; // Adjust table name and columns if needed
+                    string query = "SELECT USER_NIK, USER_NAME FROM MASTER_USER WHERE USER_NIK != @USER_NIK"; // Adjust table name and columns if needed
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -56,13 +57,58 @@ namespace Program_CADCAM
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);
 
-                        DataContact.DataSource = dt;
+                        /// Clear existing nodes
+                        ListUser.Nodes.Clear();
+
+                        // Add each USER_NAME as a root node
+                        foreach (DataRow row in dt.Rows)
+                        {
+                            string userName = row["USER_NAME"].ToString();
+                            ListUser.Nodes.Add(new TreeNode(userName));
+                        }
+
+                        ListUser.ExpandAll(); // Optional: show all nodes
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Failed to load data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadUserList()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT USER_NIK, USER_NAME FROM MASTER_USER WHERE USER_NIK != @USER_NIK";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@USER_NIK", userId); // userId = user yang login
+
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        ListUser.Nodes.Clear();
+
+                        while (reader.Read())
+                        {
+                            string userName = reader["USER_NAME"].ToString();
+
+                            TreeNode node = new TreeNode(userName);
+                            node.Tag = userName; // Simpan USER_NAME di Tag node
+
+                            ListUser.Nodes.Add(node);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat user: " + ex.Message);
             }
         }
 
@@ -77,9 +123,9 @@ namespace Program_CADCAM
             LblDepart.Text = depart;
             connectionString = Connection.ConnectionString;
             Load_DataContact();
-
+            LoadUserList();
 
         }
-
+       
     }
 }

@@ -23,8 +23,9 @@ namespace Program_CADCAM
         public Daftar_Login()
         {
             InitializeComponent();
-            this.Size = new Size(627, 1106);
+            this.Size = new Size(520, 920);
         }
+
         private System.Windows.Forms.Label lblResult;
 
         // Perintah saat klik text box Username

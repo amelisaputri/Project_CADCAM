@@ -75,7 +75,6 @@ C:\AMEL CADCAM\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CA
 C:\AMEL CADCAM\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\ref\Program_CADCAM.dll
 C:\AMEL CADCAM\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.ChatForm.resources
 C:\AMEL CADCAM\Up\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.ChatForm.resources
-C:\AMEL CADCAM\Up\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.ChatForm_20250513.resources
 C:\AMEL CADCAM\Up\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.Daftar_Login.resources
 C:\AMEL CADCAM\Up\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.Login.resources
 C:\AMEL CADCAM\Up\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.Main.resources

@@ -18,7 +18,7 @@ namespace Program_CADCAM
         public Login()
         {
             InitializeComponent();
-            this.Size = new Size(627, 1106);
+            this.Size = new Size(520, 920);
         }
 
         private System.Windows.Forms.Label lblResult;
@@ -101,7 +101,8 @@ namespace Program_CADCAM
                                 userName = Name;
                                 userId = UserNIK;
                                 userDepartment = Depart;
-                                                                                                                                this.Hide();
+
+                                this.Hide();
                                 MessageBox.Show("Selamat Datang "+userName, "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Main main = new Main();
                                 main.Load_Data(userId,userName,userDepartment);

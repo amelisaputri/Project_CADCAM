@@ -28,198 +28,121 @@
         /// </summary>
         private void InitializeComponent()
         {
+            TreeNode treeNode1 = new TreeNode("Contact User");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             Main_Menu = new Panel();
-            tabControl1 = new TabControl();
-            tabPage1 = new TabPage();
-            panel1 = new Panel();
-            DataChat = new DataGridView();
-            Chat = new DataGridViewTextBoxColumn();
-            tabPage2 = new TabPage();
-            panel2 = new Panel();
-            DataContact = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            tblLytPnl_MainMenu = new TableLayoutPanel();
             Profil = new Panel();
-            btnLogout = new Button();
+            tableLayoutPanel1 = new TableLayoutPanel();
             User = new PictureBox();
-            btnSend = new Button();
             LblNama_Karyawan = new Label();
             LblDepart = new Label();
+            btnSetting = new Button();
+            btnLogout = new Button();
+            tabControl_ListContact = new TabControl();
+            tabPage_ListContact = new TabPage();
+            panel_ListContact = new Panel();
+            ListUser = new TreeView();
+            tabPage_Chat = new TabPage();
+            tableLayoutPanel_Chat = new TableLayoutPanel();
+            panel1 = new Panel();
+            lbKaryawan = new Label();
             Main_Menu.SuspendLayout();
-            tabControl1.SuspendLayout();
-            tabPage1.SuspendLayout();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)DataChat).BeginInit();
-            tabPage2.SuspendLayout();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)DataContact).BeginInit();
+            tblLytPnl_MainMenu.SuspendLayout();
             Profil.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)User).BeginInit();
+            tabControl_ListContact.SuspendLayout();
+            tabPage_ListContact.SuspendLayout();
+            panel_ListContact.SuspendLayout();
+            tabPage_Chat.SuspendLayout();
+            tableLayoutPanel_Chat.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // Main_Menu
             // 
             Main_Menu.BackColor = SystemColors.ControlLightLight;
-            Main_Menu.Controls.Add(tabControl1);
-            Main_Menu.Controls.Add(Profil);
+            Main_Menu.Controls.Add(tblLytPnl_MainMenu);
             Main_Menu.Dock = DockStyle.Fill;
             Main_Menu.Location = new Point(0, 0);
             Main_Menu.Margin = new Padding(4, 5, 4, 5);
             Main_Menu.Name = "Main_Menu";
-            Main_Menu.Size = new Size(605, 1050);
+            Main_Menu.Size = new Size(514, 914);
             Main_Menu.TabIndex = 0;
             // 
-            // tabControl1
+            // tblLytPnl_MainMenu
             // 
-            tabControl1.Controls.Add(tabPage1);
-            tabControl1.Controls.Add(tabPage2);
-            tabControl1.Dock = DockStyle.Fill;
-            tabControl1.Location = new Point(0, 145);
-            tabControl1.Margin = new Padding(2, 3, 2, 3);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(605, 905);
-            tabControl1.TabIndex = 1;
-            // 
-            // tabPage1
-            // 
-            tabPage1.Controls.Add(panel1);
-            tabPage1.Location = new Point(4, 34);
-            tabPage1.Margin = new Padding(2, 3, 2, 3);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(2, 3, 2, 3);
-            tabPage1.Size = new Size(597, 867);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "Chat";
-            tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(DataChat);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(2, 3);
-            panel1.Margin = new Padding(2, 3, 2, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(593, 861);
-            panel1.TabIndex = 3;
-            // 
-            // DataChat
-            // 
-            DataChat.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataChat.Columns.AddRange(new DataGridViewColumn[] { Chat });
-            DataChat.Dock = DockStyle.Fill;
-            DataChat.Location = new Point(0, 0);
-            DataChat.Margin = new Padding(2, 3, 2, 3);
-            DataChat.Name = "DataChat";
-            DataChat.RowHeadersWidth = 62;
-            DataChat.Size = new Size(593, 861);
-            DataChat.TabIndex = 0;
-            // 
-            // Chat
-            // 
-            Chat.HeaderText = " ";
-            Chat.MinimumWidth = 8;
-            Chat.Name = "Chat";
-            Chat.Width = 150;
-            // 
-            // tabPage2
-            // 
-            tabPage2.Controls.Add(panel2);
-            tabPage2.Location = new Point(4, 34);
-            tabPage2.Margin = new Padding(2, 3, 2, 3);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(2, 3, 2, 3);
-            tabPage2.Size = new Size(597, 867);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Contact";
-            tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(DataContact);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(2, 3);
-            panel2.Margin = new Padding(2, 3, 2, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(593, 861);
-            panel2.TabIndex = 4;
-            // 
-            // DataContact
-            // 
-            DataContact.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataContact.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1 });
-            DataContact.Dock = DockStyle.Fill;
-            DataContact.Location = new Point(0, 0);
-            DataContact.Margin = new Padding(2, 3, 2, 3);
-            DataContact.Name = "DataContact";
-            DataContact.RowHeadersWidth = 62;
-            DataContact.Size = new Size(593, 861);
-            DataContact.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.HeaderText = " ";
-            dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.Width = 150;
+            tblLytPnl_MainMenu.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tblLytPnl_MainMenu.ColumnCount = 1;
+            tblLytPnl_MainMenu.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tblLytPnl_MainMenu.Controls.Add(Profil, 0, 0);
+            tblLytPnl_MainMenu.Controls.Add(tabControl_ListContact, 0, 1);
+            tblLytPnl_MainMenu.Location = new Point(-2, 0);
+            tblLytPnl_MainMenu.Name = "tblLytPnl_MainMenu";
+            tblLytPnl_MainMenu.RowCount = 2;
+            tblLytPnl_MainMenu.RowStyles.Add(new RowStyle(SizeType.Percent, 18.59956F));
+            tblLytPnl_MainMenu.RowStyles.Add(new RowStyle(SizeType.Percent, 81.40044F));
+            tblLytPnl_MainMenu.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tblLytPnl_MainMenu.Size = new Size(514, 914);
+            tblLytPnl_MainMenu.TabIndex = 3;
             // 
             // Profil
             // 
-            Profil.Controls.Add(btnLogout);
-            Profil.Controls.Add(User);
-            Profil.Controls.Add(btnSend);
-            Profil.Controls.Add(LblNama_Karyawan);
-            Profil.Controls.Add(LblDepart);
-            Profil.Dock = DockStyle.Top;
-            Profil.Location = new Point(0, 0);
+            Profil.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            Profil.Controls.Add(tableLayoutPanel1);
+            Profil.Location = new Point(4, 5);
             Profil.Margin = new Padding(4, 5, 4, 5);
             Profil.Name = "Profil";
-            Profil.Size = new Size(605, 145);
+            Profil.Size = new Size(506, 159);
             Profil.TabIndex = 2;
             // 
-            // btnLogout
+            // tableLayoutPanel1
             // 
-            btnLogout.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnLogout.BackgroundImage = Properties.Resources.logout__1_;
-            btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
-            btnLogout.Location = new Point(542, 55);
-            btnLogout.Margin = new Padding(2, 3, 2, 3);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(42, 42);
-            btnLogout.TabIndex = 6;
-            btnLogout.TextAlign = ContentAlignment.TopCenter;
-            btnLogout.UseVisualStyleBackColor = true;
-            btnLogout.Click += btnLogout_Click;
+            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel1.ColumnCount = 7;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 55.5907631F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.26387739F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 29.4348545F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.44988871F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.2449884F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 10F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 45F));
+            tableLayoutPanel1.Controls.Add(User, 2, 1);
+            tableLayoutPanel1.Controls.Add(LblNama_Karyawan, 0, 1);
+            tableLayoutPanel1.Controls.Add(LblDepart, 0, 2);
+            tableLayoutPanel1.Controls.Add(btnSetting, 4, 1);
+            tableLayoutPanel1.Controls.Add(btnLogout, 6, 1);
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 4;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 21.666666F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 78.3333359F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 16F));
+            tableLayoutPanel1.Size = new Size(506, 159);
+            tableLayoutPanel1.TabIndex = 7;
             // 
             // User
             // 
-            User.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            User.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             User.Image = Properties.Resources.icon_2;
-            User.Location = new Point(372, 30);
+            User.Location = new Point(264, 18);
             User.Margin = new Padding(4, 5, 4, 5);
             User.Name = "User";
-            User.Size = new Size(82, 83);
+            tableLayoutPanel1.SetRowSpan(User, 2);
+            User.Size = new Size(124, 119);
             User.SizeMode = PictureBoxSizeMode.StretchImage;
             User.TabIndex = 0;
             User.TabStop = false;
             // 
-            // btnSend
-            // 
-            btnSend.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnSend.BackgroundImage = Properties.Resources.settings1;
-            btnSend.BackgroundImageLayout = ImageLayout.Stretch;
-            btnSend.Location = new Point(484, 59);
-            btnSend.Margin = new Padding(2, 3, 2, 3);
-            btnSend.Name = "btnSend";
-            btnSend.Size = new Size(32, 33);
-            btnSend.TabIndex = 5;
-            btnSend.UseVisualStyleBackColor = true;
-            // 
             // LblNama_Karyawan
             // 
+            LblNama_Karyawan.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             LblNama_Karyawan.AutoSize = true;
             LblNama_Karyawan.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            LblNama_Karyawan.Location = new Point(34, 30);
+            LblNama_Karyawan.ImageAlign = ContentAlignment.TopLeft;
+            LblNama_Karyawan.Location = new Point(4, 31);
             LblNama_Karyawan.Margin = new Padding(4, 0, 4, 0);
             LblNama_Karyawan.Name = "LblNama_Karyawan";
             LblNama_Karyawan.Size = new Size(188, 29);
@@ -228,22 +151,154 @@
             // 
             // LblDepart
             // 
+            LblDepart.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             LblDepart.AutoSize = true;
             LblDepart.Font = new Font("Microsoft Sans Serif", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            LblDepart.Location = new Point(34, 72);
+            LblDepart.ImageAlign = ContentAlignment.TopLeft;
+            LblDepart.Location = new Point(4, 60);
             LblDepart.Margin = new Padding(4, 0, 4, 0);
             LblDepart.Name = "LblDepart";
-            LblDepart.Size = new Size(113, 25);
+            LblDepart.Size = new Size(242, 25);
             LblDepart.TabIndex = 4;
             LblDepart.Text = "Department";
-            LblDepart.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // btnSetting
+            // 
+            btnSetting.Anchor = AnchorStyles.Left;
+            btnSetting.BackgroundImage = Properties.Resources.settings1;
+            btnSetting.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSetting.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSetting.Location = new Point(405, 58);
+            btnSetting.Margin = new Padding(2, 3, 2, 3);
+            btnSetting.Name = "btnSetting";
+            tableLayoutPanel1.SetRowSpan(btnSetting, 2);
+            btnSetting.Size = new Size(38, 38);
+            btnSetting.TabIndex = 5;
+            btnSetting.UseVisualStyleBackColor = true;
+            // 
+            // btnLogout
+            // 
+            btnLogout.Anchor = AnchorStyles.Left;
+            btnLogout.BackgroundImage = Properties.Resources.logout__1_;
+            btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
+            btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
+            btnLogout.Location = new Point(461, 57);
+            btnLogout.Margin = new Padding(2, 3, 2, 3);
+            btnLogout.Name = "btnLogout";
+            tableLayoutPanel1.SetRowSpan(btnLogout, 2);
+            btnLogout.Size = new Size(40, 40);
+            btnLogout.TabIndex = 6;
+            btnLogout.TextAlign = ContentAlignment.TopCenter;
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
+            // 
+            // tabControl_ListContact
+            // 
+            tabControl_ListContact.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tabControl_ListContact.Controls.Add(tabPage_ListContact);
+            tabControl_ListContact.Controls.Add(tabPage_Chat);
+            tabControl_ListContact.Location = new Point(2, 172);
+            tabControl_ListContact.Margin = new Padding(2, 3, 2, 3);
+            tabControl_ListContact.Name = "tabControl_ListContact";
+            tabControl_ListContact.SelectedIndex = 0;
+            tabControl_ListContact.Size = new Size(510, 739);
+            tabControl_ListContact.TabIndex = 1;
+            // 
+            // tabPage_ListContact
+            // 
+            tabPage_ListContact.Controls.Add(panel_ListContact);
+            tabPage_ListContact.Font = new Font("Malgun Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            tabPage_ListContact.Location = new Point(4, 34);
+            tabPage_ListContact.Margin = new Padding(2, 3, 2, 3);
+            tabPage_ListContact.Name = "tabPage_ListContact";
+            tabPage_ListContact.Padding = new Padding(2, 3, 2, 3);
+            tabPage_ListContact.Size = new Size(502, 701);
+            tabPage_ListContact.TabIndex = 0;
+            tabPage_ListContact.Text = "List Contact ";
+            tabPage_ListContact.UseVisualStyleBackColor = true;
+            // 
+            // panel_ListContact
+            // 
+            panel_ListContact.Controls.Add(ListUser);
+            panel_ListContact.Dock = DockStyle.Fill;
+            panel_ListContact.Location = new Point(2, 3);
+            panel_ListContact.Margin = new Padding(2, 3, 2, 3);
+            panel_ListContact.Name = "panel_ListContact";
+            panel_ListContact.Size = new Size(498, 695);
+            panel_ListContact.TabIndex = 3;
+            // 
+            // ListUser
+            // 
+            ListUser.Dock = DockStyle.Fill;
+            ListUser.Location = new Point(0, 0);
+            ListUser.Name = "ListUser";
+            treeNode1.Name = "Contact_User";
+            treeNode1.Text = "Contact User";
+            ListUser.Nodes.AddRange(new TreeNode[] { treeNode1 });
+            ListUser.Size = new Size(498, 695);
+            ListUser.TabIndex = 0;
+            
+            // 
+            // tabPage_Chat
+            // 
+            tabPage_Chat.Controls.Add(tableLayoutPanel_Chat);
+            tabPage_Chat.Location = new Point(4, 34);
+            tabPage_Chat.Margin = new Padding(2, 3, 2, 3);
+            tabPage_Chat.Name = "tabPage_Chat";
+            tabPage_Chat.Padding = new Padding(2, 3, 2, 3);
+            tabPage_Chat.Size = new Size(502, 701);
+            tabPage_Chat.TabIndex = 1;
+            tabPage_Chat.Text = "Chat";
+            tabPage_Chat.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel_Chat
+            // 
+            tableLayoutPanel_Chat.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel_Chat.ColumnCount = 1;
+            tableLayoutPanel_Chat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel_Chat.Controls.Add(panel1, 0, 0);
+            tableLayoutPanel_Chat.Location = new Point(-1, 2);
+            tableLayoutPanel_Chat.Name = "tableLayoutPanel_Chat";
+            tableLayoutPanel_Chat.RowCount = 8;
+            tableLayoutPanel_Chat.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel_Chat.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel_Chat.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel_Chat.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel_Chat.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel_Chat.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel_Chat.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel_Chat.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel_Chat.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel_Chat.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel_Chat.Size = new Size(506, 729);
+            tableLayoutPanel_Chat.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.BackColor = SystemColors.ControlLight;
+            panel1.Controls.Add(lbKaryawan);
+            panel1.Location = new Point(3, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(500, 85);
+            panel1.TabIndex = 0;
+            // 
+            // lbKaryawan
+            // 
+            lbKaryawan.AutoSize = true;
+            lbKaryawan.Font = new Font("Tahoma", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbKaryawan.Location = new Point(32, 29);
+            lbKaryawan.Name = "lbKaryawan";
+            lbKaryawan.Size = new Size(156, 24);
+            lbKaryawan.TabIndex = 0;
+            lbKaryawan.Text = "Nama Karyawan";
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(605, 1050);
+            ClientSize = new Size(514, 914);
             ControlBox = false;
             Controls.Add(Main_Menu);
             FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -253,16 +308,18 @@
             StartPosition = FormStartPosition.CenterScreen;
             Load += Main_Load;
             Main_Menu.ResumeLayout(false);
-            tabControl1.ResumeLayout(false);
-            tabPage1.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)DataChat).EndInit();
-            tabPage2.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)DataContact).EndInit();
+            tblLytPnl_MainMenu.ResumeLayout(false);
             Profil.ResumeLayout(false);
-            Profil.PerformLayout();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)User).EndInit();
+            tabControl_ListContact.ResumeLayout(false);
+            tabPage_ListContact.ResumeLayout(false);
+            panel_ListContact.ResumeLayout(false);
+            tabPage_Chat.ResumeLayout(false);
+            tableLayoutPanel_Chat.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -270,19 +327,20 @@
 
         private Panel Main_Menu;
         private Panel Profil;
-        private PictureBox User;
-        private Label LblDepart;
         private Label LblNama_Karyawan;
         private Button btnLogout;
-        private Button btnSend;
+        private Button btnSetting;
+        private Panel panel_ListContact;
+        private TabControl tabControl_ListContact;
+        private TabPage tabPage_ListContact;
+        private TabPage tabPage_Chat;
+        private TreeView ListUser;
+        private TableLayoutPanel tableLayoutPanel_Chat;
         private Panel panel1;
-        private DataGridView DataChat;
-        private DataGridViewTextBoxColumn Chat;
-        private TabControl tabControl1;
-        private TabPage tabPage1;
-        private TabPage tabPage2;
-        private Panel panel2;
-        private DataGridView DataContact;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private TableLayoutPanel tblLytPnl_MainMenu;
+        private TableLayoutPanel tableLayoutPanel1;
+        private PictureBox User;
+        private Label LblDepart;
+        private Label lbKaryawan;
     }
 }
