@@ -139,7 +139,7 @@ namespace Program_CADCAM
 
                 this.Hide();
                 ChatForm form = new ChatForm();
-                form.Load_DataContact(selectedUserNik, selectedUserName, "");
+                form.Load_DataContact(selectedUserNik, selectedUserName, "", "", "");
                 form.ShowDialog();
                 this.Show();
             }

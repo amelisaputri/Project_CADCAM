@@ -56,7 +56,6 @@ namespace ServerProgram
 
             try
             {
-                // 🔐 Expect first line to be username
                 string firstLine = reader.ReadLine();
                 if (firstLine.StartsWith("__username__:"))
                 {
@@ -69,7 +68,6 @@ namespace ServerProgram
                 AppendLog("Failed to read username");
             }
 
-            // 🧠 Send today's history
             lock (lockObj)
             {
                 foreach (var msg in messageHistory)
@@ -78,7 +76,6 @@ namespace ServerProgram
                 }
             }
 
-            // 🔄 Main message loop
             while (client.Connected)
             {
                 try

@@ -13,15 +13,13 @@ namespace Program_CADCAM
         string userDepartment;
         string connectionString;
 
-
+        private System.Windows.Forms.Label lblResult;
 
         public Login()
         {
             InitializeComponent();
             this.Size = new Size(520, 920);
         }
-
-        private System.Windows.Forms.Label lblResult;
 
         private void txtUsername_Enter(object sender, EventArgs e)
         {
