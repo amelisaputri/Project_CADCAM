@@ -57,7 +57,7 @@ namespace Program_CADCAM
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);
 
-                        /// Clear existing nodes
+                        /// Clear existing node
                         ListUser.Nodes.Clear();
 
                         // Add each USER_NAME as a root node

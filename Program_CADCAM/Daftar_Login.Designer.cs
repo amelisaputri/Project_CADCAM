@@ -36,12 +36,12 @@ namespace Program_CADCAM
             txtBoxUser = new TextBox();
             txtBoxPass = new TextBox();
             txtBoxName = new TextBox();
-            txtBoxPhone = new TextBox();
             Team = new Label();
             Department = new Label();
-            cmbBoxDepart = new ComboBox();
             cmbBoxTeam = new ComboBox();
             btnDaftar = new Button();
+            txtBoxPhone = new TextBox();
+            cmbBoxDepart = new ComboBox();
             panel1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Profil).BeginInit();
@@ -64,7 +64,7 @@ namespace Program_CADCAM
             // 
             tableLayoutPanel1.BackColor = Color.Transparent;
             tableLayoutPanel1.ColumnCount = 6;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.3852711F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.38527F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.86265564F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 34.5059166F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 32.9983826F));
@@ -74,12 +74,12 @@ namespace Program_CADCAM
             tableLayoutPanel1.Controls.Add(txtBoxUser, 2, 4);
             tableLayoutPanel1.Controls.Add(txtBoxPass, 2, 5);
             tableLayoutPanel1.Controls.Add(txtBoxName, 2, 7);
-            tableLayoutPanel1.Controls.Add(txtBoxPhone, 2, 8);
             tableLayoutPanel1.Controls.Add(Team, 2, 9);
             tableLayoutPanel1.Controls.Add(Department, 3, 9);
-            tableLayoutPanel1.Controls.Add(cmbBoxDepart, 2, 10);
             tableLayoutPanel1.Controls.Add(cmbBoxTeam, 3, 10);
             tableLayoutPanel1.Controls.Add(btnDaftar, 2, 11);
+            tableLayoutPanel1.Controls.Add(txtBoxPhone, 2, 8);
+            tableLayoutPanel1.Controls.Add(cmbBoxDepart, 2, 10);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Margin = new Padding(2);
@@ -162,21 +162,6 @@ namespace Program_CADCAM
             txtBoxName.MouseEnter += txtBoxNama_Enter;
             txtBoxName.MouseLeave += txtBoxNama_Leave;
             // 
-            // txtBoxPhone
-            // 
-            txtBoxPhone.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel1.SetColumnSpan(txtBoxPhone, 2);
-            txtBoxPhone.Font = new Font("Microsoft Sans Serif", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBoxPhone.ForeColor = Color.Gray;
-            txtBoxPhone.Location = new Point(87, 544);
-            txtBoxPhone.Margin = new Padding(4, 5, 4, 5);
-            txtBoxPhone.Name = "txtBoxPhone";
-            txtBoxPhone.Size = new Size(338, 30);
-            txtBoxPhone.TabIndex = 10;
-            txtBoxPhone.Text = "Nomor Handphone";
-            txtBoxPhone.MouseEnter += txtBoxPhone_Enter;
-            txtBoxPhone.MouseLeave += txtBoxPhone_Leave;
-            // 
             // Team
             // 
             Team.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
@@ -186,9 +171,9 @@ namespace Program_CADCAM
             Team.Location = new Point(87, 663);
             Team.Margin = new Padding(4, 0, 4, 0);
             Team.Name = "Team";
-            Team.Size = new Size(63, 25);
+            Team.Size = new Size(113, 25);
             Team.TabIndex = 14;
-            Team.Text = "Team";
+            Team.Text = "Department";
             // 
             // Department
             // 
@@ -199,27 +184,16 @@ namespace Program_CADCAM
             Department.Location = new Point(264, 663);
             Department.Margin = new Padding(4, 0, 4, 0);
             Department.Name = "Department";
-            Department.Size = new Size(113, 25);
+            Department.Size = new Size(63, 25);
             Department.TabIndex = 13;
-            Department.Text = "Department";
-            // 
-            // cmbBoxDepart
-            // 
-            cmbBoxDepart.Font = new Font("Times New Roman", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cmbBoxDepart.FormattingEnabled = true;
-            cmbBoxDepart.Items.AddRange(new object[] { "CAD", "CAM", "IT" });
-            cmbBoxDepart.Location = new Point(87, 693);
-            cmbBoxDepart.Margin = new Padding(4, 5, 4, 5);
-            cmbBoxDepart.Name = "cmbBoxDepart";
-            cmbBoxDepart.Size = new Size(165, 30);
-            cmbBoxDepart.TabIndex = 5;
+            Department.Text = "Team";
             // 
             // cmbBoxTeam
             // 
             cmbBoxTeam.Dock = DockStyle.Fill;
             cmbBoxTeam.Font = new Font("Times New Roman", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbBoxTeam.FormattingEnabled = true;
-            cmbBoxTeam.Items.AddRange(new object[] { "2D/3D PRINT", "3D/ 3D SCAN", "CAM", "IT" });
+            cmbBoxTeam.Items.AddRange(new object[] { "2D/3D PRINT", "3D/3D SCAN", "CAM", "IT" });
             cmbBoxTeam.Location = new Point(264, 693);
             cmbBoxTeam.Margin = new Padding(4, 5, 4, 5);
             cmbBoxTeam.Name = "cmbBoxTeam";
@@ -240,6 +214,32 @@ namespace Program_CADCAM
             btnDaftar.Text = "Daftar Login";
             btnDaftar.UseVisualStyleBackColor = false;
             btnDaftar.Click += btnDaftar_Click;
+            // 
+            // txtBoxPhone
+            // 
+            txtBoxPhone.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel1.SetColumnSpan(txtBoxPhone, 2);
+            txtBoxPhone.Font = new Font("Microsoft Sans Serif", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBoxPhone.ForeColor = Color.Gray;
+            txtBoxPhone.Location = new Point(87, 544);
+            txtBoxPhone.Margin = new Padding(4, 5, 4, 5);
+            txtBoxPhone.Name = "txtBoxPhone";
+            txtBoxPhone.Size = new Size(338, 30);
+            txtBoxPhone.TabIndex = 10;
+            txtBoxPhone.Text = "Nomor Handphone";
+            txtBoxPhone.MouseEnter += txtBoxPhone_Enter;
+            txtBoxPhone.MouseLeave += txtBoxPhone_Leave;
+            // 
+            // cmbBoxDepart
+            // 
+            cmbBoxDepart.Font = new Font("Times New Roman", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbBoxDepart.FormattingEnabled = true;
+            cmbBoxDepart.Items.AddRange(new object[] { "CADCAM" });
+            cmbBoxDepart.Location = new Point(87, 693);
+            cmbBoxDepart.Margin = new Padding(4, 5, 4, 5);
+            cmbBoxDepart.Name = "cmbBoxDepart";
+            cmbBoxDepart.Size = new Size(165, 30);
+            cmbBoxDepart.TabIndex = 5;
             // 
             // Daftar_Login
             // 
