@@ -50,7 +50,7 @@
             txtBoxUser.ForeColor = Color.Gray;
             txtBoxUser.Location = new Point(110, 352);
             txtBoxUser.Name = "txtBoxUser";
-            txtBoxUser.Size = new Size(276, 35);
+            txtBoxUser.Size = new Size(276, 26);
             txtBoxUser.TabIndex = 0;
             txtBoxUser.Text = "NIK";
             txtBoxUser.MouseEnter += txtUsername_Enter;
@@ -79,7 +79,7 @@
             txtBoxPass.Location = new Point(110, 400);
             txtBoxPass.Name = "txtBoxPass";
             txtBoxPass.PasswordChar = '*';
-            txtBoxPass.Size = new Size(276, 35);
+            txtBoxPass.Size = new Size(276, 26);
             txtBoxPass.TabIndex = 1;
             txtBoxPass.Tag = "";
             txtBoxPass.Text = "Password";
@@ -93,9 +93,9 @@
             checkBox1.BackColor = Color.Transparent;
             tableLayoutPanel1.SetColumnSpan(checkBox1, 2);
             checkBox1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox1.Location = new Point(110, 445);
+            checkBox1.Location = new Point(110, 454);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(132, 29);
+            checkBox1.Size = new Size(89, 20);
             checkBox1.TabIndex = 3;
             checkBox1.Text = "Auto Login";
             checkBox1.UseVisualStyleBackColor = false;
@@ -109,9 +109,9 @@
             tableLayoutPanel1.SetColumnSpan(LinkCreateAcc, 2);
             LinkCreateAcc.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LinkCreateAcc.LinkColor = Color.Black;
-            LinkCreateAcc.Location = new Point(100, 651);
+            LinkCreateAcc.Location = new Point(138, 660);
             LinkCreateAcc.Name = "LinkCreateAcc";
-            LinkCreateAcc.Size = new Size(129, 25);
+            LinkCreateAcc.Size = new Size(91, 16);
             LinkCreateAcc.TabIndex = 4;
             LinkCreateAcc.TabStop = true;
             LinkCreateAcc.Text = "Daftar Login";
@@ -129,9 +129,9 @@
             LinkResetPass.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LinkResetPass.ImageAlign = ContentAlignment.MiddleLeft;
             LinkResetPass.LinkColor = Color.Black;
-            LinkResetPass.Location = new Point(264, 651);
+            LinkResetPass.Location = new Point(264, 660);
             LinkResetPass.Name = "LinkResetPass";
-            LinkResetPass.Size = new Size(167, 25);
+            LinkResetPass.Size = new Size(120, 16);
             LinkResetPass.TabIndex = 5;
             LinkResetPass.TabStop = true;
             LinkResetPass.Text = "Reset Password";
@@ -146,9 +146,9 @@
             SHI.Font = new Font("Britannic Bold", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             SHI.ForeColor = Color.DarkBlue;
             SHI.ImageAlign = ContentAlignment.TopCenter;
-            SHI.Location = new Point(251, 54);
+            SHI.Location = new Point(334, 54);
             SHI.Name = "SHI";
-            SHI.Size = new Size(244, 116);
+            SHI.Size = new Size(161, 76);
             SHI.TabIndex = 10;
             SHI.Text = "SHI\r\nCAD/CAM\r\n";
             SHI.TextAlign = ContentAlignment.TopRight;
@@ -201,7 +201,7 @@
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(10F, 22F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.White;

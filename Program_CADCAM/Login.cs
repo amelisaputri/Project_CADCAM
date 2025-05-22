@@ -23,13 +23,6 @@ namespace Program_CADCAM
             this.Size = new Size(520, 920);
         }
 
-        public static class GlobalClient
-        {
-            public static TcpClient Client;
-            public static StreamWriter Writer;
-            public static StreamReader Reader;
-        }
-
         private void txtUsername_Enter(object sender, EventArgs e)
         {
             if (txtBoxUser.Text == "NIK")
@@ -67,6 +60,7 @@ namespace Program_CADCAM
                 txtBoxPass.ForeColor = Color.Gray;
             }
         }
+
         private void btn_Login(object sender, EventArgs e)
         {
             string UserNIK = txtBoxUser.Text.Trim();
@@ -110,19 +104,41 @@ namespace Program_CADCAM
                                 userDepartment = Depart;
                                 try
                                 {
-                                    // Hubungkan ke server utama (ganti IP dan port dengan server kamu)
                                     TcpClient client = new TcpClient();
                                     client.Connect(Connection.IPAddress, 5000);
-                                    StreamWriter writer = new StreamWriter(client.GetStream()) { AutoFlush = true };
-                                    StreamReader netReader = new StreamReader(client.GetStream());
 
-                                    // Simpan koneksi global
+                                    StreamWriter writer = new StreamWriter(client.GetStream()) { AutoFlush = true };
+                                    StreamReader readerStream = new StreamReader(client.GetStream());
+
                                     GlobalClient.Client = client;
                                     GlobalClient.Writer = writer;
-                                    GlobalClient.Reader = netReader;
+                                    GlobalClient.Reader = readerStream;
+                                    GlobalClient.UserId = userNIK;   
+                                    GlobalClient.UserName = userName;
 
-                                    // Kirim informasi login ke server
-                                    writer.WriteLine($"LOGIN|{userNIK}|{userName}");
+                                    // Send login message only once per app lifecycle
+                                    writer.WriteLine($"LOGIN|{GlobalClient.UserId}|{GlobalClient.UserName}");
+
+                                    Thread receiveThread = new Thread(() =>
+                                    {
+                                        try
+                                        {
+                                            while (GlobalClient.Client.Connected)
+                                            {
+                                                string line = GlobalClient.Reader.ReadLine();
+                                                if (!string.IsNullOrWhiteSpace(line))
+                                                {
+                                                    GlobalClient.EnqueueIncomingMessage(line);
+                                                }
+                                            }
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            // You can log disconnection here if needed
+                                        }
+                                    });
+                                    receiveThread.IsBackground = true;
+                                    receiveThread.Start();
 
                                 }
                                 catch (SocketException ex)

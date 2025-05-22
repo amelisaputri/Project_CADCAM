@@ -40,50 +40,40 @@
 
 
         // Method untuk memuat data kontak
-        public void Load_DataContact(string userId, string userName, string contactId, string contactName, string department)
+        public void Load_DataContact(string _userId, string _userName, string _contactId, string _contactName, string _department)
         {
-            this.userId = userId;
-            this.username = userName;
-            this.contactId = contactId;
-            this.contactName = contactName;
+            userId = _userId;
+            username = _userName;
 
-            lblNama.Text = username; 
+            contactId = _contactId;
+            contactName = _contactName;
         }
 
         private void ChatForm_Load(object sender, EventArgs e)
         {
-            lblNama.Text = username;
+            lblNama.Text = contactName;
+
             connectionString = Connection.ConnectionString;
 
-            try
-            {
-                client = new TcpClient(Connection.IPAddress, 5000);
-                var stream = client.GetStream();
-                reader = new StreamReader(stream, Encoding.UTF8);
-                writer = new StreamWriter(stream, Encoding.UTF8) { AutoFlush = true };
+            LoadChatWithContact(contactId);
 
-                // Send username to identify
-                writer.WriteLine($"__username__:{username}");
-                //writer.WriteLine($"__usernik__:{username}");
+            Thread receiveThread = new Thread(ReceiveMessages);
+            receiveThread.IsBackground = true;
+            receiveThread.Start();
 
-                // Start background thread to receive messages
-                Thread receiveThread = new Thread(ReceiveMessages);
-                receiveThread.IsBackground = true;
-                receiveThread.Start();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Failed to connect to chat server: " + ex.Message);
-                this.Close();
-            }
+            pollTimer.Enabled = true;
+            pollTimer.Start();
 
+            this.Text = "Login as " + username;
         }
 
         private void SendMessageToContact(string userId, string contactId, string message)
         {
-            
+
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
+                conn.Open();
+
                 string query = "INSERT INTO MASTER_CHAT (SENDER_ID, RECEIVER_ID, MESSAGE_TEXT, CHAT_DATE) " +
                                "VALUES (@SENDER_ID, @RECEIVER_ID, @MESSAGE_TEXT, @CHAT_DATE)";
 
@@ -94,29 +84,29 @@
                     cmd.Parameters.AddWithValue("@MESSAGE_TEXT", message);
                     cmd.Parameters.AddWithValue("@CHAT_DATE", DateTime.Now); // Bisa juga dihapus agar pakai DEFAULT GETDATE()
 
-                    conn.Open();
-                    //cmd.ExecuteNonQuery();
+
+                    cmd.ExecuteNonQuery();
                 }
             }
         }
 
         private void LoadChatWithContact(string contactId)
         {
-            txtBoxChat.Clear();  // Bersihkan isi chat sebelumnya
+            txtBoxChat.Clear();  // Clear previous chat
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 string query = @"
-                                SELECT SENDER_ID, MESSAGE_TEXT, CHAT_DATE 
-                                FROM MASTER_CHAT 
-                                WHERE (SENDER_ID = @USER_ID AND RECEIVER_ID = @RECEIVER_ID) 
-                                    OR (SENDER_ID = @RECEIVER_ID AND RECEIVER_ID = @USER_ID)
-                                ORDER BY CHAT_DATE";
+            SELECT SENDER_ID, MESSAGE_TEXT, CHAT_DATE 
+            FROM MASTER_CHAT 
+            WHERE (SENDER_ID = @USER_ID AND RECEIVER_ID = @RECEIVER_ID) 
+               OR (SENDER_ID = @RECEIVER_ID AND RECEIVER_ID = @USER_ID)
+            ORDER BY CHAT_DATE";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@USER_ID", userId);           // userId: ID pengguna yang sedang login
-                    cmd.Parameters.AddWithValue("@RECEIVER_ID", contactId);    // contactId: ID lawan bicara
+                    cmd.Parameters.AddWithValue("@USER_ID", userId);         // Your own ID
+                    cmd.Parameters.AddWithValue("@RECEIVER_ID", contactId);  // The person you're chatting with
 
                     try
                     {
@@ -129,8 +119,11 @@
                                 string msg = reader["MESSAGE_TEXT"].ToString();
                                 DateTime time = Convert.ToDateTime(reader["CHAT_DATE"]);
 
-                                string display = sender == userId ? $"You: {msg}" : $"Them: {msg}";
-                                txtBoxChat.AppendText($"{display} ({time.ToShortTimeString()})\r\n");
+                                // Format: [HH:mm:ss] username: message
+                                string senderName = sender == userId ? username : contactName;
+                                string formatted = $"[{time:HH:mm:ss}] {senderName}: {msg}";
+
+                                txtBoxChat.AppendText(formatted + Environment.NewLine);
                             }
                         }
                     }
@@ -142,22 +135,24 @@
             }
         }
 
+
         private void ReceiveMessages()
         {
-            while (client.Connected)
+            try
             {
-                try
+                while (GlobalClient.Client != null && GlobalClient.Client.Connected)
                 {
-                    string line = reader.ReadLine();
+                    string line = GlobalClient.Reader.ReadLine();
                     if (!string.IsNullOrWhiteSpace(line))
                     {
                         AppendToChatBox(line);
                     }
                 }
-                catch
-                {
-                    break;
-                }
+            }
+            catch (Exception ex)
+            {
+                // Optionally log or show the error
+                MessageBox.Show("Connection lost: " + ex.Message);
             }
         }
 
@@ -173,26 +168,43 @@
             }
         }
 
+
         private void btnSend_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txtBoxMessage.Text))
             {
                 string message = txtBoxMessage.Text;
+                string formatted = $"CHAT|{GlobalClient.UserId}|{contactId}|{message}";
 
-                // Send to chat server
-                writer.WriteLine(message);
-
-                // Save to DB
-                SendMessageToContact(userId, contactId, message);
-                LoadChatWithContact(contactId);
-
-                txtBoxMessage.Clear();
+                if (GlobalClient.IsConnected())
+                {
+                    GlobalClient.Writer.WriteLine(formatted);
+                    SendMessageToContact(GlobalClient.UserId, contactId, message);
+                    txtBoxMessage.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Not connected to server.");
+                }
             }
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ChatForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            GlobalClient.Disconnect();
+        }
+
+        private void pollTimer_Tick(object sender, EventArgs e)
+        {
+            while (GlobalClient.IncomingMessages.TryDequeue(out string msg))
+            {
+                AppendToChatBox(msg);  // Already thread-safe
+            }
         }
     }
 }

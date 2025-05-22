@@ -20,7 +20,6 @@ E:\PROJECT TRIAL\C# Project\Project_CADCAM\ServerProgram\ServerProgram\bin\Debug
 E:\PROJECT TRIAL\C# Project\Project_CADCAM\ServerProgram\ServerProgram\bin\Debug\net8.0-windows\ServerProgram.runtimeconfig.json
 E:\PROJECT TRIAL\C# Project\Project_CADCAM\ServerProgram\ServerProgram\bin\Debug\net8.0-windows\ServerProgram.dll
 E:\PROJECT TRIAL\C# Project\Project_CADCAM\ServerProgram\ServerProgram\bin\Debug\net8.0-windows\ServerProgram.pdb
-E:\PROJECT TRIAL\C# Project\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ServerProgram.Server.resources
 E:\PROJECT TRIAL\C# Project\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ServerProgram.csproj.GenerateResource.cache
 E:\PROJECT TRIAL\C# Project\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ServerProgram.GeneratedMSBuildEditorConfig.editorconfig
 E:\PROJECT TRIAL\C# Project\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ServerProgram.AssemblyInfoInputs.cache
@@ -49,3 +48,4 @@ C:\AMEL CADCAM\Up\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-wi
 C:\AMEL CADCAM\Up\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ServerProgram.pdb
 C:\AMEL CADCAM\Up\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ServerProgram.genruntimeconfig.cache
 C:\AMEL CADCAM\Up\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ref\ServerProgram.dll
+E:\PROJECT TRIAL\C# Project\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ServerProgram.Server.resources

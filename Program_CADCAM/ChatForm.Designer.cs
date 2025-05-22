@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChatForm));
             txtBoxMessage = new TextBox();
             txtBoxChat = new TextBox();
@@ -37,11 +38,14 @@
             lblNama = new Label();
             panel2 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
+            panel3 = new Panel();
             btnLogout = new Button();
+            pollTimer = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // txtBoxMessage
@@ -95,6 +99,7 @@
             tableLayoutPanel2.RowCount = 2;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 29F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel2.Size = new Size(358, 50);
             tableLayoutPanel2.TabIndex = 5;
             // 
@@ -114,8 +119,7 @@
             // 
             // lblNama
             // 
-            lblNama.Dock = DockStyle.Fill;
-            lblNama.Font = new Font("Microsoft Sans Serif", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            lblNama.Font = new Font("Microsoft Sans Serif", 12F);
             lblNama.ImageAlign = ContentAlignment.MiddleLeft;
             lblNama.Location = new Point(1, 0);
             lblNama.Margin = new Padding(1, 0, 1, 0);
@@ -139,10 +143,10 @@
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 51.03857F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 48.9614258F));
-            tableLayoutPanel1.Controls.Add(txtBoxChat, 0, 1);
             tableLayoutPanel1.Controls.Add(lblNama, 0, 0);
-            tableLayoutPanel1.Controls.Add(btnLogout, 1, 0);
+            tableLayoutPanel1.Controls.Add(txtBoxChat, 0, 1);
             tableLayoutPanel1.Controls.Add(panel1, 0, 2);
+            tableLayoutPanel1.Controls.Add(panel3, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -153,12 +157,21 @@
             tableLayoutPanel1.Size = new Size(360, 548);
             tableLayoutPanel1.TabIndex = 0;
             // 
+            // panel3
+            // 
+            panel3.Controls.Add(btnLogout);
+            panel3.Dock = DockStyle.Fill;
+            panel3.Location = new Point(186, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(171, 56);
+            panel3.TabIndex = 3;
+            // 
             // btnLogout
             // 
             btnLogout.Anchor = AnchorStyles.Right;
             btnLogout.BackgroundImage = Properties.Resources.logout__1_;
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
-            btnLogout.Location = new Point(323, 16);
+            btnLogout.Location = new Point(110, 13);
             btnLogout.Margin = new Padding(2);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(35, 30);
@@ -166,18 +179,26 @@
             btnLogout.UseVisualStyleBackColor = true;
             btnLogout.Click += btnLogout_Click;
             // 
+            // pollTimer
+            // 
+            pollTimer.Enabled = true;
+            pollTimer.Interval = 500;
+            pollTimer.Tick += pollTimer_Tick;
+            // 
             // ChatForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(360, 548);
-            ControlBox = false;
             Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(1, 2, 1, 2);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "ChatForm";
             StartPosition = FormStartPosition.CenterScreen;
+            FormClosing += ChatForm_FormClosing;
             Load += ChatForm_Load;
             panel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
@@ -185,6 +206,7 @@
             panel2.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -200,5 +222,7 @@
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
         private Button btnLogout;
+        private Panel panel3;
+        private System.Windows.Forms.Timer pollTimer;
     }
 }

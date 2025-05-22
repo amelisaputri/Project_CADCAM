@@ -127,6 +127,8 @@ namespace Program_CADCAM
             Load_DataContact();
             LoadUserList();
 
+            this.Text = "Login as " + username;
+
         }
 
         private void ListUser_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
@@ -139,7 +141,7 @@ namespace Program_CADCAM
 
                 this.Hide();
                 ChatForm form = new ChatForm();
-                form.Load_DataContact(selectedUserNik, selectedUserName, "", "", "");
+                form.Load_DataContact(userId, username, selectedUserNik, selectedUserName, depart);
                 form.ShowDialog();
                 this.Show();
             }
