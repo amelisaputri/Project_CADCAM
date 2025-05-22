@@ -64,6 +64,7 @@
 
                 // Send username to identify
                 writer.WriteLine($"__username__:{username}");
+                //writer.WriteLine($"__usernik__:{username}");
 
                 // Start background thread to receive messages
                 Thread receiveThread = new Thread(ReceiveMessages);
@@ -78,72 +79,67 @@
 
         }
 
-        private void SendMessageToContact(string senderId, string receiverId, string message)
+        private void SendMessageToContact(string userId, string contactId, string message)
         {
+            
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string query = "INSERT INTO MASTER_CHAT (USER_ID, SENDER_ID, RECEIVER_ID, MESSAGE_TEXT, CHAT_DATE) " +
-                               "VALUES (@USER_ID, @SENDER_ID, @RECEIVER_ID, @MESSAGE_TEXT, @CHAT_DATE)";
+                string query = "INSERT INTO MASTER_CHAT (SENDER_ID, RECEIVER_ID, MESSAGE_TEXT, CHAT_DATE) " +
+                               "VALUES (@SENDER_ID, @RECEIVER_ID, @MESSAGE_TEXT, @CHAT_DATE)";
 
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@USER_ID", senderId); // atau bisa receiverId, tergantung desain tabel kamu
-                cmd.Parameters.AddWithValue("@SENDER_ID", senderId);
-                cmd.Parameters.AddWithValue("@RECEIVER_ID", receiverId);
-                cmd.Parameters.AddWithValue("@MESSAGE_TEXT", message);
-                cmd.Parameters.AddWithValue("@CHAT_DATE", DateTime.Now);
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@SENDER_ID", userId);
+                    cmd.Parameters.AddWithValue("@RECEIVER_ID", contactId);
+                    cmd.Parameters.AddWithValue("@MESSAGE_TEXT", message);
+                    cmd.Parameters.AddWithValue("@CHAT_DATE", DateTime.Now); // Bisa juga dihapus agar pakai DEFAULT GETDATE()
 
-                conn.Open();
-                cmd.ExecuteNonQuery();
+                    conn.Open();
+                    //cmd.ExecuteNonQuery();
+                }
             }
         }
 
         private void LoadChatWithContact(string contactId)
         {
-            txtBoxChat.Clear();  // Clear previous chat
+            txtBoxChat.Clear();  // Bersihkan isi chat sebelumnya
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 string query = @"
-                                    SELECT SENDER_ID, MESSAGE_TEXT, CHAT_DATE 
-                                    FROM MASTER_CHAT 
-                                    WHERE (SENDER_ID = @USER_ID AND RECEIVER_ID = @ RECEIVER_ID) 
-                                        OR (SENDER_ID = @ RECEIVER_ID AND RECEIVER_ID = @USER_ID)
-                                    ORDER BY CHAT_DATE";
+                                SELECT SENDER_ID, MESSAGE_TEXT, CHAT_DATE 
+                                FROM MASTER_CHAT 
+                                WHERE (SENDER_ID = @USER_ID AND RECEIVER_ID = @RECEIVER_ID) 
+                                    OR (SENDER_ID = @RECEIVER_ID AND RECEIVER_ID = @USER_ID)
+                                ORDER BY CHAT_DATE";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@USER_ID", userId);
-                    cmd.Parameters.AddWithValue("@RECEIVER_ID", contactId);
+                    cmd.Parameters.AddWithValue("@USER_ID", userId);           // userId: ID pengguna yang sedang login
+                    cmd.Parameters.AddWithValue("@RECEIVER_ID", contactId);    // contactId: ID lawan bicara
 
-                    conn.Open();
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        string sender = reader["SENDER_ID"].ToString();
-                        string msg = reader["MESSAGE_TEXT"].ToString();
-                        DateTime time = Convert.ToDateTime(reader["CHAT_DATE"]);
-
-                        string display = sender == userId ? $"You: {msg}" : $"Them: {msg}";
-                        txtBoxChat.AppendText($"{display} ({time.ToShortTimeString()})\r\n");
-                    }
                     try
                     {
                         conn.Open();
-                        int result = cmd.ExecuteNonQuery();
-                        if (result == 0)
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            MessageBox.Show("Gagal menyimpan pesan.");
+                            while (reader.Read())
+                            {
+                                string sender = reader["SENDER_ID"].ToString();
+                                string msg = reader["MESSAGE_TEXT"].ToString();
+                                DateTime time = Convert.ToDateTime(reader["CHAT_DATE"]);
+
+                                string display = sender == userId ? $"You: {msg}" : $"Them: {msg}";
+                                txtBoxChat.AppendText($"{display} ({time.ToShortTimeString()})\r\n");
+                            }
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error saat mengirim pesan: " + ex.Message);
+                        MessageBox.Show("Gagal memuat chat: " + ex.Message);
                     }
-
                 }
             }
-
         }
 
         private void ReceiveMessages()
@@ -188,6 +184,7 @@
 
                 // Save to DB
                 SendMessageToContact(userId, contactId, message);
+                LoadChatWithContact(contactId);
 
                 txtBoxMessage.Clear();
             }

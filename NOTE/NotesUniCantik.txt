@@ -1,0 +1,148 @@
+1. Buat chat ini dikirim oleh user yang di login (how to make the chat is from user is login) tunjukin kode button login
+2. cara untuk buat history transaksi tabelnya (screenshoot tabel master_chat) terus minta tabel apa lagi yang kurang sekalian minta buatin logic programnya
+3. kalau udah bisa, tambahin load data history chat antara user dan user yang dipilih. tidak generic
+
+
+
+
+-------------------------------------------
+handle login pada server tapi masih beum tau
+
+private Dictionary<string, TcpClient> connectedClients = new Dictionary<string, TcpClient>(); // Declare globally
+private List<string> messageHistory = new List<string>();
+private object lockObj = new object();
+
+private void StartServer()
+{
+    server = new TcpListener(IPAddress.Any, 5000);
+    server.Start();
+    AppendLog("Server started on port 5000...");
+
+    while (true)
+    {
+        TcpClient client = server.AcceptTcpClient();
+        lock (clients) clients.Add(client);
+        AppendLog("Client connected.");
+
+        Thread clientThread = new Thread(() => HandleClient(client));
+        clientThread.IsBackground = true;
+        clientThread.Start();
+    }
+}
+
+private void HandleClient(TcpClient client)
+{
+    var stream = client.GetStream();
+    var reader = new StreamReader(stream, Encoding.UTF8);
+    var writer = new StreamWriter(stream, Encoding.UTF8) { AutoFlush = true };
+
+    string username = "Unknown";
+    string userId = "Unknown";
+
+    try
+    {
+        // Step 1: Baca pesan login
+        string firstLine = reader.ReadLine();
+        if (firstLine != null && firstLine.StartsWith("LOGIN|"))
+        {
+            string[] loginParts = firstLine.Split('|');
+            if (loginParts.Length == 3)
+            {
+                userId = loginParts[1];  // userId
+                username = loginParts[2]; // username
+
+                AppendLog($"User '{username}' ({userId}) logged in.");
+
+                // Menyimpan client yang login
+                lock (connectedClients)
+                {
+                    connectedClients[userId] = client; // Store TcpClient by userId
+                }
+            }
+            else
+            {
+                AppendLog("Invalid login format.");
+                return;
+            }
+        }
+        else
+        {
+            AppendLog("No login message received.");
+            return;
+        }
+    }
+    catch (Exception ex)
+    {
+        AppendLog("Error reading login: " + ex.Message);
+        return;
+    }
+
+    // Step 2: Kirimkan pesan history yang sudah ada
+    lock (lockObj)
+    {
+        foreach (var msg in messageHistory)
+        {
+            writer.WriteLine(msg);
+        }
+    }
+
+    // Step 3: Terus menerima pesan dari client
+    while (client.Connected)
+    {
+        try
+        {
+            string line = reader.ReadLine();
+            if (string.IsNullOrWhiteSpace(line)) continue;
+
+            string timestamped = $"[{DateTime.Now:HH:mm:ss}] {username}: {line}";
+            AppendLog(timestamped);
+
+            // Simpan pesan ke dalam history
+            lock (lockObj) messageHistory.Add(timestamped);
+
+            // Broadcast ke semua client yang terhubung
+            BroadcastMessage(timestamped);
+        }
+        catch (Exception ex)
+        {
+            AppendLog($"Error while reading message from {username}: {ex.Message}");
+            break;
+        }
+    }
+
+    // Step 4: Tangani client disconnect
+    lock (connectedClients)
+    {
+        connectedClients.Remove(userId); // Remove the client from the dictionary
+    }
+
+    client.Close();
+    AppendLog($"Client '{username}' ({userId}) disconnected.");
+}
+
+private void BroadcastMessage(string message)
+{
+    // Kirim pesan ke semua client yang terhubung
+    lock (connectedClients)
+    {
+        foreach (var client in connectedClients.Values)
+        {
+            try
+            {
+                var stream = client.GetStream();
+                var writer = new StreamWriter(stream, Encoding.UTF8) { AutoFlush = true };
+                writer.WriteLine(message);
+            }
+            catch (Exception ex)
+            {
+                AppendLog($"Failed to send message to client: {ex.Message}");
+            }
+        }
+    }
+}
+
+private void AppendLog(string log)
+{
+    // Log untuk keperluan debugging atau untuk UI
+    Console.WriteLine(log);
+}

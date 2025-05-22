@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Net;
 using System.Threading;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ServerProgram
 {
@@ -53,15 +54,19 @@ namespace ServerProgram
             var writer = new StreamWriter(stream, Encoding.UTF8) { AutoFlush = true };
 
             string username = "Unknown";
+            string userId = "Unknown";
+            string usernik = "Unknown";
 
             try
             {
                 string firstLine = reader.ReadLine();
-                if (firstLine.StartsWith("__username__:"))
+
+                if (firstLine.StartsWith("__usernik__:"))
                 {
                     username = firstLine.Substring("__username__:".Length).Trim();
                     AppendLog($"Client identified as '{username}'");
                 }
+
             }
             catch
             {
@@ -125,9 +130,13 @@ namespace ServerProgram
             }
             else
             {
-                //ListServer.Items.Add(text);
-                //ListServer.TopIndex.ListSer.Items.Count - 1;
-                
+                ListUser.Items.Add(text);
+                ListUser.TopIndex = ListUser.Items.Count - 1;
+
+                //txtBoxMessage.AppendText(text & Environment.NewLine);
+                //TextBox1.SelectionStart = TextBox1.Text.Length;
+                //TextBox1.ScrollToCaret();
+
             }
         }
     }

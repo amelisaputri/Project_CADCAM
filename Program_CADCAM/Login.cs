@@ -1,5 +1,7 @@
 using System.Data;
 using System.Data.SqlClient;
+using System.Net;
+using System.Net.Sockets;
 using Microsoft.VisualBasic.ApplicationServices;
 using Program_CADCAM.Configuration;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
@@ -19,6 +21,13 @@ namespace Program_CADCAM
         {
             InitializeComponent();
             this.Size = new Size(520, 920);
+        }
+
+        public static class GlobalClient
+        {
+            public static TcpClient Client;
+            public static StreamWriter Writer;
+            public static StreamReader Reader;
         }
 
         private void txtUsername_Enter(object sender, EventArgs e)
@@ -99,6 +108,28 @@ namespace Program_CADCAM
                                 userName = Name;
                                 userId = UserNIK;
                                 userDepartment = Depart;
+                                try
+                                {
+                                    // Hubungkan ke server utama (ganti IP dan port dengan server kamu)
+                                    TcpClient client = new TcpClient();
+                                    client.Connect(Connection.IPAddress, 5000);
+                                    StreamWriter writer = new StreamWriter(client.GetStream()) { AutoFlush = true };
+                                    StreamReader netReader = new StreamReader(client.GetStream());
+
+                                    // Simpan koneksi global
+                                    GlobalClient.Client = client;
+                                    GlobalClient.Writer = writer;
+                                    GlobalClient.Reader = netReader;
+
+                                    // Kirim informasi login ke server
+                                    writer.WriteLine($"LOGIN|{userNIK}|{userName}");
+
+                                }
+                                catch (SocketException ex)
+                                {
+                                    MessageBox.Show("Gagal terhubung ke server: " + ex.Message, "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    return;
+                                }
 
                                 this.Hide();
                                 MessageBox.Show("Selamat Datang "+userName, "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);

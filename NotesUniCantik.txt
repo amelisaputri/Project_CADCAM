@@ -1,3 +1,0 @@
-1. Buat chat ini dikirim oleh user yang di login (how to make the chat is from user is login) tunjukin kode button login
-2. cara untuk buat history transaksi tabelnya (screenshoot tabel master_chat) terus minta tabel apa lagi yang kurang sekalian minta buatin logic programnya
-3. kalau udah bisa, tambahin load data history chat antara user dan user yang dipilih. tidak generic

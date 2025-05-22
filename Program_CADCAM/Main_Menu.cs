@@ -44,7 +44,7 @@ namespace Program_CADCAM
                 {
                     conn.Open();
 
-                    string query = "SELECT USER_NIK, USER_NAME FROM MASTER_USER WHERE USER_NIK != @USER_NIK"; // Adjust table name and columns if needed
+                    string query = "SELECT USER_ID, USER_NIK, USER_NAME FROM MASTER_USER WHERE USER_NIK != @USER_NIK"; // Adjust table name and columns if needed
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -84,7 +84,7 @@ namespace Program_CADCAM
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "SELECT USER_NIK, USER_NAME FROM MASTER_USER WHERE USER_NIK != @USER_NIK";
+                    string query = "SELECT USER_ID, USER_NIK, USER_NAME FROM MASTER_USER WHERE USER_NIK != @USER_NIK";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {

@@ -1,13 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\ServerProgram\\",
+  "WorkspaceRootPath": "C:\\AMEL CADCAM\\Up\\Project_CADCAM\\ServerProgram\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{047CE43B-2C33-4192-B90B-DB82AAAA01A0}|ServerProgram\\ServerProgram.csproj|e:\\project trial\\c# project\\project_cadcam\\serverprogram\\serverprogram\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{047CE43B-2C33-4192-B90B-DB82AAAA01A0}|ServerProgram\\ServerProgram.csproj|c:\\amel cadcam\\up\\project_cadcam\\serverprogram\\serverprogram\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{047CE43B-2C33-4192-B90B-DB82AAAA01A0}|ServerProgram\\ServerProgram.csproj|solutionrelative:serverprogram\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{047CE43B-2C33-4192-B90B-DB82AAAA01A0}|ServerProgram\\ServerProgram.csproj|E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\ServerProgram\\serverprogram\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{047CE43B-2C33-4192-B90B-DB82AAAA01A0}|ServerProgram\\ServerProgram.csproj|c:\\amel cadcam\\up\\project_cadcam\\serverprogram\\serverprogram\\server.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{047CE43B-2C33-4192-B90B-DB82AAAA01A0}|ServerProgram\\ServerProgram.csproj|solutionrelative:serverprogram\\server.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{047CE43B-2C33-4192-B90B-DB82AAAA01A0}|ServerProgram\\ServerProgram.csproj|C:\\AMEL CADCAM\\Up\\Project_CADCAM\\ServerProgram\\serverprogram\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{047CE43B-2C33-4192-B90B-DB82AAAA01A0}|ServerProgram\\ServerProgram.csproj|solutionrelative:serverprogram\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -18,28 +22,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Server.Designer.cs",
+              "DocumentMoniker": "C:\\AMEL CADCAM\\Up\\Project_CADCAM\\ServerProgram\\ServerProgram\\Server.Designer.cs",
+              "RelativeDocumentMoniker": "ServerProgram\\Server.Designer.cs",
+              "ToolTip": "C:\\AMEL CADCAM\\Up\\Project_CADCAM\\ServerProgram\\ServerProgram\\Server.Designer.cs",
+              "RelativeToolTip": "ServerProgram\\Server.Designer.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAhwFMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T08:17:18.919Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Server.cs",
-              "DocumentMoniker": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\ServerProgram\\ServerProgram\\Server.cs",
+              "DocumentMoniker": "C:\\AMEL CADCAM\\Up\\Project_CADCAM\\ServerProgram\\ServerProgram\\Server.cs",
               "RelativeDocumentMoniker": "ServerProgram\\Server.cs",
-              "ToolTip": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\ServerProgram\\ServerProgram\\Server.cs",
+              "ToolTip": "C:\\AMEL CADCAM\\Up\\Project_CADCAM\\ServerProgram\\ServerProgram\\Server.cs",
               "RelativeToolTip": "ServerProgram\\Server.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBMAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwDwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-13T01:10:33.725Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Server.cs [Design]",
-              "DocumentMoniker": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\ServerProgram\\ServerProgram\\Server.cs",
+              "DocumentMoniker": "C:\\AMEL CADCAM\\Up\\Project_CADCAM\\ServerProgram\\ServerProgram\\Server.cs",
               "RelativeDocumentMoniker": "ServerProgram\\Server.cs",
-              "ToolTip": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\ServerProgram\\ServerProgram\\Server.cs [Design]",
+              "ToolTip": "C:\\AMEL CADCAM\\Up\\Project_CADCAM\\ServerProgram\\ServerProgram\\Server.cs [Design]",
               "RelativeToolTip": "ServerProgram\\Server.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T04:07:22.074Z",
