@@ -1,0 +1,7 @@
+Hal yang perlu di update besok 
+
+1. benerin ui --> ChatForm
+2. tambahin event keypress buat kalau pencet enter auto kirim (tanya gpt) --> ChatForm
+3. Benerin yang Bug kalau udah buka 1 chat, terus pindah chat ke 2 ga muncul --> ChatForm (Debuging)
+4. Testing program ke komputer lain (1-3 komputer yang client)
+5. Tampilan history chat last di MainMenu (Tampilin history chat terupdate) --> MainForm
