@@ -1,0 +1,5 @@
+1. Program tidak error, tapi koneksi putus jadi tidak bisa kirim chat (harus buka tutup program)
+   perbaikannya : harus buat procedure rekoneksi session kalau putus. tambah ping setiap 30 detik sekali.
+2. Program belum bisa dites pakai banyak orang. Program bagian server masih harus perbaikan.
+   Perbaikan : cari tau jumlah maksimal session yang bisa ditampung
+3. Untuk masukan Auditor IT. itu nanti kumpulkan masukan dari user (orang Cadcam) mengenai tampilan dasarnya mau gimana

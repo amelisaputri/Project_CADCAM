@@ -194,11 +194,6 @@
             this.Close();
         }
 
-        private void ChatForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            GlobalClient.Disconnect();
-        }
-
         private void pollTimer_Tick(object sender, EventArgs e)
         {
             while (GlobalClient.IncomingMessages.TryDequeue(out string msg))

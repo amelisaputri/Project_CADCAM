@@ -114,7 +114,6 @@ namespace ServerProgram
                 }
             }
 
-            // Now process incoming chat messages from this client
             try
             {
                 while (client.Connected)
@@ -126,6 +125,11 @@ namespace ServerProgram
                     {
                         AppendLog($"User {localUsername} logged out.");
                         break;
+                    }
+                    else if (line.StartsWith("PING"))
+                    {
+                        // Handle ping to prevent disconnect
+                        AppendLog($"PING received from {localUsername}");
                     }
                     else if (line.StartsWith("CHAT|"))
                     {

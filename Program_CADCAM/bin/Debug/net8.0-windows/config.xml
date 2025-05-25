@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
-  <connectionString>Server=192.168.18.142;Database=CADCAM;User ID=sa;Password=system;</connectionString>
-  <ipAddress>192.168.18.142</ipAddress>
+  <connectionString>Server=192.168.1.27;Database=CADCAM;User ID=sa;Password=system;</connectionString>
+  <ipAddress>192.168.1.27</ipAddress>
 </configuration>

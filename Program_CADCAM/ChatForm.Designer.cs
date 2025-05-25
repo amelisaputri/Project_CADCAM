@@ -198,7 +198,6 @@
             MinimizeBox = false;
             Name = "ChatForm";
             StartPosition = FormStartPosition.CenterScreen;
-            FormClosing += ChatForm_FormClosing;
             Load += ChatForm_Load;
             panel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);

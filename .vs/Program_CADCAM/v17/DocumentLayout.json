@@ -7,28 +7,40 @@
       "RelativeMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|solutionrelative:program_cadcam\\chatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|e:\\project trial\\c# project\\project_cadcam\\program_cadcam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|solutionrelative:program_cadcam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|e:\\project trial\\c# project\\project_cadcam\\program_cadcam\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|solutionrelative:program_cadcam\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|e:\\project trial\\c# project\\project_cadcam\\program_cadcam\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|solutionrelative:program_cadcam\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|e:\\project trial\\c# project\\project_cadcam\\program_cadcam\\chatform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|solutionrelative:program_cadcam\\chatform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\program_cadcam\\chatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|solutionrelative:program_cadcam\\chatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|e:\\project trial\\c# project\\project_cadcam\\program_cadcam\\configuration\\globalclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|solutionrelative:program_cadcam\\configuration\\globalclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|e:\\project trial\\c# project\\project_cadcam\\program_cadcam\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|solutionrelative:program_cadcam\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|e:\\project trial\\c# project\\project_cadcam\\program_cadcam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|e:\\project trial\\c# project\\project_cadcam\\program_cadcam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|solutionrelative:program_cadcam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\program_cadcam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|solutionrelative:program_cadcam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|e:\\project trial\\c# project\\project_cadcam\\program_cadcam\\configuration\\connectionmonitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|solutionrelative:program_cadcam\\configuration\\connectionmonitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\program_cadcam\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|solutionrelative:program_cadcam\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|e:\\project trial\\c# project\\project_cadcam\\program_cadcam\\configuration\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|solutionrelative:program_cadcam\\configuration\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|e:\\project trial\\c# project\\project_cadcam\\program_cadcam\\configuration\\globalclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D19EA41C-182A-49A9-A5B0-05A5C2042FF5}|Program_CADCAM\\Program_CADCAM.csproj|solutionrelative:program_cadcam\\configuration\\globalclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,24 +50,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Main_Menu.cs",
-              "DocumentMoniker": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Main_Menu.cs",
-              "RelativeDocumentMoniker": "Program_CADCAM\\Main_Menu.cs",
-              "ToolTip": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Main_Menu.cs",
-              "RelativeToolTip": "Program_CADCAM\\Main_Menu.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAcwIEAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ChatForm.Designer.cs",
+              "DocumentMoniker": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\ChatForm.Designer.cs",
+              "RelativeDocumentMoniker": "Program_CADCAM\\ChatForm.Designer.cs",
+              "ToolTip": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\ChatForm.Designer.cs",
+              "RelativeToolTip": "Program_CADCAM\\ChatForm.Designer.cs",
+              "ViewState": "AgIAALoAAAAAAAAAAAAlwMcAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T16:21:24.482Z",
+              "WhenOpened": "2025-05-25T09:05:53.523Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Main_Menu.cs [Design]",
               "DocumentMoniker": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Main_Menu.cs",
               "RelativeDocumentMoniker": "Program_CADCAM\\Main_Menu.cs",
@@ -67,45 +79,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GlobalClient.cs",
-              "DocumentMoniker": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Configuration\\GlobalClient.cs",
-              "RelativeDocumentMoniker": "Program_CADCAM\\Configuration\\GlobalClient.cs",
-              "ToolTip": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Configuration\\GlobalClient.cs",
-              "RelativeToolTip": "Program_CADCAM\\Configuration\\GlobalClient.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAABfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T15:58:52.937Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Login.cs [Design]",
-              "DocumentMoniker": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Login.cs",
-              "RelativeDocumentMoniker": "Program_CADCAM\\Login.cs",
-              "ToolTip": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Login.cs [Design]",
-              "RelativeToolTip": "Program_CADCAM\\Login.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T15:19:23.104Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Login.cs",
               "DocumentMoniker": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Login.cs",
               "RelativeDocumentMoniker": "Program_CADCAM\\Login.cs",
               "ToolTip": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Login.cs",
               "RelativeToolTip": "Program_CADCAM\\Login.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAqwHAAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAswJcAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T15:19:18.936Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
+              "Title": "GlobalClient.cs",
+              "DocumentMoniker": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Configuration\\GlobalClient.cs",
+              "RelativeDocumentMoniker": "Program_CADCAM\\Configuration\\GlobalClient.cs",
+              "ToolTip": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Configuration\\GlobalClient.cs",
+              "RelativeToolTip": "Program_CADCAM\\Configuration\\GlobalClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T15:58:52.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChatForm.cs",
+              "DocumentMoniker": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\ChatForm.cs",
+              "RelativeDocumentMoniker": "Program_CADCAM\\ChatForm.cs",
+              "ToolTip": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\ChatForm.cs",
+              "RelativeToolTip": "Program_CADCAM\\ChatForm.cs",
+              "ViewState": "AgIAALsAAAAAAAAAAAAAAMMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T06:38:44.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ConnectionMonitor.cs",
+              "DocumentMoniker": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Configuration\\ConnectionMonitor.cs",
+              "RelativeDocumentMoniker": "Program_CADCAM\\Configuration\\ConnectionMonitor.cs",
+              "ToolTip": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Configuration\\ConnectionMonitor.cs",
+              "RelativeToolTip": "Program_CADCAM\\Configuration\\ConnectionMonitor.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAApwCoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T08:37:33.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ChatForm.cs [Design]",
               "DocumentMoniker": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\ChatForm.cs",
               "RelativeDocumentMoniker": "Program_CADCAM\\ChatForm.cs",
@@ -117,15 +143,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ChatForm.cs",
-              "DocumentMoniker": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\ChatForm.cs",
-              "RelativeDocumentMoniker": "Program_CADCAM\\ChatForm.cs",
-              "ToolTip": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\ChatForm.cs",
-              "RelativeToolTip": "Program_CADCAM\\ChatForm.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAwwA4AAAAgAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Main_Menu.cs",
+              "DocumentMoniker": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Main_Menu.cs",
+              "RelativeDocumentMoniker": "Program_CADCAM\\Main_Menu.cs",
+              "ToolTip": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Main_Menu.cs",
+              "RelativeToolTip": "Program_CADCAM\\Main_Menu.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAcwKgAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T06:38:44.924Z",
+              "WhenOpened": "2025-05-22T16:21:24.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Login.cs",
+              "RelativeDocumentMoniker": "Program_CADCAM\\Login.cs",
+              "ToolTip": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Login.cs [Design]",
+              "RelativeToolTip": "Program_CADCAM\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T15:19:23.104Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Connection.cs",
+              "DocumentMoniker": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Configuration\\Connection.cs",
+              "RelativeDocumentMoniker": "Program_CADCAM\\Configuration\\Connection.cs",
+              "ToolTip": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Configuration\\Connection.cs",
+              "RelativeToolTip": "Program_CADCAM\\Configuration\\Connection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T15:56:01.841Z",
               "EditorCaption": ""
             }
           ]

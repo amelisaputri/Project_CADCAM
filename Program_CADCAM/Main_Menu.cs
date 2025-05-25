@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Sockets;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,9 @@ namespace Program_CADCAM
         string username;
         string depart;
         string connectionString;
+
+        System.Windows.Forms.Timer reconnectTimer;
+        System.Windows.Forms.Timer pingTimer;
 
         public void Load_Data(string id, string name, string department)
         {
@@ -116,6 +120,21 @@ namespace Program_CADCAM
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (GlobalClient.Writer != null)
+                    GlobalClient.Writer.WriteLine($"LOGOUT|{GlobalClient.UserId}");
+
+                GlobalClient.Client?.Close();
+                GlobalClient.Client = null;
+                GlobalClient.Writer = null;
+                GlobalClient.Reader = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal logout: " + ex.Message);
+            }
+
             this.Close();
         }
 
@@ -129,7 +148,14 @@ namespace Program_CADCAM
 
             this.Text = "Login as " + username;
 
+            ConnectionMonitor.StartMonitoring();
         }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ConnectionMonitor.StopMonitoring();
+        }
+
 
         private void ListUser_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
@@ -146,5 +172,6 @@ namespace Program_CADCAM
                 this.Show();
             }
         }
-    }
+
+    }    
 }
