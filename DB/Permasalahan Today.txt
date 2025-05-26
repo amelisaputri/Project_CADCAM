@@ -1,0 +1,15 @@
+Permasalahan untuk buka chat 1 ke chat 2:
+
+
+Kontak yang dipilih tampil benar di TreeView.
+
+Chat antar pengguna tampil hanya untuk user yang sedang dipilih, tanpa campur history user sebelumnya.
+
+ID/NIK dari user dikirim dan digunakan dengan benar — karena dari kode Anda, ListUser.Nodes hanya berisi nama, tidak menyimpan ID/NIK yang dibutuhkan untuk load chat.
+
+🔧 MASALAH YANG PERLU DISELESAIKAN
+❌ 1. ListUser hanya menyimpan USER_NAME → tidak menyimpan USER_NIK
+Akibatnya, saat Anda klik node, Anda tidak tahu user mana yang dipilih, karena Tag tidak di-set.
+
+❌ 2. LoadChatWithContact(string contactId) mengasumsikan contactName, tapi tidak dijelaskan dari mana datangnya
+Kemungkinan besar, contactName seharusnya diset saat user pilih kontak.
