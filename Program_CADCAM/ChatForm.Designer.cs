@@ -60,7 +60,6 @@
             txtBoxMessage.Size = new Size(431, 73);
             txtBoxMessage.TabIndex = 0;
             txtBoxMessage.KeyDown += txtBoxMesaage_KeyDown;
-            txtBoxMessage.KeyPress += txtBoxMessage_KeyPrees;
             // 
             // txtBoxChat
             // 

@@ -129,38 +129,6 @@ namespace Program_CADCAM
             }
         }
 
-        private void RoomChat()
-        {
-            //Cek apakah room sudah ada
-            using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string Checkquery = "SELECT COUNT (*) FROM MASTER_ROOMCHAT WHERE ID_ROOM = @USER_ID;";
-
-                    using (SqlCommand Checkcmd = new SqlCommand(Checkquery, conn))
-                    {
-                        Checkcmd.Parameters.AddWithValue("@ID_ROOM", userId);
-                        int exitst = (int)Checkcmd.ExecuteScalar();
-
-                        //Jika belum ada, insert room baru
-                        if (exitst == 0)
-                        {
-                            string insertQuery = "INSERT INTO MASTER_ROOMCHAT (ID_ROOM, ID_USER1, ID_USER2) " +
-                                                   "VALUES (@ID_ROOM, @ID_USER1, @ID_USER2)";
-                            using (SqlCommand Insertcmd = new SqlCommand(insertQuery, conn))
-                            {
-                                Insertcmd.Parameters.AddWithValue("@ID_ROOM", Room);
-                                Insertcmd.Parameters.AddWithValue("@ID_USER1", userId);
-                                Insertcmd.Parameters.AddWithValue("@ID_USER2", selectedUserID);
-
-                                Insertcmd.ExecuteNonQuery();
-                            }
-                        }
-                    }
-                }
-            return;
-        }
-
         private void btnLogout_Click(object sender, EventArgs e)
         {
             try
@@ -188,7 +156,6 @@ namespace Program_CADCAM
             connectionString = Connection.ConnectionString;
             Load_DataContact();
             LoadUserList();
-            RoomChat();
 
             this.Text = "Login as " + username;
 
@@ -210,22 +177,11 @@ namespace Program_CADCAM
                 string selectedUserNik = selectedNode.Tag.ToString();
                 string selectedUserName = selectedNode.Text;
 
-                if (activeChatForm != null && !activeChatForm.IsDisposed)
-                {
-                    activeChatForm.Close();
-                    activeChatForm = null;
-                }
-                
-                activeChatForm = new ChatForm();
-                activeChatForm.Load_DataContact(userId, username, selectedUserNik, selectedUserName, depart);
-                activeChatForm.FormClosed += (s, args) =>
-                {
-                    activeChatForm = null;
-                    this.Show(); // Kembali ke Main jika diperlukan
-                };
-
                 this.Hide();
-                activeChatForm.Show();
+                ChatForm frm = new ChatForm();
+                frm.Load_DataContact(userId, username, selectedUserNik, selectedUserName, depart);
+                frm.ShowDialog();
+                this.Show();
 
             }
         }

@@ -196,7 +196,6 @@
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Close();
-            OnChatFinised.Invoke();
         }
 
         private void pollTimer_Tick(object sender, EventArgs e)
@@ -206,21 +205,6 @@
                 AppendToChatBox(msg);  // Already thread-safe
             }
         }
-
-       //Perintah untuk kirim Chat dengan Klik Enter
-       private void txtBoxMessage_KeyPrees( object sender, KeyPressEventArgs e)
-       {
-            // Izinkan huruf, angka, simbol, tanda baca, spasi
-            if (!char.IsLetter(e.KeyChar) &&
-                !char.IsSymbol(e.KeyChar) &&
-                !char.IsPunctuation(e.KeyChar) &&
-                !char.IsNumber(e.KeyChar) &&
-                !char.IsSymbol(e.KeyChar) &&
-                !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-       }
 
         private void txtBoxMesaage_KeyDown(object sender, KeyEventArgs e)
         {
