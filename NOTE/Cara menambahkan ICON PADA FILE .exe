@@ -1,0 +1,22 @@
+Cara menambahkan ICON PADA FILE .EXE APLIKASI
+🧩 Syarat:
+Siapkan file ikon dengan format .ico (bukan PNG/JPG).
+Kalau kamu punya file .png, ubah jadi .ico menggunakan converter gratis seperti:
+👉 https://icoconvert.com
+
+🛠️ LANGKAH-LANGKAH:
+✅ 1. Set Icon di Pengaturan Project
+Klik kanan nama project → pilih Properties
+
+Pilih tab "Application"
+
+Pada bagian "Icon and manifest":
+
+Klik dropdown di "Icon:"
+
+Pilih file .ico yang kamu tambahkan tadi
+
+Simpan (Ctrl+S)
+
+✅ 3. Build Ulang Project
+Klik Build > Rebuild Solution

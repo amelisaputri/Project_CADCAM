@@ -1,0 +1,9 @@
+To Do List 27/05/2025
+
+Noted hari ini :
+1. Menambahkan icon pada file.exe
+2. Memperbaiki keypress dan keydown--> ChatForm
+3. Ingin menambahkan ketik pesan menggunakan bahasa korea tetapi
+pada program historynya tidak menyimpan bahasa korea yang berujung hasilnya "???"
+4. Cara membuat user 1 pindah ke obrolan chat user 2 masih belum selesai
+5. Cek tampilan UI di kritik masih tidak bagus

@@ -13,6 +13,7 @@ namespace Program_CADCAM
         string userId;
         string userName;
         string userDepartment;
+        string selectedUserId;
         string connectionString;
 
         private System.Windows.Forms.Label lblResult;
@@ -151,6 +152,7 @@ namespace Program_CADCAM
                                 MessageBox.Show("Selamat Datang "+userName, "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Main main = new Main();
                                 main.Load_Data(userId,userName,userDepartment);
+                                main.Load_Room(userId,selectedUserId);
                                 main.ShowDialog();
                                 this.Show();
                             }

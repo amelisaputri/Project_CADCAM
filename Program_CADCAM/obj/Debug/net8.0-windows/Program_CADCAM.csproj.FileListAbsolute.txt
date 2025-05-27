@@ -161,3 +161,6 @@ E:\PROJECT TRIAL\C# Project\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windo
 E:\PROJECT TRIAL\C# Project\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.pdb
 E:\PROJECT TRIAL\C# Project\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.genruntimeconfig.cache
 E:\PROJECT TRIAL\C# Project\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\ref\Program_CADCAM.dll
+C:\AMEL CADCAM\Up\Project_CADCAM\Program_CADCAM\bin\Debug\net8.0-windows\MetroFramework.Design.dll
+C:\AMEL CADCAM\Up\Project_CADCAM\Program_CADCAM\bin\Debug\net8.0-windows\MetroFramework.Fonts.dll
+C:\AMEL CADCAM\Up\Project_CADCAM\Program_CADCAM\bin\Debug\net8.0-windows\MetroFramework.dll

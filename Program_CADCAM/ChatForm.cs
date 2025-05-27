@@ -47,7 +47,11 @@
 
             contactId = _contactId;
             contactName = _contactName;
+            
         }
+
+        public Action OnChatFinised;
+
 
         private void ChatForm_Load(object sender, EventArgs e)
         {
@@ -97,11 +101,11 @@
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 string query = @"
-            SELECT SENDER_ID, MESSAGE_TEXT, CHAT_DATE 
-            FROM MASTER_CHAT 
-            WHERE (SENDER_ID = @USER_ID AND RECEIVER_ID = @RECEIVER_ID) 
-               OR (SENDER_ID = @RECEIVER_ID AND RECEIVER_ID = @USER_ID)
-            ORDER BY CHAT_DATE";
+                                SELECT SENDER_ID, MESSAGE_TEXT, CHAT_DATE 
+                                FROM MASTER_CHAT 
+                                WHERE (SENDER_ID = @USER_ID AND RECEIVER_ID = @RECEIVER_ID) 
+                                   OR (SENDER_ID = @RECEIVER_ID AND RECEIVER_ID = @USER_ID)
+                                ORDER BY CHAT_DATE";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -192,6 +196,7 @@
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Close();
+            OnChatFinised.Invoke();
         }
 
         private void pollTimer_Tick(object sender, EventArgs e)
@@ -199,6 +204,31 @@
             while (GlobalClient.IncomingMessages.TryDequeue(out string msg))
             {
                 AppendToChatBox(msg);  // Already thread-safe
+            }
+        }
+
+       //Perintah untuk kirim Chat dengan Klik Enter
+       private void txtBoxMessage_KeyPrees( object sender, KeyPressEventArgs e)
+       {
+            // Izinkan huruf, angka, simbol, tanda baca, spasi
+            if (!char.IsLetter(e.KeyChar) &&
+                !char.IsSymbol(e.KeyChar) &&
+                !char.IsPunctuation(e.KeyChar) &&
+                !char.IsNumber(e.KeyChar) &&
+                !char.IsSymbol(e.KeyChar) &&
+                !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+       }
+
+        private void txtBoxMesaage_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                btnSend.PerformClick(); // bantu panggil button send
+                
             }
         }
     }
