@@ -66,9 +66,9 @@
             Main_Menu.Controls.Add(tblLytPnl_MainMenu);
             Main_Menu.Dock = DockStyle.Fill;
             Main_Menu.Location = new Point(0, 0);
-            Main_Menu.Margin = new Padding(3, 4, 3, 4);
+            Main_Menu.Margin = new Padding(4, 5, 4, 5);
             Main_Menu.Name = "Main_Menu";
-            Main_Menu.Size = new Size(411, 731);
+            Main_Menu.Size = new Size(498, 864);
             Main_Menu.TabIndex = 0;
             // 
             // tblLytPnl_MainMenu
@@ -79,23 +79,23 @@
             tblLytPnl_MainMenu.Controls.Add(Profil, 0, 0);
             tblLytPnl_MainMenu.Controls.Add(tabControl_ListContact, 0, 1);
             tblLytPnl_MainMenu.Location = new Point(-1, 0);
-            tblLytPnl_MainMenu.Margin = new Padding(2, 3, 2, 3);
+            tblLytPnl_MainMenu.Margin = new Padding(2, 4, 2, 4);
             tblLytPnl_MainMenu.Name = "tblLytPnl_MainMenu";
             tblLytPnl_MainMenu.RowCount = 2;
             tblLytPnl_MainMenu.RowStyles.Add(new RowStyle(SizeType.Percent, 18.59956F));
             tblLytPnl_MainMenu.RowStyles.Add(new RowStyle(SizeType.Percent, 81.40044F));
-            tblLytPnl_MainMenu.RowStyles.Add(new RowStyle(SizeType.Absolute, 16F));
-            tblLytPnl_MainMenu.Size = new Size(411, 731);
+            tblLytPnl_MainMenu.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tblLytPnl_MainMenu.Size = new Size(498, 864);
             tblLytPnl_MainMenu.TabIndex = 3;
             // 
             // Profil
             // 
             Profil.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Profil.Controls.Add(tableLayoutPanel1);
-            Profil.Location = new Point(3, 4);
-            Profil.Margin = new Padding(3, 4, 3, 4);
+            Profil.Location = new Point(4, 5);
+            Profil.Margin = new Padding(4, 5, 4, 5);
             Profil.Name = "Profil";
-            Profil.Size = new Size(405, 127);
+            Profil.Size = new Size(490, 150);
             Profil.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -107,33 +107,33 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 29.4348545F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.44988871F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.2449884F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 8F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 45F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 10F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 60F));
             tableLayoutPanel1.Controls.Add(User, 2, 1);
             tableLayoutPanel1.Controls.Add(LblNama_Karyawan, 0, 1);
             tableLayoutPanel1.Controls.Add(LblDepart, 0, 2);
             tableLayoutPanel1.Controls.Add(btnSetting, 4, 1);
             tableLayoutPanel1.Controls.Add(btnLogout, 6, 1);
             tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(2, 3, 2, 3);
+            tableLayoutPanel1.Margin = new Padding(2, 4, 2, 4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 4;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 21.666666F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 78.3333359F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 65F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 13F));
-            tableLayoutPanel1.Size = new Size(405, 127);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 81F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 16F));
+            tableLayoutPanel1.Size = new Size(490, 150);
             tableLayoutPanel1.TabIndex = 7;
             // 
             // User
             // 
             User.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             User.Image = Properties.Resources.icon_2;
-            User.Location = new Point(205, 14);
-            User.Margin = new Padding(3, 4, 3, 4);
+            User.Location = new Point(246, 16);
+            User.Margin = new Padding(4, 5, 4, 5);
             User.Name = "User";
             tableLayoutPanel1.SetRowSpan(User, 2);
-            User.Size = new Size(97, 95);
+            User.Size = new Size(115, 112);
             User.SizeMode = PictureBoxSizeMode.StretchImage;
             User.TabIndex = 0;
             User.TabStop = false;
@@ -144,9 +144,10 @@
             LblNama_Karyawan.AutoSize = true;
             LblNama_Karyawan.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             LblNama_Karyawan.ImageAlign = ContentAlignment.TopLeft;
-            LblNama_Karyawan.Location = new Point(3, 23);
+            LblNama_Karyawan.Location = new Point(4, 23);
+            LblNama_Karyawan.Margin = new Padding(4, 0, 4, 0);
             LblNama_Karyawan.Name = "LblNama_Karyawan";
-            LblNama_Karyawan.Size = new Size(157, 25);
+            LblNama_Karyawan.Size = new Size(188, 29);
             LblNama_Karyawan.TabIndex = 3;
             LblNama_Karyawan.Text = "Nama Karyawan";
             // 
@@ -156,9 +157,10 @@
             LblDepart.AutoSize = true;
             LblDepart.Font = new Font("Microsoft Sans Serif", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 129);
             LblDepart.ImageAlign = ContentAlignment.TopLeft;
-            LblDepart.Location = new Point(3, 48);
+            LblDepart.Location = new Point(4, 52);
+            LblDepart.Margin = new Padding(4, 0, 4, 0);
             LblDepart.Name = "LblDepart";
-            LblDepart.Size = new Size(189, 20);
+            LblDepart.Size = new Size(225, 25);
             LblDepart.TabIndex = 4;
             LblDepart.Text = "Department";
             // 
@@ -168,11 +170,11 @@
             btnSetting.BackgroundImage = Properties.Resources.settings1;
             btnSetting.BackgroundImageLayout = ImageLayout.Stretch;
             btnSetting.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSetting.Location = new Point(314, 45);
-            btnSetting.Margin = new Padding(1, 3, 1, 3);
+            btnSetting.Location = new Point(376, 52);
+            btnSetting.Margin = new Padding(1, 4, 1, 4);
             btnSetting.Name = "btnSetting";
             tableLayoutPanel1.SetRowSpan(btnSetting, 2);
-            btnSetting.Size = new Size(32, 32);
+            btnSetting.Size = new Size(40, 40);
             btnSetting.TabIndex = 5;
             btnSetting.UseVisualStyleBackColor = true;
             // 
@@ -182,11 +184,11 @@
             btnLogout.BackgroundImage = Properties.Resources.logout__1_;
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
             btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLogout.Location = new Point(358, 41);
-            btnLogout.Margin = new Padding(1, 3, 1, 3);
+            btnLogout.Location = new Point(429, 47);
+            btnLogout.Margin = new Padding(1, 4, 1, 4);
             btnLogout.Name = "btnLogout";
             tableLayoutPanel1.SetRowSpan(btnLogout, 2);
-            btnLogout.Size = new Size(40, 40);
+            btnLogout.Size = new Size(50, 50);
             btnLogout.TabIndex = 6;
             btnLogout.TextAlign = ContentAlignment.TopCenter;
             btnLogout.UseVisualStyleBackColor = true;
@@ -197,22 +199,22 @@
             tabControl_ListContact.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tabControl_ListContact.Controls.Add(tabPage_ListContact);
             tabControl_ListContact.Controls.Add(tabPage_Chat);
-            tabControl_ListContact.Location = new Point(1, 138);
-            tabControl_ListContact.Margin = new Padding(1, 3, 1, 3);
+            tabControl_ListContact.Location = new Point(1, 164);
+            tabControl_ListContact.Margin = new Padding(1, 4, 1, 4);
             tabControl_ListContact.Name = "tabControl_ListContact";
             tabControl_ListContact.SelectedIndex = 0;
-            tabControl_ListContact.Size = new Size(409, 590);
+            tabControl_ListContact.Size = new Size(496, 696);
             tabControl_ListContact.TabIndex = 1;
             // 
             // tabPage_ListContact
             // 
             tabPage_ListContact.Controls.Add(panel_ListContact);
             tabPage_ListContact.Font = new Font("Malgun Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            tabPage_ListContact.Location = new Point(4, 29);
-            tabPage_ListContact.Margin = new Padding(1, 3, 1, 3);
+            tabPage_ListContact.Location = new Point(4, 34);
+            tabPage_ListContact.Margin = new Padding(1, 4, 1, 4);
             tabPage_ListContact.Name = "tabPage_ListContact";
-            tabPage_ListContact.Padding = new Padding(1, 3, 1, 3);
-            tabPage_ListContact.Size = new Size(401, 557);
+            tabPage_ListContact.Padding = new Padding(1, 4, 1, 4);
+            tabPage_ListContact.Size = new Size(488, 658);
             tabPage_ListContact.TabIndex = 0;
             tabPage_ListContact.Text = "List Contact ";
             tabPage_ListContact.UseVisualStyleBackColor = true;
@@ -221,10 +223,10 @@
             // 
             panel_ListContact.Controls.Add(ListUser);
             panel_ListContact.Dock = DockStyle.Fill;
-            panel_ListContact.Location = new Point(1, 3);
-            panel_ListContact.Margin = new Padding(1, 3, 1, 3);
+            panel_ListContact.Location = new Point(1, 4);
+            panel_ListContact.Margin = new Padding(1, 4, 1, 4);
             panel_ListContact.Name = "panel_ListContact";
-            panel_ListContact.Size = new Size(399, 551);
+            panel_ListContact.Size = new Size(486, 650);
             panel_ListContact.TabIndex = 3;
             // 
             // ListUser
@@ -233,23 +235,23 @@
             ListUser.Font = new Font("Malgun Gothic", 10F, FontStyle.Bold);
             ListUser.ItemHeight = 20;
             ListUser.Location = new Point(0, 0);
-            ListUser.Margin = new Padding(2, 3, 2, 3);
+            ListUser.Margin = new Padding(2, 4, 2, 4);
             ListUser.Name = "ListUser";
             treeNode1.Name = "Contact_User";
             treeNode1.Text = "Contact User";
             ListUser.Nodes.AddRange(new TreeNode[] { treeNode1 });
-            ListUser.Size = new Size(399, 551);
+            ListUser.Size = new Size(486, 650);
             ListUser.TabIndex = 0;
             ListUser.NodeMouseDoubleClick += ListUser_NodeMouseDoubleClick;
             // 
             // tabPage_Chat
             // 
             tabPage_Chat.Controls.Add(tableLayoutPanel_Chat);
-            tabPage_Chat.Location = new Point(4, 29);
-            tabPage_Chat.Margin = new Padding(1, 3, 1, 3);
+            tabPage_Chat.Location = new Point(4, 34);
+            tabPage_Chat.Margin = new Padding(1, 4, 1, 4);
             tabPage_Chat.Name = "tabPage_Chat";
-            tabPage_Chat.Padding = new Padding(1, 3, 1, 3);
-            tabPage_Chat.Size = new Size(401, 558);
+            tabPage_Chat.Padding = new Padding(1, 4, 1, 4);
+            tabPage_Chat.Size = new Size(503, 700);
             tabPage_Chat.TabIndex = 1;
             tabPage_Chat.Text = "Chat";
             tabPage_Chat.UseVisualStyleBackColor = true;
@@ -260,8 +262,8 @@
             tableLayoutPanel_Chat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel_Chat.Controls.Add(panel1, 0, 0);
             tableLayoutPanel_Chat.Dock = DockStyle.Fill;
-            tableLayoutPanel_Chat.Location = new Point(1, 3);
-            tableLayoutPanel_Chat.Margin = new Padding(2, 3, 2, 3);
+            tableLayoutPanel_Chat.Location = new Point(1, 4);
+            tableLayoutPanel_Chat.Margin = new Padding(2, 4, 2, 4);
             tableLayoutPanel_Chat.Name = "tableLayoutPanel_Chat";
             tableLayoutPanel_Chat.RowCount = 8;
             tableLayoutPanel_Chat.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
@@ -274,7 +276,7 @@
             tableLayoutPanel_Chat.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel_Chat.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel_Chat.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel_Chat.Size = new Size(399, 552);
+            tableLayoutPanel_Chat.Size = new Size(501, 692);
             tableLayoutPanel_Chat.TabIndex = 0;
             // 
             // panel1
@@ -282,33 +284,33 @@
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = SystemColors.ControlLight;
             panel1.Controls.Add(lbKaryawan);
-            panel1.Location = new Point(2, 3);
-            panel1.Margin = new Padding(2, 3, 2, 3);
+            panel1.Location = new Point(2, 4);
+            panel1.Margin = new Padding(2, 4, 2, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(395, 63);
+            panel1.Size = new Size(497, 78);
             panel1.TabIndex = 0;
             // 
             // lbKaryawan
             // 
             lbKaryawan.AutoSize = true;
             lbKaryawan.Font = new Font("Tahoma", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbKaryawan.Location = new Point(25, 23);
+            lbKaryawan.Location = new Point(31, 29);
             lbKaryawan.Margin = new Padding(2, 0, 2, 0);
             lbKaryawan.Name = "lbKaryawan";
-            lbKaryawan.Size = new Size(131, 21);
+            lbKaryawan.Size = new Size(156, 24);
             lbKaryawan.TabIndex = 0;
             lbKaryawan.Text = "Nama Karyawan";
             // 
             // Main
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(411, 731);
+            ClientSize = new Size(498, 864);
             Controls.Add(Main_Menu);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Main";
