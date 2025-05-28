@@ -27,6 +27,7 @@
             this.Size = new Size(520, 920);
         }
 
+
         string userId;
         string username;
         string depart;
@@ -47,7 +48,7 @@
 
             contactId = _contactId;
             contactName = _contactName;
-            
+
         }
 
         public Action OnChatFinised;
@@ -96,8 +97,8 @@
 
         private void LoadChatWithContact(string contactId)
         {
-            txtBoxChat.Clear();  // Clear previous chat
-
+            Panel_Chat.Controls.Clear();  // Clear previous chat
+            
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 string query = @"
@@ -125,9 +126,14 @@
 
                                 // Format: [HH:mm:ss] username: message
                                 string senderName = sender == userId ? username : contactName;
-                                string formatted = $"[{time:HH:mm:ss}] {senderName}: {msg}";
+                                string timeStr = time.ToString("HH:mm:ss");
 
-                                txtBoxChat.AppendText(formatted + Environment.NewLine);
+                                bool isSender = sender == userId;
+
+                                ControlChat bubble = new ControlChat();
+                                bubble.SetMessage(senderName, timeStr, msg, isSender);
+
+                                Panel_Chat.Controls.Add(bubble);
                             }
                         }
                     }
@@ -162,13 +168,32 @@
 
         private void AppendToChatBox(string msg)
         {
-            if (txtBoxChat.InvokeRequired)
+            if (Panel_Chat.InvokeRequired)
             {
-                txtBoxChat.Invoke(new Action<string>(AppendToChatBox), msg);
+                Panel_Chat.Invoke(new Action<string>(AppendToChatBox), msg);
+                return;
             }
-            else
+
+            if (msg.StartsWith("CHAT|"))
             {
-                txtBoxChat.AppendText(msg + Environment.NewLine);
+                string[] parts = msg.Split('|');
+                if (parts.Length >= 4)
+                {
+                    string senderId = parts[1];
+                    string receiverId = parts[2];
+                    string message = string.Join("|", parts.Skip(3));
+
+                    bool isSender = senderId == userId;
+                    string senderName = isSender ? username : contactName;
+                    string time = DateTime.Now.ToString("HH:mm:ss");
+
+                    // Gunakan ControlChat sebagai bubble
+                    ControlChat chatBubble = new ControlChat();
+                    chatBubble.SetMessage(senderName, time, message, isSender);
+
+                    Panel_Chat.Controls.Add(chatBubble);
+                    Panel_Chat.ScrollControlIntoView(chatBubble);
+                }
             }
         }
 
@@ -177,14 +202,30 @@
         {
             if (!string.IsNullOrWhiteSpace(txtBoxMessage.Text))
             {
-                string message = txtBoxMessage.Text;
+                string message = txtBoxMessage.Text.Trim();
                 string formatted = $"CHAT|{GlobalClient.UserId}|{contactId}|{message}";
 
                 if (GlobalClient.IsConnected())
                 {
-                    GlobalClient.Writer.WriteLine(formatted);
-                    SendMessageToContact(GlobalClient.UserId, contactId, message);
-                    txtBoxMessage.Clear();
+                    try
+                    {
+                        // Kirim ke server
+                        GlobalClient.Writer.WriteLine(formatted);
+                        GlobalClient.Writer.Flush();
+
+                        // Simpan ke DB
+                        SendMessageToContact(GlobalClient.UserId, contactId, message);
+
+                        // Tampilkan langsung ke Panel_Chat
+                        AppendToChatBox(formatted);
+
+                        // Kosongkan input
+                        txtBoxMessage.Clear();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Gagal mengirim pesan: " + ex.Message);
+                    }
                 }
                 else
                 {
@@ -212,8 +253,10 @@
             {
                 e.SuppressKeyPress = true;
                 btnSend.PerformClick(); // bantu panggil button send
-                
+
             }
         }
     }
+
 }
+

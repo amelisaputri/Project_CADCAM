@@ -166,29 +166,29 @@
             // 
             // btnSetting
             // 
-            btnSetting.Anchor = AnchorStyles.Left;
+            btnSetting.Anchor = AnchorStyles.None;
             btnSetting.BackgroundImage = Properties.Resources.settings1;
             btnSetting.BackgroundImageLayout = ImageLayout.Stretch;
             btnSetting.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSetting.Location = new Point(376, 52);
+            btnSetting.Location = new Point(380, 56);
             btnSetting.Margin = new Padding(1, 4, 1, 4);
             btnSetting.Name = "btnSetting";
             tableLayoutPanel1.SetRowSpan(btnSetting, 2);
-            btnSetting.Size = new Size(40, 40);
+            btnSetting.Size = new Size(32, 32);
             btnSetting.TabIndex = 5;
             btnSetting.UseVisualStyleBackColor = true;
             // 
             // btnLogout
             // 
-            btnLogout.Anchor = AnchorStyles.Left;
+            btnLogout.Anchor = AnchorStyles.None;
             btnLogout.BackgroundImage = Properties.Resources.logout__1_;
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
             btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLogout.Location = new Point(429, 47);
+            btnLogout.Location = new Point(441, 54);
             btnLogout.Margin = new Padding(1, 4, 1, 4);
             btnLogout.Name = "btnLogout";
             tableLayoutPanel1.SetRowSpan(btnLogout, 2);
-            btnLogout.Size = new Size(50, 50);
+            btnLogout.Size = new Size(36, 36);
             btnLogout.TabIndex = 6;
             btnLogout.TextAlign = ContentAlignment.TopCenter;
             btnLogout.UseVisualStyleBackColor = true;
@@ -251,7 +251,7 @@
             tabPage_Chat.Margin = new Padding(1, 4, 1, 4);
             tabPage_Chat.Name = "tabPage_Chat";
             tabPage_Chat.Padding = new Padding(1, 4, 1, 4);
-            tabPage_Chat.Size = new Size(503, 700);
+            tabPage_Chat.Size = new Size(488, 658);
             tabPage_Chat.TabIndex = 1;
             tabPage_Chat.Text = "Chat";
             tabPage_Chat.UseVisualStyleBackColor = true;
@@ -276,7 +276,7 @@
             tableLayoutPanel_Chat.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel_Chat.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel_Chat.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel_Chat.Size = new Size(501, 692);
+            tableLayoutPanel_Chat.Size = new Size(486, 650);
             tableLayoutPanel_Chat.TabIndex = 0;
             // 
             // panel1
@@ -287,7 +287,7 @@
             panel1.Location = new Point(2, 4);
             panel1.Margin = new Padding(2, 4, 2, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(497, 78);
+            panel1.Size = new Size(482, 73);
             panel1.TabIndex = 0;
             // 
             // lbKaryawan
