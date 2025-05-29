@@ -1,20 +1,7 @@
-﻿    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.Data;
-    using System.Drawing;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using System.Windows.Forms;
-    using System.IO;
-    using System.Net.Sockets;
-    using System.Threading;
-    using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-    using Microsoft.VisualBasic.ApplicationServices;
+﻿    using System.Net.Sockets;
     using System.Data.SqlClient;
-    using System.Runtime.Serialization.DataContracts;
     using Program_CADCAM.Configuration;
+using System.Xml.Linq;
 
     namespace Program_CADCAM
     {
@@ -26,7 +13,6 @@
             InitializeComponent();
             this.Size = new Size(520, 920);
         }
-
 
         string userId;
         string username;
@@ -59,14 +45,14 @@
 
             LoadChatWithContact(contactId);
 
-            Thread receiveThread = new Thread(ReceiveMessages);
-            receiveThread.IsBackground = true;
-            receiveThread.Start();
-
-            pollTimer.Enabled = true;
-            pollTimer.Start();
+            Panel_Chat.AutoScroll = true;
+            Panel_Chat.FlowDirection = FlowDirection.TopDown;
+            Panel_Chat.WrapContents = false;
 
             this.Text = "Login as " + username;
+
+            GlobalClient.MessageReceived += OnMessageReceived;
+
         }
 
         private void SendMessageToContact(string userId, string contactId, string message)
@@ -95,7 +81,7 @@
         private void LoadChatWithContact(string contactId)
         {
             Panel_Chat.Controls.Clear();  // Clear previous chat
-            
+
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 string query = @"
@@ -142,24 +128,23 @@
             }
         }
 
-
-        private void ReceiveMessages()
+        private void OnMessageReceived(string msg)
         {
-            try
+            if (msg.StartsWith("CHAT|"))
             {
-                while (GlobalClient.Client != null && GlobalClient.Client.Connected)
+                string[] parts = msg.Split('|');
+                if (parts.Length >= 4)
                 {
-                    string line = GlobalClient.Reader.ReadLine();
-                    if (!string.IsNullOrWhiteSpace(line))
+                    string senderId = parts[1];
+                    string receiverId = parts[2];
+
+                    // Show only if it’s between me and this contact
+                    if ((senderId == userId && receiverId == contactId) ||
+                        (senderId == contactId && receiverId == userId))
                     {
-                        AppendToChatBox(line);
+                        AppendToChatBox(msg);
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                // Optionally log or show the error
-                MessageBox.Show("Connection lost: " + ex.Message);
             }
         }
 
@@ -184,12 +169,18 @@
                     string senderName = isSender ? username : contactName;
                     string time = DateTime.Now.ToString("HH:mm:ss");
 
-                    // Gunakan ControlChat sebagai bubble
+                    bool isRelevant = (senderId == userId && receiverId == contactId) ||
+                                      (senderId == contactId && receiverId == userId);
+
+                    if (!isRelevant) return;
+
                     ControlChat chatBubble = new ControlChat();
                     chatBubble.SetMessage(senderName, time, message, isSender);
 
                     Panel_Chat.Controls.Add(chatBubble);
                     Panel_Chat.ScrollControlIntoView(chatBubble);
+
+
                 }
             }
         }
@@ -213,9 +204,6 @@
                         // Simpan ke DB
                         SendMessageToContact(GlobalClient.UserId, contactId, message);
 
-                        // Tampilkan langsung ke Panel_Chat
-                        //AppendToChatBox(formatted);
-
                         // Kosongkan input
                         txtBoxMessage.Clear();
                     }
@@ -236,14 +224,6 @@
             this.Close();
         }
 
-        private void pollTimer_Tick(object sender, EventArgs e)
-        {
-            while (GlobalClient.IncomingMessages.TryDequeue(out string msg))
-            {
-                AppendToChatBox(msg);  // Already thread-safe
-            }
-        }
-
         private void txtBoxMesaage_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -252,6 +232,12 @@
                 btnSend.PerformClick(); // bantu panggil button send
 
             }
+        }
+
+        private void ChatForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            GlobalClient.MessageReceived -= OnMessageReceived;
+
         }
     }
 

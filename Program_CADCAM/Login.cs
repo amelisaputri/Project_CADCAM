@@ -120,27 +120,7 @@ namespace Program_CADCAM
                                     // Send login message only once per app lifecycle
                                     writer.WriteLine($"LOGIN|{GlobalClient.UserId}|{GlobalClient.UserName}");
 
-                                    Thread receiveThread = new Thread(() =>
-                                    {
-                                        try
-                                        {
-                                            while (GlobalClient.Client.Connected)
-                                            {
-                                                string line = GlobalClient.Reader.ReadLine();
-                                                if (!string.IsNullOrWhiteSpace(line))
-                                                {
-                                                    GlobalClient.EnqueueIncomingMessage(line);
-                                                }
-                                            }
-                                        }
-                                        catch (Exception ex)
-                                        {
-                                            // You can log disconnection here if needed
-                                        }
-                                    });
-                                    receiveThread.IsBackground = true;
-                                    receiveThread.Start();
-
+                                    GlobalClient.StartReceiving();
                                 }
                                 catch (SocketException ex)
                                 {

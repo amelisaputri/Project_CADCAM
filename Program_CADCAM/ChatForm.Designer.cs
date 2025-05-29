@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChatForm));
             txtBoxMessage = new TextBox();
             Panel_Sender = new Panel();
@@ -41,7 +40,6 @@
             lblNama = new Label();
             btnLogout = new Button();
             Panel_Chat = new FlowLayoutPanel();
-            pollTimer = new System.Windows.Forms.Timer(components);
             Panel_Sender.SuspendLayout();
             LayoutPanel_Sender.SuspendLayout();
             Panel_ChatForm.SuspendLayout();
@@ -201,12 +199,6 @@
             Panel_Chat.Size = new Size(394, 541);
             Panel_Chat.TabIndex = 4;
             // 
-            // pollTimer
-            // 
-            pollTimer.Enabled = true;
-            pollTimer.Interval = 500;
-            pollTimer.Tick += pollTimer_Tick;
-            // 
             // ChatForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -220,6 +212,7 @@
             MinimizeBox = false;
             Name = "ChatForm";
             StartPosition = FormStartPosition.CenterScreen;
+            FormClosing += ChatForm_FormClosing;
             Load += ChatForm_Load;
             Panel_Sender.ResumeLayout(false);
             LayoutPanel_Sender.ResumeLayout(false);
@@ -240,7 +233,6 @@
         private TableLayoutPanel LayoutPanelChat;
         private TableLayoutPanel LayoutPanel_Sender;
         private Button btnMenu;
-        private System.Windows.Forms.Timer pollTimer;
         private FlowLayoutPanel Panel_Chat;
         private TableLayoutPanel LayoutPanelUser;
         private Label lblNama;

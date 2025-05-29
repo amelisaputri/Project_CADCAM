@@ -15,6 +15,12 @@ namespace Program_CADCAM.Configuration
 
         public static ConcurrentQueue<string> IncomingMessages = new ConcurrentQueue<string>();
 
+        public static event Action<string> MessageReceived;
+
+
+        private static Thread receiveThread;
+        private static bool isReceiving = false;
+
         public static bool IsConnected()
         {
             return Client != null && Client.Connected;
@@ -25,22 +31,31 @@ namespace Program_CADCAM.Configuration
             IncomingMessages.Enqueue(msg);
         }
 
-        public static void Disconnect()
+        public static void StartReceiving()
         {
-            try
+            Thread receiveThread = new Thread(() =>
             {
-                Writer?.WriteLine("LOGOUT|");
-                Client?.Close();
-            }
-            catch
-            {
-                // ignored
-            }
-            Client = null;
-            Writer = null;
-            Reader = null;
-            UserId = null;
-            UserName = null;
+                try
+                {
+                    while (Client != null && Client.Connected)
+                    {
+                        string line = Reader.ReadLine();
+                        if (!string.IsNullOrWhiteSpace(line))
+                        {
+                            // Raise event to all listeners
+                            MessageReceived?.Invoke(line);
+
+                            // Still queue it if needed elsewhere
+                            EnqueueIncomingMessage(line);
+                        }
+                    }
+                }
+                catch { /* Handle disconnection if needed */ }
+            });
+
+            receiveThread.IsBackground = true;
+            receiveThread.Start();
         }
     }
+
 }

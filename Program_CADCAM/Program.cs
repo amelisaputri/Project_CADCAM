@@ -12,9 +12,6 @@ namespace Program_CADCAM
             // see https://aka.ms/applicationconfiguration.
             //ApplicationConfiguration.Initialize();
             Application.Run(new Login());
-            //Application.Run(new Daftar_Login());
-            //Application.Run(new Main());
-            //Application.Run(new ChatForm());
         }
     }
 }

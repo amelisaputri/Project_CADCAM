@@ -16,7 +16,7 @@ namespace Program_CADCAM
         {
             InitializeComponent();
         }
-         
+
         public void SetMessage(string name, string time, string message, bool isSender)
         {
             LbName.Text = name;
@@ -24,7 +24,7 @@ namespace Program_CADCAM
             LbText.Text = message;
 
             // Atur align dan background berdasarkan pengirim/penerima
-            this.Dock = DockStyle.Top;
+            //this.Dock = DockStyle.Top;
             this.BackColor = Color.Transparent;
 
             if (isSender)
