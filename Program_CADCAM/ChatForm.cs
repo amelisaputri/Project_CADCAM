@@ -63,6 +63,9 @@
             receiveThread.IsBackground = true;
             receiveThread.Start();
 
+            pollTimer.Enabled = true;
+            pollTimer.Start();
+
             this.Text = "Login as " + username;
         }
 
@@ -211,7 +214,7 @@
                         SendMessageToContact(GlobalClient.UserId, contactId, message);
 
                         // Tampilkan langsung ke Panel_Chat
-                        AppendToChatBox(formatted);
+                        //AppendToChatBox(formatted);
 
                         // Kosongkan input
                         txtBoxMessage.Clear();
