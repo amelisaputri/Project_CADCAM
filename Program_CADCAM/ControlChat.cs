@@ -32,6 +32,7 @@ namespace Program_CADCAM
                 //bubble chat Pengirim
                 this.Padding = new Padding(50, 5, 10, 5);  // Right align
                 LbText.BackColor = Color.LightBlue;
+                picProfile.Visible = false;
             }
             else
             {

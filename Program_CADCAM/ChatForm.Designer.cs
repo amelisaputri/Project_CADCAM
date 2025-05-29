@@ -53,12 +53,12 @@
             // 
             txtBoxMessage.Dock = DockStyle.Fill;
             txtBoxMessage.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBoxMessage.Location = new Point(1, 3);
-            txtBoxMessage.Margin = new Padding(1, 3, 1, 3);
+            txtBoxMessage.Location = new Point(1, 2);
+            txtBoxMessage.Margin = new Padding(1, 2, 1, 2);
             txtBoxMessage.Multiline = true;
             txtBoxMessage.Name = "txtBoxMessage";
             LayoutPanel_Sender.SetRowSpan(txtBoxMessage, 2);
-            txtBoxMessage.Size = new Size(431, 73);
+            txtBoxMessage.Size = new Size(343, 60);
             txtBoxMessage.TabIndex = 0;
             txtBoxMessage.KeyDown += txtBoxMesaage_KeyDown;
             // 
@@ -67,10 +67,10 @@
             Panel_Sender.BackColor = SystemColors.ControlLightLight;
             Panel_Sender.Controls.Add(LayoutPanel_Sender);
             Panel_Sender.Dock = DockStyle.Fill;
-            Panel_Sender.Location = new Point(1, 782);
-            Panel_Sender.Margin = new Padding(1, 3, 1, 3);
+            Panel_Sender.Location = new Point(1, 625);
+            Panel_Sender.Margin = new Padding(1, 2, 1, 2);
             Panel_Sender.Name = "Panel_Sender";
-            Panel_Sender.Size = new Size(496, 79);
+            Panel_Sender.Size = new Size(396, 64);
             Panel_Sender.TabIndex = 2;
             // 
             // LayoutPanel_Sender
@@ -82,13 +82,13 @@
             LayoutPanel_Sender.Controls.Add(txtBoxMessage, 0, 0);
             LayoutPanel_Sender.Dock = DockStyle.Fill;
             LayoutPanel_Sender.Location = new Point(0, 0);
-            LayoutPanel_Sender.Margin = new Padding(4, 5, 4, 5);
+            LayoutPanel_Sender.Margin = new Padding(3, 4, 3, 4);
             LayoutPanel_Sender.Name = "LayoutPanel_Sender";
             LayoutPanel_Sender.RowCount = 2;
             LayoutPanel_Sender.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            LayoutPanel_Sender.RowStyles.Add(new RowStyle(SizeType.Absolute, 48F));
-            LayoutPanel_Sender.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
-            LayoutPanel_Sender.Size = new Size(496, 79);
+            LayoutPanel_Sender.RowStyles.Add(new RowStyle(SizeType.Absolute, 38F));
+            LayoutPanel_Sender.RowStyles.Add(new RowStyle(SizeType.Absolute, 26F));
+            LayoutPanel_Sender.Size = new Size(396, 64);
             LayoutPanel_Sender.TabIndex = 5;
             // 
             // btnSend
@@ -96,11 +96,11 @@
             btnSend.Anchor = AnchorStyles.None;
             btnSend.BackgroundImage = Properties.Resources.message__1_;
             btnSend.BackgroundImageLayout = ImageLayout.Stretch;
-            btnSend.Location = new Point(439, 14);
-            btnSend.Margin = new Padding(1, 3, 1, 3);
+            btnSend.Location = new Point(350, 12);
+            btnSend.Margin = new Padding(1, 2, 1, 2);
             btnSend.Name = "btnSend";
             LayoutPanel_Sender.SetRowSpan(btnSend, 2);
-            btnSend.Size = new Size(50, 50);
+            btnSend.Size = new Size(40, 40);
             btnSend.TabIndex = 4;
             btnSend.UseVisualStyleBackColor = true;
             btnSend.Click += btnSend_Click;
@@ -110,28 +110,28 @@
             Panel_ChatForm.Controls.Add(LayoutPanelChat);
             Panel_ChatForm.Dock = DockStyle.Fill;
             Panel_ChatForm.Location = new Point(0, 0);
-            Panel_ChatForm.Margin = new Padding(4, 5, 4, 5);
+            Panel_ChatForm.Margin = new Padding(3, 4, 3, 4);
             Panel_ChatForm.Name = "Panel_ChatForm";
-            Panel_ChatForm.Size = new Size(498, 864);
+            Panel_ChatForm.Size = new Size(398, 691);
             Panel_ChatForm.TabIndex = 5;
             // 
             // LayoutPanelChat
             // 
             LayoutPanelChat.ColumnCount = 1;
             LayoutPanelChat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            LayoutPanelChat.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            LayoutPanelChat.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
             LayoutPanelChat.Controls.Add(LayoutPanelUser, 0, 0);
             LayoutPanelChat.Controls.Add(Panel_Chat, 0, 1);
             LayoutPanelChat.Controls.Add(Panel_Sender, 0, 2);
             LayoutPanelChat.Dock = DockStyle.Fill;
             LayoutPanelChat.Location = new Point(0, 0);
-            LayoutPanelChat.Margin = new Padding(4, 5, 4, 5);
+            LayoutPanelChat.Margin = new Padding(3, 4, 3, 4);
             LayoutPanelChat.Name = "LayoutPanelChat";
             LayoutPanelChat.RowCount = 3;
             LayoutPanelChat.RowStyles.Add(new RowStyle(SizeType.Percent, 11.3785553F));
             LayoutPanelChat.RowStyles.Add(new RowStyle(SizeType.Percent, 78.8840256F));
             LayoutPanelChat.RowStyles.Add(new RowStyle(SizeType.Percent, 9.737417F));
-            LayoutPanelChat.Size = new Size(498, 864);
+            LayoutPanelChat.Size = new Size(398, 691);
             LayoutPanelChat.TabIndex = 0;
             // 
             // LayoutPanelUser
@@ -144,11 +144,12 @@
             LayoutPanelUser.Controls.Add(btnMenu, 2, 0);
             LayoutPanelUser.Controls.Add(lblNama, 1, 0);
             LayoutPanelUser.Controls.Add(btnLogout, 0, 0);
-            LayoutPanelUser.Location = new Point(3, 3);
+            LayoutPanelUser.Location = new Point(2, 2);
+            LayoutPanelUser.Margin = new Padding(2);
             LayoutPanelUser.Name = "LayoutPanelUser";
             LayoutPanelUser.RowCount = 1;
             LayoutPanelUser.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            LayoutPanelUser.Size = new Size(492, 92);
+            LayoutPanelUser.Size = new Size(394, 74);
             LayoutPanelUser.TabIndex = 0;
             // 
             // btnMenu
@@ -156,44 +157,48 @@
             btnMenu.Anchor = AnchorStyles.Right;
             btnMenu.BackgroundImage = Properties.Resources.menu;
             btnMenu.BackgroundImageLayout = ImageLayout.Stretch;
-            btnMenu.Location = new Point(454, 28);
+            btnMenu.Location = new Point(364, 22);
+            btnMenu.Margin = new Padding(2);
             btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(35, 36);
+            btnMenu.Size = new Size(28, 29);
             btnMenu.TabIndex = 3;
             btnMenu.UseVisualStyleBackColor = true;
             // 
             // lblNama
             // 
-            lblNama.Anchor = AnchorStyles.None;
+            lblNama.Dock = DockStyle.Fill;
             lblNama.Font = new Font("Microsoft Sans Serif", 12F);
             lblNama.ImageAlign = ContentAlignment.MiddleLeft;
-            lblNama.Location = new Point(148, 14);
+            lblNama.Location = new Point(33, 0);
             lblNama.Margin = new Padding(1, 0, 1, 0);
             lblNama.Name = "lblNama";
-            lblNama.Size = new Size(195, 64);
+            lblNama.Size = new Size(327, 74);
             lblNama.TabIndex = 2;
             lblNama.Text = "Nama Karyawan";
-            lblNama.TextAlign = ContentAlignment.MiddleLeft;
+            lblNama.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnLogout
             // 
             btnLogout.Anchor = AnchorStyles.Right;
             btnLogout.BackgroundImage = Properties.Resources.back;
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
-            btnLogout.Location = new Point(3, 28);
+            btnLogout.Location = new Point(3, 22);
+            btnLogout.Margin = new Padding(2);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(34, 36);
+            btnLogout.Size = new Size(27, 29);
             btnLogout.TabIndex = 4;
             btnLogout.UseVisualStyleBackColor = true;
             btnLogout.Click += btnLogout_Click;
             // 
             // Panel_Chat
             // 
-            Panel_Chat.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            Panel_Chat.AutoScroll = true;
             Panel_Chat.BackColor = Color.White;
-            Panel_Chat.Location = new Point(3, 101);
+            Panel_Chat.Dock = DockStyle.Fill;
+            Panel_Chat.Location = new Point(2, 80);
+            Panel_Chat.Margin = new Padding(2);
             Panel_Chat.Name = "Panel_Chat";
-            Panel_Chat.Size = new Size(492, 675);
+            Panel_Chat.Size = new Size(394, 541);
             Panel_Chat.TabIndex = 4;
             // 
             // pollTimer
@@ -204,13 +209,13 @@
             // 
             // ChatForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(498, 864);
+            ClientSize = new Size(398, 691);
             Controls.Add(Panel_ChatForm);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(1, 3, 1, 3);
+            Margin = new Padding(1, 2, 1, 2);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "ChatForm";

@@ -51,9 +51,6 @@
 
         }
 
-        public Action OnChatFinised;
-
-
         private void ChatForm_Load(object sender, EventArgs e)
         {
             lblNama.Text = contactName;
@@ -65,9 +62,6 @@
             Thread receiveThread = new Thread(ReceiveMessages);
             receiveThread.IsBackground = true;
             receiveThread.Start();
-
-            pollTimer.Enabled = true;
-            pollTimer.Start();
 
             this.Text = "Login as " + username;
         }

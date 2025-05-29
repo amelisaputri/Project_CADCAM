@@ -168,3 +168,4 @@ E:\PROJECT TRIAL\C# Project\Project_CADCAM\Program_CADCAM\bin\Debug\net8.0-windo
 E:\PROJECT TRIAL\C# Project\Project_CADCAM\Program_CADCAM\bin\Debug\net8.0-windows\MetroFramework.Fonts.dll
 E:\PROJECT TRIAL\C# Project\Project_CADCAM\Program_CADCAM\bin\Debug\net8.0-windows\MetroFramework.dll
 C:\AMEL CADCAM\Up\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.ControlChat.resources
+E:\PROJECT TRIAL\C# Project\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.ControlChat.resources
