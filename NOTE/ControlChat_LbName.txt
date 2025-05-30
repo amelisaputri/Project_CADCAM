@@ -1,0 +1,45 @@
+control user yang Lbname pengirim sudah berada di sebelah kanan 
+
+public void SetMessage(string name, string time, string message, bool isSender)
+{
+    LbName.Text = name;
+    LbTime.Text = time;
+    LbText.Text = message;
+
+    // Atur align dan background berdasarkan pengirim/penerima
+
+    this.BackColor = Color.Transparent;
+
+    if (isSender)
+    {
+        //bubble chat Pengirim
+        LbName.Anchor = AnchorStyles.Right;
+        this.Padding = new Padding(50, 5, 10, 5);  // Right align
+        LbText.BackColor = Color.LightBlue;
+        this.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+
+        //Untuk Panel_Typing 
+        Panel_Typing.AutoSize = true;
+        Panel_Typing.Dock = DockStyle.None;
+
+        LbText.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+        LbText.TextAlign = ContentAlignment.MiddleRight;
+
+        LbTime.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+        LbTime.TextAlign = ContentAlignment.BottomLeft;
+        LbTime.AutoSize = true;
+        LbTime.Location = new Point(0, Panel_Typing.Height - LbTime.Height);
+        this.Dock = DockStyle.None;
+        this.Margin = new Padding(190, 5, 10, 5);
+        picProfile.Visible = false;
+
+    }
+    else
+    {
+        //bubble chat Penerima
+        this.Padding = new Padding(10, 5, 50, 5);  // Left align
+        LbTime.TextAlign = ContentAlignment.MiddleLeft;
+        this.Dock = DockStyle.None;
+        LbText.BackColor = Color.LightYellow;
+        this.Margin = new Padding(10, 5, 190, 5);
+    }
