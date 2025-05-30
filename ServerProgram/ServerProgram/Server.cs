@@ -141,7 +141,7 @@ namespace ServerProgram
                             string receiverNIK = parts[2];
                             string messageText = string.Join('|', parts, 3, parts.Length - 3);
 
-                            string timestamped = $"[{DateTime.Now:HH:mm:ss}] {localUsername}: {messageText}";
+                            string timestamped = $"CHAT|{senderNIK}|{receiverNIK}|{messageText}";
                             AppendLog(timestamped);
 
                             lock (lockObj)
