@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Program_CADCAM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a70de6600c9520ca6be49c0a65c7bfcb6041e0e5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d506fc6c9010e9aee4f2ff147982b14a1ff69a3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Program_CADCAM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Program_CADCAM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

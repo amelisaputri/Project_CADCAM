@@ -126,6 +126,11 @@ using System.Xml.Linq;
                     }
                 }
             }
+
+            if (Panel_Chat.Controls.Count > 0)
+            {
+                Panel_Chat.ScrollControlIntoView(Panel_Chat.Controls[Panel_Chat.Controls.Count - 1]);
+            }
         }
 
         private void OnMessageReceived(string msg)

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj": {}
+    "E:\\PROGAM CADCAM CSTI\\Project_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj": {}
   },
   "projects": {
-    "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj": {
+    "E:\\PROGAM CADCAM CSTI\\Project_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj",
+        "projectUniqueName": "E:\\PROGAM CADCAM CSTI\\Project_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj",
         "projectName": "Program_CADCAM",
-        "projectPath": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj",
-        "packagesPath": "C:\\Users\\fikri\\.nuget\\packages\\",
-        "outputPath": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\obj\\",
+        "projectPath": "E:\\PROGAM CADCAM CSTI\\Project_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj",
+        "packagesPath": "C:\\Users\\ameli\\.nuget\\packages\\",
+        "outputPath": "E:\\PROGAM CADCAM CSTI\\Project_CADCAM\\Program_CADCAM\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\fikri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ameli\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -86,7 +86,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

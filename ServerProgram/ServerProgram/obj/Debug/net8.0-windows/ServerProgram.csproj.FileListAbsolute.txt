@@ -49,3 +49,20 @@ C:\AMEL CADCAM\Up\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-wi
 C:\AMEL CADCAM\Up\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ServerProgram.genruntimeconfig.cache
 C:\AMEL CADCAM\Up\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ref\ServerProgram.dll
 E:\PROJECT TRIAL\C# Project\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ServerProgram.Server.resources
+E:\PROGAM CADCAM CSTI\Project_CADCAM\ServerProgram\ServerProgram\bin\Debug\net8.0-windows\ServerProgram.exe
+E:\PROGAM CADCAM CSTI\Project_CADCAM\ServerProgram\ServerProgram\bin\Debug\net8.0-windows\ServerProgram.deps.json
+E:\PROGAM CADCAM CSTI\Project_CADCAM\ServerProgram\ServerProgram\bin\Debug\net8.0-windows\ServerProgram.runtimeconfig.json
+E:\PROGAM CADCAM CSTI\Project_CADCAM\ServerProgram\ServerProgram\bin\Debug\net8.0-windows\ServerProgram.dll
+E:\PROGAM CADCAM CSTI\Project_CADCAM\ServerProgram\ServerProgram\bin\Debug\net8.0-windows\ServerProgram.pdb
+E:\PROGAM CADCAM CSTI\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ServerProgram.Server.resources
+E:\PROGAM CADCAM CSTI\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ServerProgram.csproj.GenerateResource.cache
+E:\PROGAM CADCAM CSTI\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ServerProgram.GeneratedMSBuildEditorConfig.editorconfig
+E:\PROGAM CADCAM CSTI\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ServerProgram.AssemblyInfoInputs.cache
+E:\PROGAM CADCAM CSTI\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ServerProgram.AssemblyInfo.cs
+E:\PROGAM CADCAM CSTI\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ServerProgram.csproj.CoreCompileInputs.cache
+E:\PROGAM CADCAM CSTI\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ServerProgram.sourcelink.json
+E:\PROGAM CADCAM CSTI\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ServerProgram.dll
+E:\PROGAM CADCAM CSTI\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\refint\ServerProgram.dll
+E:\PROGAM CADCAM CSTI\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ServerProgram.pdb
+E:\PROGAM CADCAM CSTI\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ServerProgram.genruntimeconfig.cache
+E:\PROGAM CADCAM CSTI\Project_CADCAM\ServerProgram\ServerProgram\obj\Debug\net8.0-windows\ref\ServerProgram.dll

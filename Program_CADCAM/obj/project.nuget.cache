@@ -1,19 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "7QexqA4giR8=",
+  "dgSpecHash": "zW95q9YmRec=",
   "success": true,
-  "projectFilePath": "E:\\PROJECT TRIAL\\C# Project\\Project_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj",
+  "projectFilePath": "E:\\PROGAM CADCAM CSTI\\Project_CADCAM\\Program_CADCAM\\Program_CADCAM.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\fikri\\.nuget\\packages\\metroframework\\1.2.0.3\\metroframework.1.2.0.3.nupkg.sha512",
-    "C:\\Users\\fikri\\.nuget\\packages\\metroframework.design\\1.2.0.3\\metroframework.design.1.2.0.3.nupkg.sha512",
-    "C:\\Users\\fikri\\.nuget\\packages\\metroframework.fonts\\1.2.0.3\\metroframework.fonts.1.2.0.3.nupkg.sha512",
-    "C:\\Users\\fikri\\.nuget\\packages\\metroframework.runtime\\1.2.0.3\\metroframework.runtime.1.2.0.3.nupkg.sha512",
-    "C:\\Users\\fikri\\.nuget\\packages\\metromodernui\\1.4.0\\metromodernui.1.4.0.nupkg.sha512",
-    "C:\\Users\\fikri\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\fikri\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\fikri\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\fikri\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\fikri\\.nuget\\packages\\system.data.sqlclient\\4.9.0\\system.data.sqlclient.4.9.0.nupkg.sha512"
+    "C:\\Users\\ameli\\.nuget\\packages\\metroframework\\1.2.0.3\\metroframework.1.2.0.3.nupkg.sha512",
+    "C:\\Users\\ameli\\.nuget\\packages\\metroframework.design\\1.2.0.3\\metroframework.design.1.2.0.3.nupkg.sha512",
+    "C:\\Users\\ameli\\.nuget\\packages\\metroframework.fonts\\1.2.0.3\\metroframework.fonts.1.2.0.3.nupkg.sha512",
+    "C:\\Users\\ameli\\.nuget\\packages\\metroframework.runtime\\1.2.0.3\\metroframework.runtime.1.2.0.3.nupkg.sha512",
+    "C:\\Users\\ameli\\.nuget\\packages\\metromodernui\\1.4.0\\metromodernui.1.4.0.nupkg.sha512",
+    "C:\\Users\\ameli\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\ameli\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\ameli\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\ameli\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\ameli\\.nuget\\packages\\system.data.sqlclient\\4.9.0\\system.data.sqlclient.4.9.0.nupkg.sha512"
   ],
   "logs": [
     {
