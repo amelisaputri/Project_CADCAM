@@ -33,12 +33,12 @@
             Main_Menu = new Panel();
             tblLytPnl_MainMenu = new TableLayoutPanel();
             Profil = new Panel();
-            tableLayoutPanel1 = new TableLayoutPanel();
+            LayoutPanel_User = new TableLayoutPanel();
             User = new PictureBox();
             LblNama_Karyawan = new Label();
             LblDepart = new Label();
-            btnSetting = new Button();
             btnLogout = new Button();
+            picSetting = new PictureBox();
             tabControl_ListContact = new TabControl();
             tabPage_ListContact = new TabPage();
             panel_ListContact = new Panel();
@@ -50,8 +50,9 @@
             Main_Menu.SuspendLayout();
             tblLytPnl_MainMenu.SuspendLayout();
             Profil.SuspendLayout();
-            tableLayoutPanel1.SuspendLayout();
+            LayoutPanel_User.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)User).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picSetting).BeginInit();
             tabControl_ListContact.SuspendLayout();
             tabPage_ListContact.SuspendLayout();
             panel_ListContact.SuspendLayout();
@@ -91,49 +92,48 @@
             // Profil
             // 
             Profil.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            Profil.Controls.Add(tableLayoutPanel1);
+            Profil.Controls.Add(LayoutPanel_User);
             Profil.Location = new Point(4, 5);
             Profil.Margin = new Padding(4, 5, 4, 5);
             Profil.Name = "Profil";
             Profil.Size = new Size(490, 150);
             Profil.TabIndex = 2;
             // 
-            // tableLayoutPanel1
+            // LayoutPanel_User
             // 
-            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel1.ColumnCount = 7;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 55.5907631F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.26387739F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 29.4348545F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.44988871F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.2449884F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 10F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 60F));
-            tableLayoutPanel1.Controls.Add(User, 2, 1);
-            tableLayoutPanel1.Controls.Add(LblNama_Karyawan, 0, 1);
-            tableLayoutPanel1.Controls.Add(LblDepart, 0, 2);
-            tableLayoutPanel1.Controls.Add(btnSetting, 4, 1);
-            tableLayoutPanel1.Controls.Add(btnLogout, 6, 1);
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(2, 4, 2, 4);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 4;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 21.666666F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 78.3333359F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 81F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 16F));
-            tableLayoutPanel1.Size = new Size(490, 150);
-            tableLayoutPanel1.TabIndex = 7;
+            LayoutPanel_User.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            LayoutPanel_User.ColumnCount = 6;
+            LayoutPanel_User.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 55.4963531F));
+            LayoutPanel_User.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.44545722F));
+            LayoutPanel_User.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 29.3848686F));
+            LayoutPanel_User.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.44572854F));
+            LayoutPanel_User.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.2275906F));
+            LayoutPanel_User.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 38F));
+            LayoutPanel_User.Controls.Add(User, 2, 1);
+            LayoutPanel_User.Controls.Add(LblNama_Karyawan, 0, 1);
+            LayoutPanel_User.Controls.Add(LblDepart, 0, 2);
+            LayoutPanel_User.Controls.Add(btnLogout, 5, 1);
+            LayoutPanel_User.Controls.Add(picSetting, 4, 1);
+            LayoutPanel_User.Location = new Point(0, 0);
+            LayoutPanel_User.Margin = new Padding(2, 4, 2, 4);
+            LayoutPanel_User.Name = "LayoutPanel_User";
+            LayoutPanel_User.RowCount = 4;
+            LayoutPanel_User.RowStyles.Add(new RowStyle(SizeType.Percent, 21.666666F));
+            LayoutPanel_User.RowStyles.Add(new RowStyle(SizeType.Percent, 78.3333359F));
+            LayoutPanel_User.RowStyles.Add(new RowStyle(SizeType.Absolute, 66F));
+            LayoutPanel_User.RowStyles.Add(new RowStyle(SizeType.Absolute, 16F));
+            LayoutPanel_User.Size = new Size(490, 150);
+            LayoutPanel_User.TabIndex = 7;
             // 
             // User
             // 
             User.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             User.Image = Properties.Resources.icon_2;
-            User.Location = new Point(246, 16);
+            User.Location = new Point(265, 19);
             User.Margin = new Padding(4, 5, 4, 5);
             User.Name = "User";
-            tableLayoutPanel1.SetRowSpan(User, 2);
-            User.Size = new Size(115, 112);
+            LayoutPanel_User.SetRowSpan(User, 2);
+            User.Size = new Size(124, 109);
             User.SizeMode = PictureBoxSizeMode.StretchImage;
             User.TabIndex = 0;
             User.TabStop = false;
@@ -144,7 +144,7 @@
             LblNama_Karyawan.AutoSize = true;
             LblNama_Karyawan.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             LblNama_Karyawan.ImageAlign = ContentAlignment.TopLeft;
-            LblNama_Karyawan.Location = new Point(4, 23);
+            LblNama_Karyawan.Location = new Point(4, 38);
             LblNama_Karyawan.Margin = new Padding(4, 0, 4, 0);
             LblNama_Karyawan.Name = "LblNama_Karyawan";
             LblNama_Karyawan.Size = new Size(188, 29);
@@ -157,42 +157,42 @@
             LblDepart.AutoSize = true;
             LblDepart.Font = new Font("Microsoft Sans Serif", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 129);
             LblDepart.ImageAlign = ContentAlignment.TopLeft;
-            LblDepart.Location = new Point(4, 52);
+            LblDepart.Location = new Point(4, 67);
             LblDepart.Margin = new Padding(4, 0, 4, 0);
             LblDepart.Name = "LblDepart";
-            LblDepart.Size = new Size(225, 25);
+            LblDepart.Size = new Size(242, 25);
             LblDepart.TabIndex = 4;
             LblDepart.Text = "Department";
-            // 
-            // btnSetting
-            // 
-            btnSetting.Anchor = AnchorStyles.None;
-            btnSetting.BackgroundImage = Properties.Resources.settings1;
-            btnSetting.BackgroundImageLayout = ImageLayout.Stretch;
-            btnSetting.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSetting.Location = new Point(380, 56);
-            btnSetting.Margin = new Padding(1, 4, 1, 4);
-            btnSetting.Name = "btnSetting";
-            tableLayoutPanel1.SetRowSpan(btnSetting, 2);
-            btnSetting.Size = new Size(32, 32);
-            btnSetting.TabIndex = 5;
-            btnSetting.UseVisualStyleBackColor = true;
             // 
             // btnLogout
             // 
             btnLogout.Anchor = AnchorStyles.None;
+            btnLogout.BackColor = Color.Transparent;
             btnLogout.BackgroundImage = Properties.Resources.logout__1_;
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
             btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLogout.Location = new Point(441, 54);
+            btnLogout.Location = new Point(452, 55);
             btnLogout.Margin = new Padding(1, 4, 1, 4);
             btnLogout.Name = "btnLogout";
-            tableLayoutPanel1.SetRowSpan(btnLogout, 2);
+            LayoutPanel_User.SetRowSpan(btnLogout, 2);
             btnLogout.Size = new Size(36, 36);
             btnLogout.TabIndex = 6;
             btnLogout.TextAlign = ContentAlignment.TopCenter;
-            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.UseVisualStyleBackColor = false;
             btnLogout.Click += btnLogout_Click;
+            // 
+            // picSetting
+            // 
+            picSetting.Anchor = AnchorStyles.Left;
+            picSetting.BackgroundImageLayout = ImageLayout.Stretch;
+            picSetting.Image = Properties.Resources.settings_removebg_preview;
+            picSetting.Location = new Point(407, 55);
+            picSetting.Name = "picSetting";
+            LayoutPanel_User.SetRowSpan(picSetting, 2);
+            picSetting.Size = new Size(36, 36);
+            picSetting.SizeMode = PictureBoxSizeMode.StretchImage;
+            picSetting.TabIndex = 7;
+            picSetting.TabStop = false;
             // 
             // tabControl_ListContact
             // 
@@ -320,9 +320,10 @@
             Main_Menu.ResumeLayout(false);
             tblLytPnl_MainMenu.ResumeLayout(false);
             Profil.ResumeLayout(false);
-            tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel1.PerformLayout();
+            LayoutPanel_User.ResumeLayout(false);
+            LayoutPanel_User.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)User).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picSetting).EndInit();
             tabControl_ListContact.ResumeLayout(false);
             tabPage_ListContact.ResumeLayout(false);
             panel_ListContact.ResumeLayout(false);
@@ -339,7 +340,6 @@
         private Panel Profil;
         private Label LblNama_Karyawan;
         private Button btnLogout;
-        private Button btnSetting;
         private Panel panel_ListContact;
         private TabControl tabControl_ListContact;
         private TabPage tabPage_ListContact;
@@ -348,9 +348,10 @@
         private TableLayoutPanel tableLayoutPanel_Chat;
         private Panel panel1;
         private TableLayoutPanel tblLytPnl_MainMenu;
-        private TableLayoutPanel tableLayoutPanel1;
+        private TableLayoutPanel LayoutPanel_User;
         private PictureBox User;
         private Label LblDepart;
         private Label lbKaryawan;
+        private PictureBox picSetting;
     }
 }

@@ -46,11 +46,11 @@
             // 
             tableLayoutPanel1.SetColumnSpan(txtBoxUser, 3);
             txtBoxUser.Dock = DockStyle.Fill;
-            txtBoxUser.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBoxUser.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxUser.ForeColor = Color.Gray;
             txtBoxUser.Location = new Point(110, 352);
             txtBoxUser.Name = "txtBoxUser";
-            txtBoxUser.Size = new Size(276, 35);
+            txtBoxUser.Size = new Size(276, 36);
             txtBoxUser.TabIndex = 0;
             txtBoxUser.Text = "NIK";
             txtBoxUser.MouseEnter += txtUsername_Enter;
@@ -58,10 +58,10 @@
             // 
             // Button_Login
             // 
-            Button_Login.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Button_Login.BackColor = Color.White;
             tableLayoutPanel1.SetColumnSpan(Button_Login, 3);
-            Button_Login.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Button_Login.Dock = DockStyle.Fill;
+            Button_Login.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Button_Login.Location = new Point(110, 480);
             Button_Login.Name = "Button_Login";
             Button_Login.Size = new Size(276, 57);
@@ -74,12 +74,12 @@
             // 
             tableLayoutPanel1.SetColumnSpan(txtBoxPass, 3);
             txtBoxPass.Dock = DockStyle.Fill;
-            txtBoxPass.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBoxPass.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxPass.ForeColor = Color.Gray;
             txtBoxPass.Location = new Point(110, 400);
             txtBoxPass.Name = "txtBoxPass";
             txtBoxPass.PasswordChar = '*';
-            txtBoxPass.Size = new Size(276, 35);
+            txtBoxPass.Size = new Size(276, 36);
             txtBoxPass.TabIndex = 1;
             txtBoxPass.Tag = "";
             txtBoxPass.Text = "Password";
@@ -92,10 +92,10 @@
             checkBox1.AutoSize = true;
             checkBox1.BackColor = Color.Transparent;
             tableLayoutPanel1.SetColumnSpan(checkBox1, 2);
-            checkBox1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox1.Location = new Point(110, 445);
+            checkBox1.Font = new Font("Tahoma", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBox1.Location = new Point(110, 446);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(132, 29);
+            checkBox1.Size = new Size(131, 28);
             checkBox1.TabIndex = 3;
             checkBox1.Text = "Auto Login";
             checkBox1.UseVisualStyleBackColor = false;
@@ -106,12 +106,12 @@
             LinkCreateAcc.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             LinkCreateAcc.AutoSize = true;
             LinkCreateAcc.BackColor = Color.Transparent;
-            tableLayoutPanel1.SetColumnSpan(LinkCreateAcc, 2);
-            LinkCreateAcc.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            tableLayoutPanel1.SetColumnSpan(LinkCreateAcc, 3);
+            LinkCreateAcc.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LinkCreateAcc.LinkColor = Color.Black;
-            LinkCreateAcc.Location = new Point(100, 651);
+            LinkCreateAcc.Location = new Point(68, 647);
             LinkCreateAcc.Name = "LinkCreateAcc";
-            LinkCreateAcc.Size = new Size(129, 25);
+            LinkCreateAcc.Size = new Size(161, 29);
             LinkCreateAcc.TabIndex = 4;
             LinkCreateAcc.TabStop = true;
             LinkCreateAcc.Text = "Daftar Login";
@@ -126,16 +126,16 @@
             LinkResetPass.AutoSize = true;
             LinkResetPass.BackColor = Color.Transparent;
             tableLayoutPanel1.SetColumnSpan(LinkResetPass, 3);
-            LinkResetPass.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LinkResetPass.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LinkResetPass.ImageAlign = ContentAlignment.MiddleLeft;
             LinkResetPass.LinkColor = Color.Black;
-            LinkResetPass.Location = new Point(264, 651);
+            LinkResetPass.Location = new Point(264, 647);
             LinkResetPass.Name = "LinkResetPass";
-            LinkResetPass.Size = new Size(167, 25);
+            LinkResetPass.Size = new Size(202, 29);
             LinkResetPass.TabIndex = 5;
             LinkResetPass.TabStop = true;
             LinkResetPass.Text = "Reset Password";
-            LinkResetPass.TextAlign = ContentAlignment.MiddleCenter;
+            LinkResetPass.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // SHI
             // 
@@ -175,14 +175,13 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25.7851238F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.619835F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15.7012768F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanel1.Controls.Add(Button_Login, 2, 5);
-            tableLayoutPanel1.Controls.Add(LinkCreateAcc, 1, 6);
             tableLayoutPanel1.Controls.Add(LinkResetPass, 4, 6);
             tableLayoutPanel1.Controls.Add(SHI, 3, 1);
             tableLayoutPanel1.Controls.Add(checkBox1, 2, 4);
             tableLayoutPanel1.Controls.Add(txtBoxPass, 2, 3);
             tableLayoutPanel1.Controls.Add(txtBoxUser, 2, 2);
+            tableLayoutPanel1.Controls.Add(LinkCreateAcc, 0, 6);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -195,7 +194,6 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.33333349F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 15.7740993F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 21.2268753F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 14F));
             tableLayoutPanel1.Size = new Size(498, 864);
             tableLayoutPanel1.TabIndex = 11;
             // 

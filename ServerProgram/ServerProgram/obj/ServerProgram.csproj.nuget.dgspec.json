@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\PROGAM CADCAM CSTI\\Project_CADCAM\\ServerProgram\\ServerProgram\\ServerProgram.csproj": {}
+    "C:\\AMEL CADCAM\\Up\\Project_CADCAM\\ServerProgram\\ServerProgram\\ServerProgram.csproj": {}
   },
   "projects": {
-    "E:\\PROGAM CADCAM CSTI\\Project_CADCAM\\ServerProgram\\ServerProgram\\ServerProgram.csproj": {
+    "C:\\AMEL CADCAM\\Up\\Project_CADCAM\\ServerProgram\\ServerProgram\\ServerProgram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PROGAM CADCAM CSTI\\Project_CADCAM\\ServerProgram\\ServerProgram\\ServerProgram.csproj",
+        "projectUniqueName": "C:\\AMEL CADCAM\\Up\\Project_CADCAM\\ServerProgram\\ServerProgram\\ServerProgram.csproj",
         "projectName": "ServerProgram",
-        "projectPath": "E:\\PROGAM CADCAM CSTI\\Project_CADCAM\\ServerProgram\\ServerProgram\\ServerProgram.csproj",
-        "packagesPath": "C:\\Users\\ameli\\.nuget\\packages\\",
-        "outputPath": "E:\\PROGAM CADCAM CSTI\\Project_CADCAM\\ServerProgram\\ServerProgram\\obj\\",
+        "projectPath": "C:\\AMEL CADCAM\\Up\\Project_CADCAM\\ServerProgram\\ServerProgram\\ServerProgram.csproj",
+        "packagesPath": "C:\\Users\\yong3\\.nuget\\packages\\",
+        "outputPath": "C:\\AMEL CADCAM\\Up\\Project_CADCAM\\ServerProgram\\ServerProgram\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ameli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yong3\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

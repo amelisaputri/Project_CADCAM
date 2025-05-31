@@ -174,3 +174,4 @@ E:\PROGAM CADCAM CSTI\Project_CADCAM\Program_CADCAM\bin\Debug\net8.0-windows\Met
 E:\PROGAM CADCAM CSTI\Project_CADCAM\Program_CADCAM\bin\Debug\net8.0-windows\MetroFramework.dll
 E:\PROGAM CADCAM CSTI\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.ControlChat.resources
 E:\PROGAM CADCAM CSTI\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.ControlChat_TableLayout.resources
+C:\AMEL CADCAM\Up\Project_CADCAM\Program_CADCAM\obj\Debug\net8.0-windows\Program_CADCAM.ControlChat_TableLayout.resources

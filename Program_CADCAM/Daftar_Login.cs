@@ -196,6 +196,11 @@ namespace Program_CADCAM
         {
             connectionString = Connection.ConnectionString;
         }
+
+        private void picLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 
